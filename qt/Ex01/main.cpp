@@ -33,9 +33,11 @@ int main()
 void ex2_1(void){
 
     vector <char> vec(26,0);
-    cout<<endl<<" Exercise 1-2 -letters a-z in order"<<endl;
+    cout<<endl<<" Exercise 1-2 -letters a-z and z-a"<<endl;
     iota(vec.begin(),vec.end(),'a');
     copy(vec.begin(),vec.end(), ostream_iterator<char> (cout," "));
+    cout<<endl;
+    reverse_copy(vec.begin(),vec.end(), ostream_iterator<char> (cout," "));
 
 }
 
@@ -78,7 +80,7 @@ void ex2_3(char letter,vector <string> &vec){
 
 void ex2_4(string predicate,vector <string> &vec){
 
-    cout<<endl<<endl<<" Exercise 2-4 "<<endl;
+    cout<<endl<<endl<<" Exercise 2-4 pred = "<<predicate<<endl;
     copy_if(vec.cbegin(),vec.cend(),ostream_iterator<string> (cout," "),[predicate](string toCompare)
     {
         char regardless_case;
@@ -95,7 +97,7 @@ void ex3(void){
 
     vector <string> vec;
     vec.clear();
-    cout<<endl<<endl<<" Exercise 3 "<<endl;
+    cout<<endl<<endl<<" Exercise 3 "<<endl<<"Please enter some text: ";
     copy_if(istream_iterator<string>(cin),istream_iterator<string>(), ostream_iterator<string> (cout," "),[&vec](string input)
     {
     auto it= find(vec.cbegin(),vec.cend(),input);
