@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <vector>
+#include <set>
 #include <numeric> //iota
 #include <iterator>
 #include <fstream>
@@ -95,16 +96,11 @@ void ex2_4(string predicate,vector <string> &vec){
 
 void ex3(void){
 
-    vector <string> vec;
+    set <string> vec;
     vec.clear();
     cout<<endl<<endl<<" Exercise 3 "<<endl<<"Please enter some text: ";
-    copy_if(istream_iterator<string>(cin),istream_iterator<string>(), ostream_iterator<string> (cout," "),[&vec](string input)
-    {
-    auto it= find(vec.cbegin(),vec.cend(),input);
-    if(it == vec.cend()){
-            vec.push_back(input);
-            return 1;
-        }
-        return 0;
-    });
+    copy(istream_iterator<string>(cin),istream_iterator<string>(),inserter(vec,vec.end()));
+    cout<<"The unique word list contains:"<<endl<<endl;
+    unique_copy(vec.begin(),vec.end(),ostream_iterator<string>(cout," "));
+    cout<<endl;
 }
