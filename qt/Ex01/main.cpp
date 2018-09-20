@@ -78,9 +78,14 @@ void ex2_3(char letter,vector <string> &vec){
 
 void ex2_4(string predicate,vector <string> &vec){
 
+<<<<<<< HEAD
     vector<string> vecOutput;
     cout<<endl<<endl<<" Exercise 2-4 -lambda function to implement the binary predicate "<<endl;
     copy_if(vec.cbegin(),vec.cend(),back_inserter(vecOutput),[&predicate](string toCompare)
+=======
+    cout<<endl<<endl<<" Exercise 2-4 "<<endl;
+    copy_if(vec.cbegin(),vec.cend(),ostream_iterator<string> (cout," "),[&predicate](string toCompare)
+>>>>>>> 60b741098d8e90856e07841f0c51402970438d21
     {
         char regardless_case;
         if (toCompare[0]<91) { regardless_case=toCompare[0]+32;}
@@ -90,16 +95,19 @@ void ex2_4(string predicate,vector <string> &vec){
         }
         return 0;
      });
-     copy(vecOutput.begin(),vecOutput.end(), ostream_iterator<string> (cout," "));
-     cout <<endl;
 }
 
 void ex3(){
 
     vector <string> vec;
     vec.clear();
+<<<<<<< HEAD
     cout<<endl<<endl<<" Exercise 3 - Filling Containers from istream_iterators"<<endl;
     copy_if(istream_iterator<string>(cin),istream_iterator<string>(), ostream_iterator<string> (cout," "),[&vec](string input)
+=======
+    cout<<endl<<endl<<" Exercise 3 "<<endl;
+    copy_if(istream_iterator<string>(cin),istream_iterator<string>(), ostream_iterator<string> (cout,"\n"),[&vec](string input)
+>>>>>>> 60b741098d8e90856e07841f0c51402970438d21
     {
     auto it= find(vec.cbegin(),vec.cend(),input);
     if(it == vec.cend()){
