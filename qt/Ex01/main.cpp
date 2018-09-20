@@ -78,9 +78,8 @@ void ex2_3(char letter,vector <string> &vec){
 
 void ex2_4(string predicate,vector <string> &vec){
 
-    vector<string> vecOutput;
     cout<<endl<<endl<<" Exercise 2-4 "<<endl;
-    copy_if(vec.cbegin(),vec.cend(),back_inserter(vecOutput),[&predicate](string toCompare)
+    copy_if(vec.cbegin(),vec.cend(),ostream_iterator<string> (cout," "),[&predicate](string toCompare)
     {
         char regardless_case;
         if (toCompare[0]<91) { regardless_case=toCompare[0]+32;}
@@ -90,8 +89,6 @@ void ex2_4(string predicate,vector <string> &vec){
         }
         return 0;
      });
-     copy(vecOutput.begin(),vecOutput.end(), ostream_iterator<string> (cout," "));
-     cout <<endl;
 }
 
 void ex3(){
@@ -99,7 +96,7 @@ void ex3(){
     vector <string> vec;
     vec.clear();
     cout<<endl<<endl<<" Exercise 3 "<<endl;
-    copy_if(istream_iterator<string>(cin),istream_iterator<string>(), ostream_iterator<string> (cout," "),[&vec](string input)
+    copy_if(istream_iterator<string>(cin),istream_iterator<string>(), ostream_iterator<string> (cout,"\n"),[&vec](string input)
     {
     auto it= find(vec.cbegin(),vec.cend(),input);
     if(it == vec.cend()){
