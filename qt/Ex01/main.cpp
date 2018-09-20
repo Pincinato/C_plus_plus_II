@@ -21,7 +21,7 @@ int main()
     vector<string> vec;
     vec.clear();
     ex2_1();
-    if(readFile("C:/Users/THP/Desktop/cars.txt",vec)){
+    if(readFile("cars.txt",vec)){
         ex2_2(vec);
         ex2_3('A',vec);
         ex2_4("aBc",vec);
@@ -33,7 +33,7 @@ int main()
 void ex2_1(void){
 
     vector <char> vec(26,0);
-    cout<<endl<<" Exercise 1-2"<<endl;
+    cout<<endl<<" Exercise 1-2 -letters a-z in order"<<endl;
     iota(vec.begin(),vec.end(),'a');
     copy(vec.begin(),vec.end(), ostream_iterator<char> (cout," "));
 
@@ -58,7 +58,7 @@ bool readFile(const char * const path,vector<string> &vecOutput){
 void ex2_2(vector <string> &vec){
 
 
-    cout<<endl<<endl<<" Exercise 2-2"<<endl;
+    cout<<endl<<endl<<" Exercise 2-2 - read a list with names of car brands"<<endl;
     copy(vec.begin(),vec.end(), ostream_iterator<string> (cout," "));
 
 }
@@ -69,7 +69,7 @@ void ex2_3(char letter,vector <string> &vec){
      for( auto it=vec.cbegin();it<vec.cend();it++){
              if(it.operator->()->at(0) == letter){ cout<<*it<<" ";}
       }
-      cout<<endl<<endl<<" Exercise 2-3b range based for loop"<<endl;
+      cout<<endl<<endl<<" Exercise 2-3b - range based for loop"<<endl;
       for (const auto& car : vec){
         if(car.at(0)== letter){cout<<car<<" ";}
          }
@@ -79,7 +79,7 @@ void ex2_3(char letter,vector <string> &vec){
 void ex2_4(string predicate,vector <string> &vec){
 
     vector<string> vecOutput;
-    cout<<endl<<endl<<" Exercise 2-4 "<<endl;
+    cout<<endl<<endl<<" Exercise 2-4 -lambda function to implement the binary predicate "<<endl;
     copy_if(vec.cbegin(),vec.cend(),back_inserter(vecOutput),[&predicate](string toCompare)
     {
         char regardless_case;
@@ -98,7 +98,7 @@ void ex3(){
 
     vector <string> vec;
     vec.clear();
-    cout<<endl<<endl<<" Exercise 3 "<<endl;
+    cout<<endl<<endl<<" Exercise 3 - Filling Containers from istream_iterators"<<endl;
     copy_if(istream_iterator<string>(cin),istream_iterator<string>(), ostream_iterator<string> (cout," "),[&vec](string input)
     {
     auto it= find(vec.cbegin(),vec.cend(),input);
