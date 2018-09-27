@@ -25,7 +25,7 @@ int main()
     if(readFile("cars.txt",vec)){
         ex2_2(vec);
         ex2_3('A',vec);
-        ex2_4("aBc",vec);
+        ex2_4("ABCD",vec);
     }
     ex3();
     return 0;
@@ -45,6 +45,7 @@ void ex2_1(void){
 bool readFile(const char * const path,vector<string> &vecOutput){
 
     ifstream in(path);
+    istream_iterator<string> it(in);
     if(in && in.is_open()){
         copy(istream_iterator<string> (in),istream_iterator<string>(),back_inserter(vecOutput));
         in.close();
@@ -84,12 +85,7 @@ void ex2_4(string predicate,vector <string> &vec){
     cout<<endl<<endl<<" Exercise 2-4 pred = "<<predicate<<endl;
     copy_if(vec.cbegin(),vec.cend(),ostream_iterator<string> (cout," "),[predicate](string toCompare)
     {
-        char regardless_case;
-        if (toCompare[0]<91) { regardless_case=toCompare[0]+32;}
-        else {regardless_case=toCompare[0]-32;};
-        for(const auto& letter : predicate){
-            if((letter == toCompare[0])||(letter == regardless_case) ){ return 1;}
-        }
+        if(toCompare.find_first_of(predicate) == 0){ return 1;}
         return 0;
      });
 }
