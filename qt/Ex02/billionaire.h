@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <iostream>
 #include <fstream>
+#include <vector>
 using namespace std;
 
 class Billionaire
@@ -35,6 +36,7 @@ public:
 
         string space(" ");
         //out<<Source.info<<"\n";
+        cout<<"ostream& out, vector<Billionaire>::iterator Source "<<endl;
         out<<Source->name <<space<<Source->fortune<<space<<Source->country<<endl;
         return out;
     }
@@ -42,15 +44,17 @@ public:
     friend ostream& operator <<( vector<Billionaire>::iterator Source,ostream& out) {
 
         string space(" ");
-        //out<<Source.info<<"\n";
+        //out<<Source.info<<"\n";        
+        cout<<"vector<Billionaire>::iterator Source,ostream& out "<<endl;
         out<<Source->name <<space<<Source->fortune<<space<<Source->country<<endl;
         return out;
     }
 
-    friend ostream& operator <<(ostream& out, Billionaire Source) {
+    friend ostream& operator <<(ostream& out, const Billionaire &Source) { //const is a key word as friend it is.
 
         string space(" ");
         //out<<Source.info<<"\n";
+        cout<<"ostream& out, Billionaire Source "<<endl;
         out<<Source.name <<space<<Source.fortune<<space<<Source.country<<endl;
         return out;
     }

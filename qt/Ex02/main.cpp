@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <unordered_map>
+#include <vector>
 #include <map>
 #include "billionaire.h"
 using namespace std;
@@ -11,8 +12,8 @@ void ex3(void);
 
 int main()
 {
-    ex2_a();
-    ex2_b();
+    //ex2_a();
+    //ex2_b();
     ex3();
     return 0;
 }
@@ -67,17 +68,25 @@ void ex2_b(){
 void ex3(void){
 
     ifstream in("Forbes2018.txt");
-    Billionaire test;
+    cout<<"Exercise 3"<<endl;
     if (!in) cout << " WARNING : File not found !" << endl ;
     else{
         vector <Billionaire> billionaires ;
         copy(istream_iterator <Billionaire>(in), istream_iterator <Billionaire>(),back_inserter(billionaires));
         copy (billionaires.begin() ,billionaires.end(),ostream_iterator<Billionaire>(cout));
-        cout<<billionaires.size();
-    }
-    cout<<endl<<"Second part "<<endl;
-    map < string , pair < const Billionaire , size_t >> mymap;
+        //cout<<billionaires.size();
+        cout<<endl<<"Second part "<<endl;
+        map < string , pair < const Billionaire , size_t >> mymap;
+        for(auto &it : billionaires){
+           auto b= mymap.try_emplace(it.country,make_pair(it,1));
+            if(b.second ==false){
+                //b.first.;
+                int abc;
+                abc=0;
+            }
 
+        }
+    }
 }
 
 
