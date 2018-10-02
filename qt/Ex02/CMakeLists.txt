@@ -11,4 +11,4 @@ endif()
 
 # set build type to Debug/Release
 set(CMAKE_BUILD_TYPE "Debug")
-add_executable(${PROJECT_NAME} main.cpp billionaire.cpp billionaire.h)
+add_executable(${PROJECT_NAME} main.cpp billionaire.h)
