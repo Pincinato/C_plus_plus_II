@@ -15,7 +15,7 @@ class Widget : public QWidget
 public:
     explicit Widget(QWidget *parent = nullptr);
     ~Widget();
-    void plotData (QcustomPlot *widget,const std::function<double(double)> &function);
+    void plotData (const std::function<double(double)> &function1,const std::function<double(double)> &function2);
 
 private:
     Ui::Widget *ui;
