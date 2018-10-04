@@ -21,7 +21,9 @@ find_package(Qt5Widgets CONFIG REQUIRED)
 find_package(Qt5PrintSupport CONFIG REQUIRED)
 message("${Qt5PrintSupport_DIR}")
 # Populate a CMake variable with the sources
-set(APP_SOURCES src/ui/widget.ui src/ui/widget.cpp src/main.cpp src/ui/widget.h src/ui/qcustomplot-source/qcustomplot.cpp src/ui/qcustomplot-source/qcustomplot.h)
+set(APP_SOURCES src/main.cpp src/ui/widget.ui src/ui/widget.cpp src/main.cpp src/ui/widget.h
+    src/ui/qcustomplot-source/qcustomplot.cpp src/ui/qcustomplot-source/qcustomplot.h
+    src/ui/widget_ex3_4.ui src/ui/widget_ex3_4.cpp src/ui/widget_ex3_4.h  src/files/ekg.txt)
 #set Directories
 set(APP_INCLUDE_DIRS src src/ui src/ui/qcustomplot-source)
 INCLUDE_DIRECTORIES(${APP_INCLUDE_DIRS})

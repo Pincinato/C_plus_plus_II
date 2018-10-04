@@ -3,14 +3,13 @@
 #include <functional>
 #include <algorithm>
 
-Widget::Widget(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::Widget)
+Widget::Widget(QWidget *parent) :QWidget(parent), ui(new Ui::Widget)
 {
     ui->setupUi(this);
     std::function<double(double)> x_square=[](double x){return  x*x;};
     std::function<double(double)> inverse_x=[](double x){return  1/x;};
     plotData(x_square,inverse_x);
+
 }
 
 Widget::~Widget()
@@ -20,6 +19,7 @@ Widget::~Widget()
 
 void Widget::plotData(const std::function<double(double)> &function1,const std::function<double(double)> &function2){
 
+    ui->qcpwidget->setWindowTitle("Ex 3 part 2");
     ui->qcpwidget->setInteraction(QCP::iRangeDrag, true);
     ui->qcpwidget->setInteraction(QCP::iRangeZoom, true);
     connect (ui->qcpwidget, SIGNAL(mouseDoubleClick(QMouseEvent *)), ui->qcpwidget, SLOT(rescaleAxes()));
