@@ -1,6 +1,6 @@
 #build files
-/qt/build-*
+qt/build-*
 
 #txt.user
-/qt/Ex*/CMakeLists.txt.user
+qt/Ex*/CMakeLists.txt.user
 
