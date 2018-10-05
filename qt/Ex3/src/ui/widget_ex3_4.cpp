@@ -33,15 +33,30 @@ void widget_ex3_4::handleButton(void){
 void widget_ex3_4::plotData(std::ifstream &in){
 
     std::vector<double> data;
+    const int sample_freq=360;
     copy(std::istream_iterator<int>(in),std::istream_iterator<int>(),back_inserter(data)); //postion, value
     in.close();
-    std::vector<std::pair<double,double>> peaks= find_peaks(data);
     std::vector<double> data_x(data.size());
-    std::iota(data_x.begin(), data_x.end(), 0);
+    std::vector<double> x(data.size());
+    std::iota(data_x.begin(), data_x.end(),0);
+    std::transform(data_x.cbegin(),data_x.cend(),x.begin(),[](double x){return (x/sample_freq);});
     presetWindow(ui->widget,"Ex3-p4","Time[s]","Signal[au]");
-    ui->widget->graph(0)->setData(QVector<double>::fromStdVector(data_x),QVector<double>::fromStdVector(data));
-    ui->widget->rescaleAxes ();
-    ui->widget->replot ();
+    ui->widget->addGraph();
+    ui->widget->graph(0)->setData(QVector<double>::fromStdVector(x),QVector<double>::fromStdVector(data));
+    ui->widget->rescaleAxes();
+    ui->widget->replot();
+    std::vector<std::pair<double,double>> peaks = find_peaks(data); //position, value
+    std::vector<double> peaks_y(peaks.size());
+    std::transform(peaks.cbegin(),peaks.cend(),peaks_y.begin(),[](std::pair<double,double> x){return x.second;});
+    std::vector<double> peaks_x(peaks.size());
+    std::transform(peaks.cbegin(),peaks.cend(),peaks_x.begin(),[](std::pair<double,double> x){return (x.first/sample_freq);});
+    ui->widget->addGraph();
+    ui->widget->graph(1)->setPen(QPen(Qt::red));
+    ui->widget->graph(1)->setLineStyle(QCPGraph::lsNone);
+    ui->widget->graph(1)->setScatterStyle(QCPScatterStyle(QCPScatterStyle::ssCircle,7));
+    ui->widget->graph(1)->setData(QVector<double>::fromStdVector(peaks_x),QVector<double>::fromStdVector(peaks_y));
+    ui->widget->rescaleAxes();
+    ui->widget->replot();
 
 }
 
@@ -53,7 +68,7 @@ std::vector<std::pair<double,double>>widget_ex3_4::find_peaks(const std::vector<
     std::vector<std::pair<double,double>> peaks; //position,value
     for (const auto &it: data){
         if(it >threshold){
-            peaks.push_back(std::make_pair(count,it));
+           peaks.push_back(std::make_pair(count,it));
         }
         count++;
     }
@@ -67,8 +82,6 @@ void widget_ex3_4::presetWindow(QcustomPlot * widget,QString Title, QString X_la
     widget->setInteraction(QCP::iRangeZoom, true);
     connect (widget, SIGNAL(mouseDoubleClick(QMouseEvent *)),widget, SLOT(rescaleAxes()));
     // Add Graph and s e t some p r o p e r t i e s
-
-    widget->addGraph();
     widget->xAxis->setLabel(X_label);
     widget->yAxis->setLabel(Y_label);
     widget->xAxis->grid()->setSubGridVisible(true);
