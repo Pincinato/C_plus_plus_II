@@ -17,8 +17,13 @@ widget_ex3_4::~widget_ex3_4()
 void widget_ex3_4::handleButton(void){
 
     std::ifstream in("ekg.txt");
-    if (!in) std::cout << " WARNING : File not found !" << std::endl ;
-       else{
+    if (!in) {
+        std::cout << " WARNING : File not found !" << std::endl ;
+        QMessageBox msgBox;
+        msgBox.setText("File not found !");
+        msgBox.exec();
+    }
+    else{
         plotData(in);
     }
 }
