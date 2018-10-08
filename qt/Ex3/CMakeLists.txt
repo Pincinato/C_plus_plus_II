@@ -19,6 +19,7 @@ set(CMAKE_AUTOUIC ON)
 # Find the QtWidgets library
 find_package(Qt5Widgets CONFIG REQUIRED)
 find_package(Qt5PrintSupport CONFIG REQUIRED)
+find_package(Threads)
 message("${Qt5PrintSupport_DIR}")
 # Populate a CMake variable with the sources
 set(APP_SOURCES src/main.cpp src/ui/widget.ui src/ui/widget.cpp src/main.cpp src/ui/widget.h
@@ -30,5 +31,6 @@ INCLUDE_DIRECTORIES(${APP_INCLUDE_DIRS})
 # set build type to Debug/Release
 set(CMAKE_BUILD_TYPE "Debug")
 add_executable(${PROJECT_NAME} ${APP_SOURCES})
+FILE(COPY src/files/ekg.txt DESTINATION ${PROJECT_BINARY_DIR})
 # Use the Widgets module from Qt 5
-target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::PrintSupport)
+target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::PrintSupport ${CMAKE_THREAD_LIBS_INIT})

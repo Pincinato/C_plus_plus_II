@@ -1,13 +1,25 @@
-# include <QApplication>
-# include "widget.h"
+#include <QApplication>
+#include <thread>
+#include "widget.h"
 #include "widget_ex3_4.h"
 
-int main ( int argc , char * argv [])
-{
+
+void thread_gui(int argc , char * argv []){
+
     QApplication a(argc , argv );
     Widget w;
     widget_ex3_4 w2;
+    w.show();
     w2.show();
-    return a.exec ();
+    a.exec();
+}
+
+int main ( int argc , char * argv [])
+{
+    std::thread gui(thread_gui,argc,argv);
+    if(gui.joinable()){
+        gui.join();
+    }
+    return 1;
 
 }

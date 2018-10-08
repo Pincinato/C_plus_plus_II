@@ -21,7 +21,7 @@ private slots:
     void handleButton(void);
 private:
     Ui::widget_ex3_4 *ui;
-    std::vector<std::pair<double,double>>find_peaks(const std::vector<double> &data);
+    std::vector<std::pair<double,double>>find_peaks(const std::vector<double> &data,const uint window, const int threshold);
     void presetWindow(QcustomPlot * widget,QString Title, QString X_label,QString Y_label);
 
 };

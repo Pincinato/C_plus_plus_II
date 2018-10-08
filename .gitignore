@@ -4,3 +4,5 @@ qt/build-*
 #txt.user
 qt/Ex*/CMakeLists.txt.user
 
+#zip files
+qt/Ex*.zip

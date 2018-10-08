@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>700</width>
-    <height>462</height>
+    <width>696</width>
+    <height>527</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Ex3</string>
   </property>
   <widget class="QcustomPlot" name="qcpwidget" native="true">
    <property name="geometry">
@@ -21,6 +21,19 @@
      <width>600</width>
      <height>400</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Exit">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>470</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>EXIT</string>
    </property>
   </widget>
  </widget>
@@ -33,5 +46,22 @@
   </customwidget>
  </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>Exit</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>580</x>
+     <y>436</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>535</x>
+     <y>433</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
