@@ -44,8 +44,9 @@ void widget_ex3_4::plotData(std::ifstream &in){
     ui->widget->addGraph();
     ui->widget->graph(0)->setData(QVector<double>::fromStdVector(x),QVector<double>::fromStdVector(data));
     ui->widget->rescaleAxes();
+    ui->widget->axisRect()->setRangeZoom(Qt::Horizontal);
     ui->widget->replot();
-    std::vector<std::pair<double,double>> peaks = find_peaks(data,100,1140); //position, value
+    std::vector<std::pair<double,double>> peaks = find_peaks(data,200,1140); //position, value
     std::vector<double> peaks_y(peaks.size());
     std::transform(peaks.cbegin(),peaks.cend(),peaks_y.begin(),[](std::pair<double,double> x){return x.second;});
     std::vector<double> peaks_x(peaks.size());
@@ -65,7 +66,7 @@ void widget_ex3_4::plotData(std::ifstream &in){
 std::vector<std::pair<double,double>>widget_ex3_4::find_peaks(const std::vector<double> &data,const uint window, const int threshold){
 
     std::vector<std::pair<double,double>> peaks; //position,value
-      for(uint i=1; i < data.size()/window ;i++){
+      for(uint i=1; i <= data.size()/window ;i++){
        auto it=std::max_element(data.begin()+(i-1)*window,data.begin()+(i)*window);
        double index = static_cast<double> (std::distance(data.begin(),it));
        if((*it)>threshold){peaks.push_back(std::make_pair(index,(*it)));};
