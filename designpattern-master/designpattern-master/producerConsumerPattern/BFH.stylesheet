@@ -1,0 +1,97 @@
+/*
+*
+* BFH COLORS:
+* Blue: #697d91
+* Yellow: #e7bd16
+*
+*/
+QWidget
+{
+    color: #697d91;
+    background-color: white;
+    selection-background-color:#e7bd16;
+    selection-color: #697d91;
+    /*border: 10px transparent black;*/
+  /*  outline: 0;*/
+    
+}
+
+
+
+QScrollBar:horizontal
+{
+    height: 15px;
+    border: 1px transparent #697d91;
+    border-radius: 4px;
+    background-color: #697d91;
+    margin: 20px
+
+}
+
+QScrollBar::handle:horizontal
+{
+    background-color: #d99100;
+    min-width: 5px;
+    border-radius: 4px;
+}
+
+
+
+
+QScrollBar:vertical
+{
+    background-color: #697d91;
+    width: 15px;
+    border: 1px transparent #697d91;
+    border-radius: 4px;
+    margin: 20px
+}
+
+QScrollBar::handle:vertical
+{
+    background-color: #d99100;
+    min-height: 5px;
+    border-radius: 4px;
+}
+
+
+
+
+QSlider::groove:horizontal {
+    border: 1px solid #697d91;
+    height: 4px;
+    background: #697d91;
+    margin: 20px;
+    border-radius: 2px;
+}
+
+QSlider::handle:horizontal {
+    background: #d99100;
+    border: 1px solid #d99100;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0;
+    border-radius: 9px;
+}
+
+QSlider::groove:vertical {
+    border: 1px solid #697d91;
+    width: 4px;
+    background: #697d91;
+    margin: 20px;
+    border-radius: 3px;
+}
+
+QSlider::handle:vertical {
+    background: #d99100;
+    border: 1px solid #d99100;
+    width: 16px;
+    height: 16px;
+    margin: 0 -8px;
+    border-radius: 9px;
+}
+
+QLabel
+{
+    border: 0;
+}

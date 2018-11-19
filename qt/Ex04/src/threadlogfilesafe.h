@@ -16,7 +16,7 @@ public:
     }
     void print(std::thread::id thread_id,int value){
 
-        std::call_once(header,[this](){in<<" HEADER "<<std::endl<<"------------"<<std::endl;});
+        std::call_once(header,[&](){in<<" HEADER "<<std::endl<<"------------"<<std::endl;});
         std::lock_guard<std::mutex> guard(mutexLogToFile);
         std::cout<<"Log from thread: "<<thread_id<<" with value: "<<value<<std::endl;
         in<<"Log from thread: "<<thread_id<<" with value: "<<value<<std::endl;
