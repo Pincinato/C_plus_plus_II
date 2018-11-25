@@ -7,10 +7,6 @@
 #include <chrono>
 #include "VCamera.h"
 #include "dataBufferPool.h"
-
-// TODO: Remove compile time dependency
-//#include "control.h"
-// ------------------------------------------------------------
 #include "icamera.h"
 
 VCamera::VCamera(ICamera *control, std::shared_ptr<DataBufferPool> dataPool) :
@@ -33,11 +29,15 @@ VCamera::~VCamera()
     {
         m_acquireThread.join();
     }
+    if(capture.isOpened()){
+        capture.release();
+    }
 }
 
 void VCamera::startPlayData()
 {
     m_play = true;
+    capture.open(0);
     m_acquireThread = std::thread(&VCamera::run, this);
     m_control->displayMsg(m_tag, "Start Playing");
 }
@@ -46,6 +46,9 @@ void VCamera::stop()
 {
     m_play = false;
     m_control->displayMsg(m_tag, "Stop playing");
+    if(capture.isOpened()){
+        capture.release();
+    }
 }
 
 bool VCamera::isPlaying()
@@ -61,7 +64,7 @@ void VCamera::setPlayRate(int playRate)
 //******* Below runs in own thread **********//
 void VCamera::run()
 {
-    while( m_play )
+    while( (m_play) & (capture.isOpened()))
     {
         DataBufferPtr nextPtr = m_dataPool->getBuffer();
         if( readImage(nextPtr) )
@@ -76,17 +79,12 @@ void VCamera::run()
 
 bool VCamera::readImage(DataBufferPtr data)
 {
-    int width = data->m_image.width();
-    int height = data->m_image.height();
-
-    for(int y = 0; y < height; y++)
-    {
-        for(int x = 0; x < width; x++)
-        {
-            int val = x + offset;
-            data->m_image.setPixel(x, y, qRgb(val, val ,val));
-        }
+    bool ACK=false;
+    //capture.read(frame);
+    capture>>data->m_frame;
+    if(!data->m_frame.empty()){
+        data->m_image =QImage(data->m_frame.data,data->m_frame.cols,data->m_frame.rows,data->m_frame.step,QImage::Format_RGB888);
+        ACK=true;
     }
-    offset+= 25;
-    return true;
+    return ACK;
 }

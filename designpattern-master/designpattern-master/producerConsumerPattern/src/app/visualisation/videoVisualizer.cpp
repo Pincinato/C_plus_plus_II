@@ -40,7 +40,8 @@ void VideoVisualizer::setScan(DataBufferPtr data)
 {
     if( !data )
         return;
-
+    cv::Mat frame_gray;
+    //cvtColor( data->m_frame, frame_gray, cv::COLOR_BGR2GRAY );
     m_image = data->m_image;
     redrawFrame();
 }

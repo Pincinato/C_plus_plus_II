@@ -47,6 +47,11 @@ SET( APP_SOURCES ${APP_SOURCES}
     src/app/visualisation/videoVisualizer.h
     src/app/visualisation/rOg_image.cpp
     src/app/visualisation/rOg_image.h
+    src/app/common/Eye_detector.cpp
+    src/app/common/Eye_detector.h
+    src/ui/mainwindow.cpp
+    src/ui/mainwindow.h
+    src/ui/mainwindow.ui
 )
 
 
@@ -67,13 +72,17 @@ IF(UNIX)
 SET(APP_LIBS ${APP_LIBS} ${CMAKE_THREAD_LIBS_INIT} )
 ENDIF(UNIX)
 
+#Include Opencv
+find_package(OpenCV REQUIRED)
+
 # set includes
 include_directories( ${APP_INCLUDE_DIRS} )
 
 # create exe
 add_executable(PCP src/main.cpp ${APP_SOURCES} )
 # link libs
-target_link_libraries(PCP Qt5::Widgets Qt5::Core ${APP_LIBS} )
+target_link_libraries(PCP Qt5::Widgets Qt5::Core ${OpenCV_LIBS} ${APP_LIBS} )
 
 # copy stylesheets
 file(COPY BFH.stylesheet DESTINATION ${PROJECT_BINARY_DIR})
+FILE(COPY src/files/haarcascade_frontalface_alt.xml src/files/haarcascade_eye_tree_eyeglasses.xml DESTINATION ${PROJECT_BINARY_DIR})

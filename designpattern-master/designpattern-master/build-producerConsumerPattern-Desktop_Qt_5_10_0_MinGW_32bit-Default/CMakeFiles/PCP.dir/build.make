@@ -256,10 +256,35 @@ CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj.provides: CMakeFiles/
 CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj.provides.build: CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj
 
 
+CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj: CMakeFiles/PCP.dir/flags.make
+CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj: CMakeFiles/PCP.dir/includes_CXX.rsp
+CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/eye_detector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PCP.dir\src\app\common\eye_detector.cpp.obj -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\app\common\eye_detector.cpp
+
+CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.i"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\app\common\eye_detector.cpp > CMakeFiles\PCP.dir\src\app\common\eye_detector.cpp.i
+
+CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.s"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\app\common\eye_detector.cpp -o CMakeFiles\PCP.dir\src\app\common\eye_detector.cpp.s
+
+CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.requires:
+
+.PHONY : CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.requires
+
+CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.provides: CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.provides.build
+.PHONY : CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.provides
+
+CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.provides.build: CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj
+
+
 CMakeFiles/PCP.dir/PCP_automoc.cpp.obj: CMakeFiles/PCP.dir/flags.make
 CMakeFiles/PCP.dir/PCP_automoc.cpp.obj: CMakeFiles/PCP.dir/includes_CXX.rsp
 CMakeFiles/PCP.dir/PCP_automoc.cpp.obj: PCP_automoc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PCP.dir/PCP_automoc.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PCP.dir/PCP_automoc.cpp.obj"
 	C:\Qt\Tools\mingw530_32\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PCP.dir\PCP_automoc.cpp.obj -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\PCP_automoc.cpp
 
 CMakeFiles/PCP.dir/PCP_automoc.cpp.i: cmake_force
@@ -291,6 +316,7 @@ PCP_OBJECTS = \
 "CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj" \
 "CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj" \
 "CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj" \
+"CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj" \
 "CMakeFiles/PCP.dir/PCP_automoc.cpp.obj"
 
 # External object files for target PCP
@@ -304,15 +330,33 @@ PCP.exe: CMakeFiles/PCP.dir/src/app/common/dataBufferPool.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj
+PCP.exe: CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/PCP_automoc.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/build.make
+PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_dnn343.dll.a
+PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_ml343.dll.a
+PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_objdetect343.dll.a
+PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_shape343.dll.a
+PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_stitching343.dll.a
+PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_superres343.dll.a
+PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_videostab343.dll.a
+PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_calib3d343.dll.a
+PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_features2d343.dll.a
+PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_flann343.dll.a
+PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_highgui343.dll.a
 PCP.exe: C:/Qt/5.10.0/mingw53_32/lib/libQt5Widgets.a
 PCP.exe: C:/Qt/5.10.0/mingw53_32/lib/libQt5Gui.a
 PCP.exe: C:/Qt/5.10.0/mingw53_32/lib/libQt5Core.a
+PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_photo343.dll.a
+PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_video343.dll.a
+PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_videoio343.dll.a
+PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_imgcodecs343.dll.a
+PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_imgproc343.dll.a
+PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_core343.dll.a
 PCP.exe: CMakeFiles/PCP.dir/linklibs.rsp
 PCP.exe: CMakeFiles/PCP.dir/objects1.rsp
 PCP.exe: CMakeFiles/PCP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable PCP.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable PCP.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\PCP.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -328,6 +372,7 @@ CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/common/dataBufferPool.cp
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj.requires
+CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/PCP_automoc.cpp.obj.requires
 
 .PHONY : CMakeFiles/PCP.dir/requires

@@ -11,12 +11,10 @@
 #include <memory>
 #include "icamera.h"
 #include <QTimer>
-// TODO: Remove compile time dependency with observer pattern
-// control should compile without including widget.h
-//#include "widget.h"
-// ------------------------------------------------------------
 #include "iwidget.h"
+#include "eye_detector.h"
 
+using namespace cv;
 // Forward declarations
 class VCamera;
 class DataBufferPool;
@@ -28,10 +26,6 @@ public:
     Control(IWidget *parent);
     ~Control() override;
 
-    // TODO: Move to interface
-    //void displayMsg(const std::string &tag, const std::string &msg) override;
-    //void setData(DataBufferPtr dataJunk) override;
-    // ------------------------------------------------------------
     void displayMsg(const std::string &tag, const std::string &msg) override;
     void setData(DataBufferPtr dataJunk) override;
 
@@ -40,14 +34,19 @@ public:
     void stopPlaying();
     bool isPlaying() const;
     void setPlayRate(int playRate);
+    bool getEyes(DataBufferPtr &data);
+    bool setEyesInFrame(DataBufferPtr &data);
+    bool setFaceInFrame(DataBufferPtr &data);
 
 private:
     IWidget* m_widget;
     uint m_height;
     uint m_widht;
-
+    std::unique_ptr<Eye_detector> m_tracking;
     std::unique_ptr<VCamera> m_player;
     std::shared_ptr<DataBufferPool> m_dataPool;
     std::unique_ptr<QTimer> m_ScanUpdateRateTimer;
+    std::vector<Rect> eyes;
+    std::vector<Rect> faces;
 };
 #endif // CONTROL_H

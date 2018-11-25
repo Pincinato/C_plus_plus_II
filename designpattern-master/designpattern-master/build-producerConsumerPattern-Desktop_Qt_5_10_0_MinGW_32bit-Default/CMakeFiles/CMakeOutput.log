@@ -677,3 +677,141 @@ int main(int argc, char** argv)
 #endif
 }
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe" "cmTC_2d468/fast"
+C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe -f CMakeFiles\cmTC_2d468.dir\build.make CMakeFiles/cmTC_2d468.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2d468.dir/CheckIncludeFile.c.obj
+C:\Qt\Tools\mingw530_32\bin\gcc.exe     -o CMakeFiles\cmTC_2d468.dir\CheckIncludeFile.c.obj   -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_2d468.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_2d468.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_2d468.dir/objects.a
+C:\Qt\Tools\mingw530_32\bin\ar.exe cr CMakeFiles\cmTC_2d468.dir/objects.a @CMakeFiles\cmTC_2d468.dir\objects1.rsp
+C:\Qt\Tools\mingw530_32\bin\gcc.exe       -Wl,--whole-archive CMakeFiles\cmTC_2d468.dir/objects.a -Wl,--no-whole-archive  -o cmTC_2d468.exe -Wl,--out-implib,libcmTC_2d468.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_2d468.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+
+
+Determining if the pthread_create exist passed with the following output:
+Change Dir: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe" "cmTC_ac71a/fast"
+C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe -f CMakeFiles\cmTC_ac71a.dir\build.make CMakeFiles/cmTC_ac71a.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ac71a.dir/CheckSymbolExists.c.obj
+C:\Qt\Tools\mingw530_32\bin\gcc.exe     -o CMakeFiles\cmTC_ac71a.dir\CheckSymbolExists.c.obj   -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+Linking C executable cmTC_ac71a.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_ac71a.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_ac71a.dir/objects.a
+C:\Qt\Tools\mingw530_32\bin\ar.exe cr CMakeFiles\cmTC_ac71a.dir/objects.a @CMakeFiles\cmTC_ac71a.dir\objects1.rsp
+C:\Qt\Tools\mingw530_32\bin\gcc.exe       -Wl,--whole-archive CMakeFiles\cmTC_ac71a.dir/objects.a -Wl,--no-whole-archive  -o cmTC_ac71a.exe -Wl,--out-implib,libcmTC_ac71a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_ac71a.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+
+File C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe" "cmTC_f61b1/fast"
+C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe -f CMakeFiles\cmTC_f61b1.dir\build.make CMakeFiles/cmTC_f61b1.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f61b1.dir/CheckIncludeFile.c.obj
+C:\Qt\Tools\mingw530_32\bin\gcc.exe     -o CMakeFiles\cmTC_f61b1.dir\CheckIncludeFile.c.obj   -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_f61b1.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_f61b1.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_f61b1.dir/objects.a
+C:\Qt\Tools\mingw530_32\bin\ar.exe cr CMakeFiles\cmTC_f61b1.dir/objects.a @CMakeFiles\cmTC_f61b1.dir\objects1.rsp
+C:\Qt\Tools\mingw530_32\bin\gcc.exe       -Wl,--whole-archive CMakeFiles\cmTC_f61b1.dir/objects.a -Wl,--no-whole-archive  -o cmTC_f61b1.exe -Wl,--out-implib,libcmTC_f61b1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_f61b1.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+
+
+Determining if the pthread_create exist passed with the following output:
+Change Dir: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe" "cmTC_bcbba/fast"
+C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe -f CMakeFiles\cmTC_bcbba.dir\build.make CMakeFiles/cmTC_bcbba.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bcbba.dir/CheckSymbolExists.c.obj
+C:\Qt\Tools\mingw530_32\bin\gcc.exe     -o CMakeFiles\cmTC_bcbba.dir\CheckSymbolExists.c.obj   -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+Linking C executable cmTC_bcbba.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_bcbba.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_bcbba.dir/objects.a
+C:\Qt\Tools\mingw530_32\bin\ar.exe cr CMakeFiles\cmTC_bcbba.dir/objects.a @CMakeFiles\cmTC_bcbba.dir\objects1.rsp
+C:\Qt\Tools\mingw530_32\bin\gcc.exe       -Wl,--whole-archive CMakeFiles\cmTC_bcbba.dir/objects.a -Wl,--no-whole-archive  -o cmTC_bcbba.exe -Wl,--out-implib,libcmTC_bcbba.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_bcbba.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+
+File C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe" "cmTC_4e014/fast"
+C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe -f CMakeFiles\cmTC_4e014.dir\build.make CMakeFiles/cmTC_4e014.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4e014.dir/CheckIncludeFile.c.obj
+C:\Qt\Tools\mingw530_32\bin\gcc.exe     -o CMakeFiles\cmTC_4e014.dir\CheckIncludeFile.c.obj   -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_4e014.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_4e014.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_4e014.dir/objects.a
+C:\Qt\Tools\mingw530_32\bin\ar.exe cr CMakeFiles\cmTC_4e014.dir/objects.a @CMakeFiles\cmTC_4e014.dir\objects1.rsp
+C:\Qt\Tools\mingw530_32\bin\gcc.exe       -Wl,--whole-archive CMakeFiles\cmTC_4e014.dir/objects.a -Wl,--no-whole-archive  -o cmTC_4e014.exe -Wl,--out-implib,libcmTC_4e014.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_4e014.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+
+
+Determining if the pthread_create exist passed with the following output:
+Change Dir: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe" "cmTC_a3f77/fast"
+C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe -f CMakeFiles\cmTC_a3f77.dir\build.make CMakeFiles/cmTC_a3f77.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a3f77.dir/CheckSymbolExists.c.obj
+C:\Qt\Tools\mingw530_32\bin\gcc.exe     -o CMakeFiles\cmTC_a3f77.dir\CheckSymbolExists.c.obj   -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+Linking C executable cmTC_a3f77.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_a3f77.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_a3f77.dir/objects.a
+C:\Qt\Tools\mingw530_32\bin\ar.exe cr CMakeFiles\cmTC_a3f77.dir/objects.a @CMakeFiles\cmTC_a3f77.dir\objects1.rsp
+C:\Qt\Tools\mingw530_32\bin\gcc.exe       -Wl,--whole-archive CMakeFiles\cmTC_a3f77.dir/objects.a -Wl,--no-whole-archive  -o cmTC_a3f77.exe -Wl,--out-implib,libcmTC_a3f77.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_a3f77.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp'
+
+File C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

@@ -1,0 +1,4 @@
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug/CMakeFiles/PCP.dir
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug/CMakeFiles/PCP_automoc.dir

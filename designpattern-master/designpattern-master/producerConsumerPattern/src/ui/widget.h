@@ -12,13 +12,14 @@
 #include <memory>
 #include "dataBuffer.h"
 #include "iwidget.h"
-
+//#include "eye_detector.h"
 // Forward declarations
 class DataBuffer;
 class Control;
 class VideoVisualizer;
 class QTimer;
 class IWidget;
+//class Eye_detector;
 
 namespace Ui {
 class Widget;
@@ -53,6 +54,7 @@ private:
     QString m_tag;
 
     std::shared_ptr<DataBuffer> m_lastData;
+    //std::unique_ptr<Control> m_appCtrl;
     std::unique_ptr<Control> m_appCtrl;
     std::unique_ptr<VideoVisualizer> m_videoVisualizer;
     std::unique_ptr<QTimer> m_guiUpdateTimer;
@@ -61,6 +63,16 @@ private:
     size_t m_frameCount;
     const size_t m_GuiUpdateRateMS;
     const size_t m_fpsUpdateRateMS;
+
+
+private slots:
+
+    //void updateFrameEyes();
+    void sendBack();
+
+signals:
+    //void newFrame();
+    void back();
 
 };
 

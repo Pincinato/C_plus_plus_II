@@ -12,6 +12,7 @@
 #include "dataBuffer.h"
 #include "control.h"
 #include "videoVisualizer.h"
+//#include "eye_detector.h"
 
 
 Widget::Widget(QWidget *parent) :
@@ -26,7 +27,7 @@ Widget::Widget(QWidget *parent) :
 
     // Setup main control - passing widget to control
     m_appCtrl.reset( new Control(this) );
-
+    //m_appCtrl.reset(new Eye_detector(this));
     // reset data container
     m_lastData.reset();
 
@@ -47,6 +48,11 @@ Widget::Widget(QWidget *parent) :
     connect( m_frameRateTimer.get(), SIGNAL(timeout()), this, SLOT(updateFrameRate()) );
     m_frameRateTimer->start(m_fpsUpdateRateMS);
 
+    //back button
+    connect(ui->back_pushButton,SIGNAL(clicked()),this,SLOT(sendBack()));
+    //newFrame signal
+    //connect(this,SIGNAL(newFrame()),this,SLOT(updateFrameEyes()));
+
 }
 
 Widget::~Widget()
@@ -66,6 +72,7 @@ void Widget::setData(DataBufferPtr data)
 {
     m_lastData = data;
     ++m_frameCount;
+    //emit newFrame();
 }
 
 // -----------------------------------------------------------------
@@ -87,6 +94,9 @@ void Widget::updateGui()
 {
     if( m_lastData )
     {
+        m_appCtrl->getEyes(m_lastData);
+        m_appCtrl->setEyesInFrame(m_lastData);
+        //m_appCtrl->setFaceInFrame(m_lastData);
         m_videoVisualizer->setScan(m_lastData);
     }
 }
@@ -117,3 +127,24 @@ void Widget::updateFrameRate()
     ui->frameRate_label->setText("FPS: " + QString::number(fps));
     m_frameCount = 0;
 }
+
+void Widget::sendBack(){
+
+    if( m_appCtrl->isPlaying() )
+    {
+        m_appCtrl->stopPlaying();
+        ui->play_pushButton->setText("Play");
+    }
+    emit back();
+}
+
+/*
+void Widget::updateFrameEyes(){
+
+    if( m_lastData )
+    {
+        m_appCtrl->getEyes(m_lastData);
+        m_appCtrl->setEyesInFrame(m_lastData);
+    }
+}
+*/

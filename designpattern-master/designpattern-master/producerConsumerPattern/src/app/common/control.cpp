@@ -13,6 +13,8 @@ Control::Control(IWidget *parent) :
     m_height(256),
     m_widht(256)
 {
+    faces.clear();
+    eyes.clear();
     // init control handels
     init();
 }
@@ -33,6 +35,9 @@ void Control::init()
 
     // Message
     m_widget->displayMsg("Control", "Constructed");
+
+    //eye_detector
+    m_tracking.reset(new Eye_detector);
 }
 
 // -----------------------------------------------------------------
@@ -68,4 +73,18 @@ bool Control::isPlaying() const
 void Control::setPlayRate(int playRate)
 {
     m_player->setPlayRate(playRate);
+}
+
+bool Control::getEyes(DataBufferPtr &data){
+
+    return m_tracking->detectEyes(data->m_frame,faces,eyes);
+}
+
+bool Control::setEyesInFrame(DataBufferPtr &data){
+
+    return m_tracking->drawEyes(data->m_frame,faces,eyes);
+}
+
+bool Control::setFaceInFrame(DataBufferPtr &data){
+    return m_tracking->drawFaces(data->m_frame,faces);
 }

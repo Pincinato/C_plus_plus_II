@@ -5,7 +5,7 @@
 		<Option title="PCP"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\5.10.0\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\5.10.0\mingw53_32\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\5.10.0\mingw53_32\lib\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\5.10.0\mingw53_32\lib\cmake\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\5.10.0\mingw53_32\lib\cmake\Qt5Core\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\5.10.0\mingw53_32\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\5.10.0\mingw53_32\lib\cmake\Qt5Gui\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\5.10.0\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\5.10.0\mingw53_32\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\5.10.0\mingw53_32\lib\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\5.10.0\mingw53_32\lib\cmake\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\5.10.0\mingw53_32\lib\cmake\Qt5Core\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\5.10.0\mingw53_32\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\5.10.0\mingw53_32\lib\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\..\..\..\Documents\;CMake Files\..\..\..\..\..\..\..\..\Documents\opencv\;CMake Files\..\..\..\..\..\..\..\..\Documents\opencv\release\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default"/>
@@ -40,6 +40,27 @@
 					<Add directory="C:/Qt/5.10.0/mingw53_32/include/QtANGLE"/>
 					<Add directory="C:/Qt/5.10.0/mingw53_32/include/QtCore"/>
 					<Add directory="C:/Qt/5.10.0/mingw53_32/./mkspecs/win32-g++"/>
+					<Add directory="C:/Users/THP/Documents/opencv/release"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/include/opencv"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/core/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/flann/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/imgproc/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/ml/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/objdetect/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/photo/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/video/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/dnn/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/imgcodecs/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/shape/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/videoio/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/highgui/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/superres/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/ts/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/features2d/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/calib3d/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/stitching/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/videostab/include"/>
 					<Add directory="C:/Qt/Tools/mingw530_32/bin/../lib/gcc/i686-w64-mingw32/5.3.0/include"/>
 					<Add directory="C:/Qt/Tools/mingw530_32/bin/../lib/gcc/i686-w64-mingw32/5.3.0/include-fixed"/>
 					<Add directory="C:/Qt/Tools/mingw530_32/bin/../lib/gcc/i686-w64-mingw32/5.3.0/../../../../i686-w64-mingw32/include"/>
@@ -77,6 +98,27 @@
 					<Add directory="C:/Qt/5.10.0/mingw53_32/include/QtANGLE"/>
 					<Add directory="C:/Qt/5.10.0/mingw53_32/include/QtCore"/>
 					<Add directory="C:/Qt/5.10.0/mingw53_32/./mkspecs/win32-g++"/>
+					<Add directory="C:/Users/THP/Documents/opencv/release"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/include/opencv"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/core/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/flann/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/imgproc/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/ml/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/objdetect/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/photo/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/video/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/dnn/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/imgcodecs/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/shape/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/videoio/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/highgui/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/superres/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/ts/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/features2d/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/calib3d/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/stitching/include"/>
+					<Add directory="C:/Users/THP/Documents/opencv/sources/modules/videostab/include"/>
 					<Add directory="C:/Qt/Tools/mingw530_32/bin/../lib/gcc/i686-w64-mingw32/5.3.0/include"/>
 					<Add directory="C:/Qt/Tools/mingw530_32/bin/../lib/gcc/i686-w64-mingw32/5.3.0/include-fixed"/>
 					<Add directory="C:/Qt/Tools/mingw530_32/bin/../lib/gcc/i686-w64-mingw32/5.3.0/../../../../i686-w64-mingw32/include"/>
@@ -150,6 +192,15 @@
 			<Option target="PCP"/>
 		</Unit>
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/dataBufferPool.h">
+			<Option target="PCP"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/eye_detector.cpp">
+			<Option target="PCP"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/eye_detector.h">
+			<Option target="PCP"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/ieye_detector.h">
 			<Option target="PCP"/>
 		</Unit>
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/visualisation/rOg_image.cpp">
@@ -256,6 +307,15 @@
 		</Unit>
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/../../../../../../../../../../Qt/5.10.0/mingw53_32/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\..\Qt\5.10.0\mingw53_32\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/../../../../../../../../Documents/opencv/release/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Documents\opencv\release\"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/../../../../../../../../Documents/opencv/release/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Documents\opencv\release\"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/../../../../../../../../Documents/opencv/release/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\Documents\opencv\release\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

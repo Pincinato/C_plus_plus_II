@@ -9,6 +9,10 @@
 
 #include <memory>
 #include <QImage>
+
+#include <opencv2/objdetect.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/imgproc.hpp>
 /**
  * This class is the container for one data buffer. Modify content as required
  *
@@ -26,9 +30,9 @@ public:
      * @param width
      */
     DataBuffer(const uint& height, const uint& width );
-
 public:
-    QImage m_image;   
+    QImage m_image;
+    cv::Mat m_frame;
 };
 
 typedef std::shared_ptr<DataBuffer> DataBufferPtr;

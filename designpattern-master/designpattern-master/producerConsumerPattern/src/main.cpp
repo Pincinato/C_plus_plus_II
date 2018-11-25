@@ -6,7 +6,7 @@
 *****************************************************************************/
 #include <QApplication>
 #include <QFile>
-#include "widget.h"
+#include "mainwindow.h"
 
 int main(int argc, char *argv[])
 {
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     QString StyleSheet = QLatin1String(File.readAll());
     qApp->setStyleSheet(StyleSheet);
 
-    Widget w;
+    MainWindow w;
     w.show();
     return a.exec();
 }

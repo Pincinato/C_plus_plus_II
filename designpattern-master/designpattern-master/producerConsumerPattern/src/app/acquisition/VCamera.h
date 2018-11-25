@@ -9,7 +9,11 @@
 
 #include <thread>
 #include "dataBuffer.h"
-
+#include <opencv2/objdetect.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/imgproc.hpp>
+using namespace cv;
+using namespace std;
 // Forward declarations
 class ICamera;
 class DataBufferPool;
@@ -38,12 +42,8 @@ private:
      std::string m_tag;
      std::thread m_acquireThread;
      bool m_play;
-
-     // TODO: Remove compile time dependency
-     //Control* m_control;
-     // ------------------------------------------------------------
+     VideoCapture capture;
      ICamera* m_control;
-
      int m_playRate;
      std::shared_ptr<DataBufferPool> m_dataPool;
      size_t offset;
