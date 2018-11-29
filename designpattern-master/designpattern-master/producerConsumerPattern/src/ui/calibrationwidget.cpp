@@ -42,9 +42,9 @@ void CalibrationWidget::myShow(){
 void CalibrationWidget::keyPressEvent(QKeyEvent *ev){
 
     if(ev->key()==Qt::Key_Space){
-        m_appCtrl->stopPlaying();
         if(m_lastData){
             if(m_appCtrl->getEyes(m_lastData)){
+                m_appCtrl->stopPlaying();
                 m_appCtrl->setEyesInFrame(m_lastData);
                 m_appCtrl->setEyesCenter(m_lastData);
                 QPixmap newImage;
@@ -103,8 +103,9 @@ void CalibrationWidget::Refuse(){
     m_appCtrl->startPlaying();
 }
 
-void CalibrationWidget::setPoint(const cv::Point eye_center){
-    Point a;
-    a= eye_center;
+void CalibrationWidget::setPoint(const cv::Point &eyeLeft,const cv::Point &eyeRight){
+    Point a,b;
+    a= eyeLeft;
+    b= eyeRight;
     //m_owner->setCalibrationPoint(eye_center); // problem here when come from calibration
 }

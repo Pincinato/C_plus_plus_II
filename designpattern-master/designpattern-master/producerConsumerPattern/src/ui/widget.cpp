@@ -170,7 +170,8 @@ string Widget::getCamOption(){
     return CamOption;
 }
 
-void Widget::setPoint(const cv::Point eye_center){
-    cv::Point a;
-    a=eye_center;
+void Widget::setPoint(const cv::Point &eyeLeft,const cv::Point &eyeRight){
+    cv::Point a,b;
+    a=eyeLeft;
+    b=eyeRight;
 }

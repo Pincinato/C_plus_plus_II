@@ -56,6 +56,7 @@ private:
     std::unique_ptr<QTimer> m_ScanUpdateRateTimer;
     std::vector<Rect> eyes;
     std::vector<Rect> faces;
-    Point centerEyes;
+    Point centerEyeLeft;
+    Point centerEyeRight;
 };
 #endif // CONTROL_H

@@ -84,10 +84,11 @@ bool Control::getEyes(DataBufferPtr &data){
 
    bool ACK = m_tracking->detectEyes(data->m_frame,faces,eyes);
    if(ACK){
-      centerEyes = m_tracking->detectCenter(faces,eyes);
+      centerEyeLeft = m_tracking->detectCenterLeftEye(faces,eyes);
+      centerEyeRight = m_tracking->detectCenterRightEye(faces,eyes);
       Point zero(0,0);
-      if(centerEyes==zero){ ACK=false;}
-      else{m_widget->setPoint(centerEyes);}
+      if((centerEyeLeft==zero)|| (centerEyeRight==zero)){ ACK=false;}
+      else{m_widget->setPoint(centerEyeLeft,centerEyeRight);}
    }
    return ACK;
 }
@@ -104,7 +105,8 @@ bool Control::setFaceInFrame(DataBufferPtr &data){
 }
 
 bool Control::setEyesCenter(DataBufferPtr &data){
-    return m_tracking->drawEyesCenter(data->m_frame,eyes,centerEyes);
+   return m_tracking->drawEyesCenter(data->m_frame,eyes,centerEyeLeft) & (m_tracking->drawEyesCenter(data->m_frame,eyes,centerEyeRight));
+
 }
 
 void Control::setCamera(const string &option)

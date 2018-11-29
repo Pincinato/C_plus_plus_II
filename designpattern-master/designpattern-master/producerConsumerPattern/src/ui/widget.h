@@ -35,7 +35,7 @@ public:
     void displayMsg(const std::string &tag, const std::string &msg) override;
     void setData(DataBufferPtr data) override;
     std::string getCamOption();
-    void setPoint(const cv::Point eye_center) override;
+    void setPoint(const cv::Point &eyeLeft,const cv::Point &eyeRight) override;
 private:
     void initGUI();
     void updateScanVis();

@@ -27,9 +27,11 @@ public:
 
     bool detectEyes(const Mat &frame, vector<Rect> &faces,vector<Rect> &eyes);
     Rect getRightEye(vector<Rect> &eyes);
+    Rect getLeftEye(vector<Rect> &eyes);
     bool drawEyes( Mat &frame,vector<Rect> &faces, vector<Rect> &eyes);
     bool drawFaces(Mat &frame,vector<Rect> &faces);
-    Point detectCenter(std::vector<Rect> &faces, vector<Rect> &eyes);
+    Point detectCenterLeftEye(std::vector<Rect> &faces, vector<Rect> &eyes);
+    Point detectCenterRightEye(std::vector<Rect> &faces, vector<Rect> &eyes);
     bool drawBothCenterEye(std::vector<Rect> &faces, vector<Rect> &eyes);
     bool drawEyesCenter(Mat &frame, vector<Rect> &eyes,Point & eye_center);
 private:

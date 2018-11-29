@@ -9,7 +9,7 @@ ActionWidget::ActionWidget(QWidget *parent,const string &CamOp) :
     ui->setupUi(this);
     m_lastData.reset();
     m_appCtrl.reset( new Control(this) );
-     connect(ui->BackButton,SIGNAL(clicked),this,SLOT(buttonBack()));
+     connect(ui->BackButton,SIGNAL(clicked()),this,SLOT(buttonBack()));
     //setting button layout;
 }
 
@@ -21,11 +21,11 @@ ActionWidget::~ActionWidget()
 void ActionWidget::myShow(){
 
 
-    QPixmap newImage("back_button.png");
-    newImage = newImage.scaled(ui->BackButton->size(), Qt::IgnoreAspectRatio);
-    QPalette palette;
-    palette.setBrush(QPalette::Background, newImage);
-    this->setPalette(palette);
+    QPixmap ButtonImage("back_button.png");
+    QIcon ButtonIcon(ButtonImage);
+    ui->BackButton->setIcon(ButtonIcon);
+    ui->BackButton->setIconSize(ButtonImage.rect().size());
+    ui->BackButton->setFixedSize(ButtonImage.rect().size());
     this->showFullScreen();
 }
 
@@ -41,8 +41,9 @@ void ActionWidget::displayMsg(const std::string &tag, const std::string &msg) {
 void ActionWidget::setData(DataBufferPtr data){
     m_lastData = data;
 }
-void ActionWidget::setPoint(const cv::Point eye_center){
-    std::cout << " Point x: " << eye_center.x << " y:" <<  eye_center.y << std::endl;
+void ActionWidget::setPoint(const cv::Point &eyeLeft,const cv::Point &eyeRight){
+    std::cout << " Point x: " << eyeLeft.x << " y:" <<  eyeLeft.y << std::endl;
+    std::cout << " Point x: " << eyeRight.x << " y:" <<  eyeRight.y << std::endl;
 }
 
 void ActionWidget::buttonBack(){

@@ -11,7 +11,7 @@ public:
     virtual ~IControl(){}
     virtual void displayMsg(const std::string &tag, const std::string &msg) =0;
     virtual void setData(DataBufferPtr dataJunk) =0;
-    virtual void setPoint(const cv::Point eye_center) =0;
+    virtual void setPoint(const cv::Point &eyeLeft,const cv::Point &eyeRight) =0;
 
 };
 

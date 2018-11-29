@@ -63,8 +63,9 @@ void MainWindow::backActionView(){
     m_actionWigdet->close();
 }
 
-void MainWindow::setCalibrationPoint(cv::Point eye_center){
-    calibrationEye=eye_center;
+void MainWindow::setCalibrationPoint(const cv::Point &eyeLeft,const cv::Point &eyeRight){
+    calibrationEyeLeft=eyeLeft;
+    calibrationEyeRight=eyeRight;
 }
 
 
