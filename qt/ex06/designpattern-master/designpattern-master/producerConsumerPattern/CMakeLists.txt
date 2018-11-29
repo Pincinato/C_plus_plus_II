@@ -30,19 +30,23 @@ SET( APP_LIBS )
 
 # main sources
 SET( APP_SOURCES ${APP_SOURCES}
-    src/ui/IWidget.h
     src/ui/widget.cpp
     src/ui/widget.h
     src/ui/widget.ui
     src/app/common/control.cpp
     src/app/common/control.h
+    src/app/common/icontrol.h
     src/app/common/dataBuffer.cpp
     src/app/common/dataBuffer.h
     src/app/common/dataBufferPool.cpp
     src/app/common/dataBufferPool.h
     src/app/acquisition/VCamera.cpp
     src/app/acquisition/VCamera.h
+    src/app/acquisition/vrgbcamera.cpp
+    src/app/acquisition/vrgbcamera.h
     src/app/acquisition/icamera.h
+    src/app/acquisition/BaseCamera.h
+    src/app/acquisition/BaseCameraFactory.h
     src/app/visualisation/videoVisualizer.cpp
     src/app/visualisation/videoVisualizer.h
     src/app/visualisation/rOg_image.cpp

@@ -189,6 +189,33 @@ src/app/acquisition/VCamera.cpp.s:
 	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.s
 .PHONY : src/app/acquisition/VCamera.cpp.s
 
+src/app/acquisition/vrgbcamera.obj: src/app/acquisition/vrgbcamera.cpp.obj
+
+.PHONY : src/app/acquisition/vrgbcamera.obj
+
+# target to build an object file
+src/app/acquisition/vrgbcamera.cpp.obj:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.obj
+.PHONY : src/app/acquisition/vrgbcamera.cpp.obj
+
+src/app/acquisition/vrgbcamera.i: src/app/acquisition/vrgbcamera.cpp.i
+
+.PHONY : src/app/acquisition/vrgbcamera.i
+
+# target to preprocess a source file
+src/app/acquisition/vrgbcamera.cpp.i:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.i
+.PHONY : src/app/acquisition/vrgbcamera.cpp.i
+
+src/app/acquisition/vrgbcamera.s: src/app/acquisition/vrgbcamera.cpp.s
+
+.PHONY : src/app/acquisition/vrgbcamera.s
+
+# target to generate assembly for a file
+src/app/acquisition/vrgbcamera.cpp.s:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.s
+.PHONY : src/app/acquisition/vrgbcamera.cpp.s
+
 src/app/common/control.obj: src/app/common/control.cpp.obj
 
 .PHONY : src/app/common/control.obj
@@ -394,6 +421,9 @@ help:
 	@echo ... src/app/acquisition/VCamera.obj
 	@echo ... src/app/acquisition/VCamera.i
 	@echo ... src/app/acquisition/VCamera.s
+	@echo ... src/app/acquisition/vrgbcamera.obj
+	@echo ... src/app/acquisition/vrgbcamera.i
+	@echo ... src/app/acquisition/vrgbcamera.s
 	@echo ... src/app/common/control.obj
 	@echo ... src/app/common/control.i
 	@echo ... src/app/common/control.s

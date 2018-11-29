@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/PCP.dir/src/app/common/dataBuffer.cpp.obj"
   "CMakeFiles/PCP.dir/src/app/common/dataBufferPool.cpp.obj"
   "CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj"
+  "CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.obj"
   "CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj"
   "CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj"
   "CMakeFiles/PCP.dir/PCP_automoc.cpp.obj"

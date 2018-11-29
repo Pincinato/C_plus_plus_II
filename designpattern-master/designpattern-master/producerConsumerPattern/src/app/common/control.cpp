@@ -5,13 +5,16 @@
 ** Contact:    Patrik Arnold ( patrik.arnold@bfh.ch )
 *****************************************************************************/
 #include "control.h"
+#include "icontrol.h"
 #include "VCamera.h"
 #include "dataBufferPool.h"
+#include "eye_detector.h"
 
-Control::Control(IWidget *parent) :
+Control::Control(IControl *parent) :
     m_widget(parent),
     m_height(256),
-    m_widht(256)
+    m_widht(256),
+    cameraOption("WebCam")
 {
     faces.clear();
     eyes.clear();
@@ -31,7 +34,9 @@ void Control::init()
     m_dataPool.reset(new DataBufferPool(m_height, m_widht));
 
     // create file reader
-    m_player.reset( new VCamera( this, m_dataPool) );
+    camera_factory.reset(new BaseCameraFactory);
+    m_player.reset();
+    m_player = camera_factory->CreateCamera(this,m_dataPool,cameraOption);
 
     // Message
     m_widget->displayMsg("Control", "Constructed");
@@ -77,14 +82,34 @@ void Control::setPlayRate(int playRate)
 
 bool Control::getEyes(DataBufferPtr &data){
 
-    return m_tracking->detectEyes(data->m_frame,faces,eyes);
+   bool ACK = m_tracking->detectEyes(data->m_frame,faces,eyes);
+   if(ACK){
+      centerEyes = m_tracking->detectCenter(faces,eyes);
+      Point zero(0,0);
+      if(centerEyes==zero){ ACK=false;}
+      else{m_widget->setPoint(centerEyes);}
+   }
+   return ACK;
 }
 
 bool Control::setEyesInFrame(DataBufferPtr &data){
 
-    return m_tracking->drawEyes(data->m_frame,faces,eyes);
+   return m_tracking->drawEyes(data->m_frame,faces,eyes);
+
 }
 
 bool Control::setFaceInFrame(DataBufferPtr &data){
     return m_tracking->drawFaces(data->m_frame,faces);
+
+}
+
+bool Control::setEyesCenter(DataBufferPtr &data){
+    return m_tracking->drawEyesCenter(data->m_frame,eyes,centerEyes);
+}
+
+void Control::setCamera(const string &option)
+{
+
+ cameraOption.clear();
+ cameraOption.append(option);
 }

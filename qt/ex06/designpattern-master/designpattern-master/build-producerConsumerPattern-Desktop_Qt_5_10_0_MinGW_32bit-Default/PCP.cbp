@@ -131,7 +131,19 @@
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/VCamera.h">
 			<Option target="PCP"/>
 		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamera.h">
+			<Option target="PCP"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamerafactory.h">
+			<Option target="PCP"/>
+		</Unit>
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/icamera.h">
+			<Option target="PCP"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/vrgbcamera.cpp">
+			<Option target="PCP"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/vrgbcamera.h">
 			<Option target="PCP"/>
 		</Unit>
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/control.cpp">
@@ -152,6 +164,9 @@
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/dataBufferPool.h">
 			<Option target="PCP"/>
 		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/icontrol.h">
+			<Option target="PCP"/>
+		</Unit>
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/visualisation/rOg_image.cpp">
 			<Option target="PCP"/>
 		</Unit>
@@ -165,9 +180,6 @@
 			<Option target="PCP"/>
 		</Unit>
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/main.cpp">
-			<Option target="PCP"/>
-		</Unit>
-		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/iwidget.h">
 			<Option target="PCP"/>
 		</Unit>
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/widget.cpp">

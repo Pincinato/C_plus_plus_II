@@ -7,21 +7,17 @@
 #include <chrono>
 #include "VCamera.h"
 #include "dataBufferPool.h"
-
-// TODO: Remove compile time dependency
-//#include "control.h"
-// ------------------------------------------------------------
 #include "icamera.h"
 
 VCamera::VCamera(ICamera *control, std::shared_ptr<DataBufferPool> dataPool) :
+    BaseCamera(control,dataPool),
     m_tag("Player"),
     m_play(false),
-    m_control(control),
     m_playRate(33),
-    m_dataPool(dataPool),
     offset(0)
+
 {
-    m_control->displayMsg(m_tag, "Player constructed");
+    m_control->displayMsg(m_tag, "Player VCamera constructed");
 }
 
 VCamera::~VCamera()
@@ -33,6 +29,7 @@ VCamera::~VCamera()
     {
         m_acquireThread.join();
     }
+    m_control->displayMsg(m_tag, "Player VCamera destroyed");
 }
 
 void VCamera::startPlayData()

@@ -19,6 +19,20 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
+        <widget class="QComboBox" name="CameraOption">
+         <item>
+          <property name="text">
+           <string>VCamera</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>RGBCamera</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
         <widget class="QPushButton" name="play_pushButton">
          <property name="minimumSize">
           <size>

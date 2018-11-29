@@ -132,8 +132,8 @@ CMakeFiles/PCP.dir/PCP_automoc.cpp.obj
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/PCP_automoc.dir/moc_rOg_image_L4Z25VNYTV32PG.cpp
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default/PCP_automoc.dir/moc_widget_LD5AFFWRDBITAG.cpp
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/dataBuffer.h
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/icontrol.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/visualisation/rOg_image.h
- C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/iwidget.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/widget.h
 CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj
  C:/Qt/5.10.0/mingw53_32/include/QtCore/qalgorithms.h
@@ -211,7 +211,88 @@ CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj
  C:/Qt/5.10.0/mingw53_32/include/QtGui/qwindowdefs_win.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/VCamera.cpp
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/VCamera.h
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamera.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/icamera.h
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/dataBuffer.h
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/dataBufferPool.h
+CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.obj
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qalgorithms.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qarraydata.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qatomic.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qatomic_bootstrap.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qatomic_cxx11.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qatomic_msvc.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qbasicatomic.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qbytearray.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qbytearraylist.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qchar.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qcompilerdetection.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qconfig-bootstrapped.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qconfig.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qcontainerfwd.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qcoreevent.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qdatastream.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qflags.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qgenericatomic.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qglobal.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qglobalstatic.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qhashfunctions.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qiodevice.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qiterator.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qline.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qlist.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qlogging.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qmargins.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qmetatype.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qmutex.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qnamespace.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qnumeric.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qobject.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qobject_impl.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qobjectdefs.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qobjectdefs_impl.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qpair.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qpoint.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qprocessordetection.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qrect.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qrefcount.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qregexp.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qscopedpointer.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qsize.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qstring.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qstringalgorithms.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qstringbuilder.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qstringlist.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qstringliteral.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qstringmatcher.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qstringview.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qsysinfo.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qsystemdetection.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qtcore-config.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qtypeinfo.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qvarlengtharray.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qvector.h
+ C:/Qt/5.10.0/mingw53_32/include/QtCore/qversiontagging.h
+ C:/Qt/5.10.0/mingw53_32/include/QtGui/QImage
+ C:/Qt/5.10.0/mingw53_32/include/QtGui/qcolor.h
+ C:/Qt/5.10.0/mingw53_32/include/QtGui/qimage.h
+ C:/Qt/5.10.0/mingw53_32/include/QtGui/qmatrix.h
+ C:/Qt/5.10.0/mingw53_32/include/QtGui/qpaintdevice.h
+ C:/Qt/5.10.0/mingw53_32/include/QtGui/qpainterpath.h
+ C:/Qt/5.10.0/mingw53_32/include/QtGui/qpixelformat.h
+ C:/Qt/5.10.0/mingw53_32/include/QtGui/qpolygon.h
+ C:/Qt/5.10.0/mingw53_32/include/QtGui/qregion.h
+ C:/Qt/5.10.0/mingw53_32/include/QtGui/qrgb.h
+ C:/Qt/5.10.0/mingw53_32/include/QtGui/qrgba64.h
+ C:/Qt/5.10.0/mingw53_32/include/QtGui/qtgui-config.h
+ C:/Qt/5.10.0/mingw53_32/include/QtGui/qtguiglobal.h
+ C:/Qt/5.10.0/mingw53_32/include/QtGui/qtransform.h
+ C:/Qt/5.10.0/mingw53_32/include/QtGui/qwindowdefs.h
+ C:/Qt/5.10.0/mingw53_32/include/QtGui/qwindowdefs_win.h
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamera.h
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/icamera.h
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/vrgbcamera.cpp
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/vrgbcamera.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/dataBuffer.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/dataBufferPool.h
 CMakeFiles/PCP.dir/src/app/common/control.cpp.obj
@@ -323,12 +404,15 @@ CMakeFiles/PCP.dir/src/app/common/control.cpp.obj
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qtwidgetsglobal.h
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qwidget.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/VCamera.h
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamera.h
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamerafactory.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/icamera.h
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/vrgbcamera.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/control.cpp
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/control.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/dataBuffer.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/dataBufferPool.h
- C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/iwidget.h
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/icontrol.h
 CMakeFiles/PCP.dir/src/app/common/dataBuffer.cpp.obj
  C:/Qt/5.10.0/mingw53_32/include/QtCore/qalgorithms.h
  C:/Qt/5.10.0/mingw53_32/include/QtCore/qarraydata.h
@@ -863,8 +947,8 @@ CMakeFiles/PCP.dir/src/main.cpp.obj
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qtwidgetsglobal.h
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qwidget.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/dataBuffer.h
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/icontrol.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/main.cpp
- C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/iwidget.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/widget.h
 CMakeFiles/PCP.dir/src/ui/widget.cpp.obj
  C:/Qt/5.10.0/mingw53_32/include/QtCore/QTimer
@@ -982,6 +1066,7 @@ CMakeFiles/PCP.dir/src/ui/widget.cpp.obj
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QAction
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QApplication
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QButtonGroup
+ C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QComboBox
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QHBoxLayout
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QHeaderView
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QLabel
@@ -1001,6 +1086,7 @@ CMakeFiles/PCP.dir/src/ui/widget.cpp.obj
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qapplication.h
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qboxlayout.h
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qbuttongroup.h
+ C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qcombobox.h
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qdesktopwidget.h
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qframe.h
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qgridlayout.h
@@ -1019,11 +1105,16 @@ CMakeFiles/PCP.dir/src/ui/widget.cpp.obj
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qtwidgets-config.h
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qtwidgetsglobal.h
  C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qwidget.h
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/VCamera.h
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamera.h
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamerafactory.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/icamera.h
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/vrgbcamera.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/control.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/dataBuffer.h
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/dataBufferPool.h
+ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/icontrol.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/visualisation/videoVisualizer.h
- C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/iwidget.h
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/widget.cpp
  C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/widget.h
  ui_widget.h

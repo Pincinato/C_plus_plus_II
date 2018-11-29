@@ -80,3 +80,60 @@ bool Eye_detector::drawFaces(Mat &frame,vector<Rect> &faces){
     }
     return ACK;
 }
+
+Point Eye_detector::detectCenter(std::vector<Rect> &faces, vector<Rect> &eyes){
+
+    Point ret(0,0);
+    for( size_t i = 0; i < faces.size(); i++ )
+    {
+        for( size_t j = 0; j < eyes.size(); j++ )
+        {
+            Point eye_center( faces[i].x + eyes[j].x + eyes[j].width/2, faces[i].y + eyes[j].y + eyes[j].height/2 );
+            return eye_center;
+        }
+    }
+    return ret;
+}
+
+bool Eye_detector::drawBothCenterEye(std::vector<Rect> &faces, vector<Rect> &eyes){
+    bool ACK=false;
+    for( size_t i = 0; i < faces.size(); i++ )
+    {
+        for( size_t j = 0; j < eyes.size(); j++ )
+        {
+            Point eye_center( faces[i].x + eyes[j].x + eyes[j].width/2, faces[i].y + eyes[j].y + eyes[j].height/2 );
+            ACK=true;
+        }
+    }
+    return ACK;
+}
+
+bool Eye_detector::drawEyesCenter(Mat &frame, vector<Rect> &eyes,Point & eye_center){
+
+    bool ACK=false;
+    for( size_t j = 0; j < eyes.size(); j++ )
+    {
+        circle(frame, eye_center, 1, Scalar( 255, 0, 0 ), 2, 8, 0 );
+        ACK=true;
+    }
+    return ACK;
+}
+
+
+Rect Eye_detector::getRightEye(vector<Rect> &eyes){
+
+       int rightEyeValue = 0;
+      int rightEyeIndex = 0;
+      for (uint i = 0; i < eyes.size(); i++)
+      {
+          if (eyes[i].tl().x > rightEyeValue)
+          {
+              rightEyeValue = eyes[i].tl().x;
+              rightEyeIndex = i;
+          }
+      }
+      return eyes[rightEyeIndex];
+
+}
+
+

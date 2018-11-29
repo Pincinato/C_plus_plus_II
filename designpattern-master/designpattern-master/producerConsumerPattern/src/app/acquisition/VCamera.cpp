@@ -10,6 +10,7 @@
 #include "icamera.h"
 
 VCamera::VCamera(ICamera *control, std::shared_ptr<DataBufferPool> dataPool) :
+    BaseCamera(control,dataPool),
     m_tag("Player"),
     m_play(false),
     m_control(control),
@@ -80,8 +81,10 @@ void VCamera::run()
 bool VCamera::readImage(DataBufferPtr data)
 {
     bool ACK=false;
-    //capture.read(frame);
-    capture>>data->m_frame;
+    //capture.read(data->m_frame);
+    capture >> data->m_frame;
+    //Mat frame_gray(256,256,CV_8UC1);
+    //cvtColor(data->m_frame, frame_gray, COLOR_BGR2GRAY );
     if(!data->m_frame.empty()){
         data->m_image =QImage(data->m_frame.data,data->m_frame.cols,data->m_frame.rows,data->m_frame.step,QImage::Format_RGB888);
         ACK=true;

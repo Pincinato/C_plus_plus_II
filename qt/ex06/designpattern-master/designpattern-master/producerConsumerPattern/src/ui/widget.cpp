@@ -47,6 +47,9 @@ Widget::Widget(QWidget *parent) :
     connect( m_frameRateTimer.get(), SIGNAL(timeout()), this, SLOT(updateFrameRate()) );
     m_frameRateTimer->start(m_fpsUpdateRateMS);
 
+
+    //Connect Qcombox
+    connect(ui->CameraOption,SIGNAL(currentIndexChanged(const QString &)),this,SLOT(setCamera(const QString &)));
 }
 
 Widget::~Widget()
@@ -57,7 +60,7 @@ Widget::~Widget()
 // -----------------------------------------------------------------
 // Functions called by Control (tight coupling)
 // -----------------------------------------------------------------
-void Widget::displayMsg(std::string tag, std::string msg)
+void Widget::displayMsg(const std::string &tag, const std::string &msg)
 {
     std::cout << " Info: " << tag << " : " <<  msg << std::endl;
 }
@@ -116,4 +119,14 @@ void Widget::updateFrameRate()
     float fps = (float)m_frameCount / m_fpsUpdateRateMS * 1000.f;
     ui->frameRate_label->setText("FPS: " + QString::number(fps));
     m_frameCount = 0;
+}
+
+void Widget::setCamera(const QString &text){
+
+    if( m_appCtrl->isPlaying() )
+    {
+        m_appCtrl->stopPlaying();
+        ui->play_pushButton->setText("Play");
+    }
+    m_appCtrl->setCamera(text.toUtf8().constData());
 }

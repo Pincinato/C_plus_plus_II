@@ -1206,6 +1206,10 @@ C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QButtonGroup
 qbuttongroup.h
 C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qbuttongroup.h
 
+C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QComboBox
+qcombobox.h
+C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qcombobox.h
+
 C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QFileDialog
 qfiledialog.h
 C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qfiledialog.h
@@ -1358,6 +1362,20 @@ C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qbuttongroup.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtCore/qobject.h
+-
+
+C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qcombobox.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qwidget.h
+-
+QtWidgets/qabstractitemdelegate.h
+-
+QtCore/qabstractitemmodel.h
+-
+QtCore/qvariant.h
+-
+QtGui/qvalidator.h
 -
 
 C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qdesktopwidget.h
@@ -1671,10 +1689,52 @@ thread
 -
 dataBuffer.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/dataBuffer.h
+basecamera.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamera.h
+
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamera.h
+icamera.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/icamera.h
+dataBufferPool.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/dataBufferPool.h
+
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamerafactory.h
+memory
+-
+iostream
+-
+string
+-
+VCamera.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/VCamera.h
+vrgbcamera.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/vrgbcamera.h
+icamera.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/icamera.h
+dataBufferPool.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/dataBufferPool.h
 
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/icamera.h
 dataBuffer.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/dataBuffer.h
+
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/vrgbcamera.cpp
+chrono
+-
+dataBufferPool.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/dataBufferPool.h
+icamera.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/icamera.h
+vrgbcamera.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/vrgbcamera.h
+
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/vrgbcamera.h
+thread
+-
+dataBuffer.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/dataBuffer.h
+basecamera.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamera.h
 
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/control.cpp
 control.h
@@ -1693,8 +1753,12 @@ icamera.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/icamera.h
 QTimer
 -
-iwidget.h
-C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/iwidget.h
+icontrol.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/icontrol.h
+basecamerafactory.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/basecamerafactory.h
+basecamera.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/basecamera.h
 
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/dataBuffer.cpp
 dataBuffer.h
@@ -1719,6 +1783,10 @@ vector
 -
 mutex
 -
+dataBuffer.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/dataBuffer.h
+
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/icontrol.h
 dataBuffer.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/dataBuffer.h
 
@@ -1770,10 +1838,6 @@ QFile
 widget.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/widget.h
 
-C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/iwidget.h
-dataBuffer.h
-C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/dataBuffer.h
-
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/widget.cpp
 iostream
 -
@@ -1799,8 +1863,8 @@ memory
 -
 dataBuffer.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/dataBuffer.h
-iwidget.h
-C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/iwidget.h
+icontrol.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/icontrol.h
 
 ui_widget.h
 QtCore/QVariant
@@ -1810,6 +1874,8 @@ QtWidgets/QAction
 QtWidgets/QApplication
 -
 QtWidgets/QButtonGroup
+-
+QtWidgets/QComboBox
 -
 QtWidgets/QHBoxLayout
 -

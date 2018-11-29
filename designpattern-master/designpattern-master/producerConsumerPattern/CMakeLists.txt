@@ -6,7 +6,8 @@ project(PCP)
 if(MSVC)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++latest /W4")
 else()
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z -Wall -Wextra -Werror")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z -Wall ")
+    #"-Wextra -Werror")
 endif()
 
 
@@ -30,28 +31,39 @@ SET( APP_LIBS )
 
 # main sources
 SET( APP_SOURCES ${APP_SOURCES}
-    src/ui/IWidget.h
     src/ui/widget.cpp
     src/ui/widget.h
     src/ui/widget.ui
     src/app/common/control.cpp
     src/app/common/control.h
+    src/app/common/icontrol.h
     src/app/common/dataBuffer.cpp
     src/app/common/dataBuffer.h
     src/app/common/dataBufferPool.cpp
     src/app/common/dataBufferPool.h
+    src/app/common/eye_detector.cpp
+    src/app/common/eye_detector.h
     src/app/acquisition/VCamera.cpp
     src/app/acquisition/VCamera.h
+    src/app/acquisition/USBcamera.cpp
+    src/app/acquisition/USBcamera.h
     src/app/acquisition/icamera.h
+    src/app/acquisition/BaseCamera.h
+    src/app/acquisition/BaseCameraFactory.h
     src/app/visualisation/videoVisualizer.cpp
     src/app/visualisation/videoVisualizer.h
     src/app/visualisation/rOg_image.cpp
     src/app/visualisation/rOg_image.h
-    src/app/common/Eye_detector.cpp
-    src/app/common/Eye_detector.h
     src/ui/mainwindow.cpp
     src/ui/mainwindow.h
     src/ui/mainwindow.ui
+    src/ui/calibrationwidget.cpp
+    src/ui/calibrationwidget.h
+    src/ui/calibrationwidget.ui
+    src/ui/icalibrationwidget.h
+    src/ui/actionwidget.cpp
+    src/ui/actionwidget.h
+    src/ui/actionwidget.ui
 )
 
 
@@ -86,3 +98,5 @@ target_link_libraries(PCP Qt5::Widgets Qt5::Core ${OpenCV_LIBS} ${APP_LIBS} )
 # copy stylesheets
 file(COPY BFH.stylesheet DESTINATION ${PROJECT_BINARY_DIR})
 FILE(COPY src/files/haarcascade_frontalface_alt.xml src/files/haarcascade_eye_tree_eyeglasses.xml DESTINATION ${PROJECT_BINARY_DIR})
+file(COPY src/images/calibration.png DESTINATION ${PROJECT_BINARY_DIR})
+file(COPY src/images/back_button.png DESTINATION ${PROJECT_BINARY_DIR})

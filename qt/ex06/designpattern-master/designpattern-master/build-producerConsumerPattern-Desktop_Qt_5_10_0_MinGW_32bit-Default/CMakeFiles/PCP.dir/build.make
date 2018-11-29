@@ -206,10 +206,35 @@ CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj.provides: CMakeFiles/PCP.
 CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj.provides.build: CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj
 
 
+CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.obj: CMakeFiles/PCP.dir/flags.make
+CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.obj: CMakeFiles/PCP.dir/includes_CXX.rsp
+CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.obj: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/vrgbcamera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.obj"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PCP.dir\src\app\acquisition\vrgbcamera.cpp.obj -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\producerConsumerPattern\src\app\acquisition\vrgbcamera.cpp
+
+CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.i"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\producerConsumerPattern\src\app\acquisition\vrgbcamera.cpp > CMakeFiles\PCP.dir\src\app\acquisition\vrgbcamera.cpp.i
+
+CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.s"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\producerConsumerPattern\src\app\acquisition\vrgbcamera.cpp -o CMakeFiles\PCP.dir\src\app\acquisition\vrgbcamera.cpp.s
+
+CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.obj.requires:
+
+.PHONY : CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.obj.requires
+
+CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.obj.provides: CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.obj.provides.build
+.PHONY : CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.obj.provides
+
+CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.obj.provides.build: CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.obj
+
+
 CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj: CMakeFiles/PCP.dir/flags.make
 CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj: CMakeFiles/PCP.dir/includes_CXX.rsp
 CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/visualisation/videoVisualizer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj"
 	C:\Qt\Tools\mingw530_32\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PCP.dir\src\app\visualisation\videoVisualizer.cpp.obj -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\producerConsumerPattern\src\app\visualisation\videoVisualizer.cpp
 
 CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.i: cmake_force
@@ -234,7 +259,7 @@ CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj.provides.build:
 CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj: CMakeFiles/PCP.dir/flags.make
 CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj: CMakeFiles/PCP.dir/includes_CXX.rsp
 CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/qt/ex06/designpattern-master/designpattern-master/producerConsumerPattern/src/app/visualisation/rOg_image.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj"
 	C:\Qt\Tools\mingw530_32\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PCP.dir\src\app\visualisation\rOg_image.cpp.obj -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\producerConsumerPattern\src\app\visualisation\rOg_image.cpp
 
 CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.i: cmake_force
@@ -259,7 +284,7 @@ CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj.provides.build: CMake
 CMakeFiles/PCP.dir/PCP_automoc.cpp.obj: CMakeFiles/PCP.dir/flags.make
 CMakeFiles/PCP.dir/PCP_automoc.cpp.obj: CMakeFiles/PCP.dir/includes_CXX.rsp
 CMakeFiles/PCP.dir/PCP_automoc.cpp.obj: PCP_automoc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PCP.dir/PCP_automoc.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PCP.dir/PCP_automoc.cpp.obj"
 	C:\Qt\Tools\mingw530_32\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PCP.dir\PCP_automoc.cpp.obj -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\PCP_automoc.cpp
 
 CMakeFiles/PCP.dir/PCP_automoc.cpp.i: cmake_force
@@ -289,6 +314,7 @@ PCP_OBJECTS = \
 "CMakeFiles/PCP.dir/src/app/common/dataBuffer.cpp.obj" \
 "CMakeFiles/PCP.dir/src/app/common/dataBufferPool.cpp.obj" \
 "CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj" \
+"CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.obj" \
 "CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj" \
 "CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj" \
 "CMakeFiles/PCP.dir/PCP_automoc.cpp.obj"
@@ -302,6 +328,7 @@ PCP.exe: CMakeFiles/PCP.dir/src/app/common/control.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/common/dataBuffer.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/common/dataBufferPool.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj
+PCP.exe: CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/PCP_automoc.cpp.obj
@@ -312,7 +339,7 @@ PCP.exe: C:/Qt/5.10.0/mingw53_32/lib/libQt5Core.a
 PCP.exe: CMakeFiles/PCP.dir/linklibs.rsp
 PCP.exe: CMakeFiles/PCP.dir/objects1.rsp
 PCP.exe: CMakeFiles/PCP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable PCP.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\qt\ex06\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable PCP.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\PCP.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -326,6 +353,7 @@ CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/common/control.cpp.obj.r
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/common/dataBuffer.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/common/dataBufferPool.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj.requires
+CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/acquisition/vrgbcamera.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/PCP_automoc.cpp.obj.requires

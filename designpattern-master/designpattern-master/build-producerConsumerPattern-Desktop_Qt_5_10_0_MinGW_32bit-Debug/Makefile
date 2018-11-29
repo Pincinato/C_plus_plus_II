@@ -162,6 +162,33 @@ PCP_automoc.cpp.s:
 	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/PCP_automoc.cpp.s
 .PHONY : PCP_automoc.cpp.s
 
+src/app/acquisition/USBcamera.obj: src/app/acquisition/USBcamera.cpp.obj
+
+.PHONY : src/app/acquisition/USBcamera.obj
+
+# target to build an object file
+src/app/acquisition/USBcamera.cpp.obj:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj
+.PHONY : src/app/acquisition/USBcamera.cpp.obj
+
+src/app/acquisition/USBcamera.i: src/app/acquisition/USBcamera.cpp.i
+
+.PHONY : src/app/acquisition/USBcamera.i
+
+# target to preprocess a source file
+src/app/acquisition/USBcamera.cpp.i:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.i
+.PHONY : src/app/acquisition/USBcamera.cpp.i
+
+src/app/acquisition/USBcamera.s: src/app/acquisition/USBcamera.cpp.s
+
+.PHONY : src/app/acquisition/USBcamera.s
+
+# target to generate assembly for a file
+src/app/acquisition/USBcamera.cpp.s:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.s
+.PHONY : src/app/acquisition/USBcamera.cpp.s
+
 src/app/acquisition/VCamera.obj: src/app/acquisition/VCamera.cpp.obj
 
 .PHONY : src/app/acquisition/VCamera.obj
@@ -378,6 +405,60 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/ui/actionwidget.obj: src/ui/actionwidget.cpp.obj
+
+.PHONY : src/ui/actionwidget.obj
+
+# target to build an object file
+src/ui/actionwidget.cpp.obj:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj
+.PHONY : src/ui/actionwidget.cpp.obj
+
+src/ui/actionwidget.i: src/ui/actionwidget.cpp.i
+
+.PHONY : src/ui/actionwidget.i
+
+# target to preprocess a source file
+src/ui/actionwidget.cpp.i:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.i
+.PHONY : src/ui/actionwidget.cpp.i
+
+src/ui/actionwidget.s: src/ui/actionwidget.cpp.s
+
+.PHONY : src/ui/actionwidget.s
+
+# target to generate assembly for a file
+src/ui/actionwidget.cpp.s:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.s
+.PHONY : src/ui/actionwidget.cpp.s
+
+src/ui/calibrationwidget.obj: src/ui/calibrationwidget.cpp.obj
+
+.PHONY : src/ui/calibrationwidget.obj
+
+# target to build an object file
+src/ui/calibrationwidget.cpp.obj:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.obj
+.PHONY : src/ui/calibrationwidget.cpp.obj
+
+src/ui/calibrationwidget.i: src/ui/calibrationwidget.cpp.i
+
+.PHONY : src/ui/calibrationwidget.i
+
+# target to preprocess a source file
+src/ui/calibrationwidget.cpp.i:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.i
+.PHONY : src/ui/calibrationwidget.cpp.i
+
+src/ui/calibrationwidget.s: src/ui/calibrationwidget.cpp.s
+
+.PHONY : src/ui/calibrationwidget.s
+
+# target to generate assembly for a file
+src/ui/calibrationwidget.cpp.s:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.s
+.PHONY : src/ui/calibrationwidget.cpp.s
+
 src/ui/mainwindow.obj: src/ui/mainwindow.cpp.obj
 
 .PHONY : src/ui/mainwindow.obj
@@ -445,6 +526,9 @@ help:
 	@echo ... PCP_automoc.obj
 	@echo ... PCP_automoc.i
 	@echo ... PCP_automoc.s
+	@echo ... src/app/acquisition/USBcamera.obj
+	@echo ... src/app/acquisition/USBcamera.i
+	@echo ... src/app/acquisition/USBcamera.s
 	@echo ... src/app/acquisition/VCamera.obj
 	@echo ... src/app/acquisition/VCamera.i
 	@echo ... src/app/acquisition/VCamera.s
@@ -469,6 +553,12 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/ui/actionwidget.obj
+	@echo ... src/ui/actionwidget.i
+	@echo ... src/ui/actionwidget.s
+	@echo ... src/ui/calibrationwidget.obj
+	@echo ... src/ui/calibrationwidget.i
+	@echo ... src/ui/calibrationwidget.s
 	@echo ... src/ui/mainwindow.obj
 	@echo ... src/ui/mainwindow.i
 	@echo ... src/ui/mainwindow.s

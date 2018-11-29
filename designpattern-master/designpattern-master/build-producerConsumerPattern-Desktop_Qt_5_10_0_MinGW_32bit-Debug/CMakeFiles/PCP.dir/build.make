@@ -181,10 +181,35 @@ CMakeFiles/PCP.dir/src/app/common/dataBufferPool.cpp.obj.provides: CMakeFiles/PC
 CMakeFiles/PCP.dir/src/app/common/dataBufferPool.cpp.obj.provides.build: CMakeFiles/PCP.dir/src/app/common/dataBufferPool.cpp.obj
 
 
+CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj: CMakeFiles/PCP.dir/flags.make
+CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj: CMakeFiles/PCP.dir/includes_CXX.rsp
+CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/eye_detector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PCP.dir\src\app\common\eye_detector.cpp.obj -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\app\common\eye_detector.cpp
+
+CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.i"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\app\common\eye_detector.cpp > CMakeFiles\PCP.dir\src\app\common\eye_detector.cpp.i
+
+CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.s"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\app\common\eye_detector.cpp -o CMakeFiles\PCP.dir\src\app\common\eye_detector.cpp.s
+
+CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.requires:
+
+.PHONY : CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.requires
+
+CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.provides: CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.provides.build
+.PHONY : CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.provides
+
+CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.provides.build: CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj
+
+
 CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj: CMakeFiles/PCP.dir/flags.make
 CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj: CMakeFiles/PCP.dir/includes_CXX.rsp
 CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/VCamera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj"
 	C:\Qt\Tools\mingw530_32\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PCP.dir\src\app\acquisition\VCamera.cpp.obj -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\app\acquisition\VCamera.cpp
 
 CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.i: cmake_force
@@ -206,10 +231,35 @@ CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj.provides: CMakeFiles/PCP.
 CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj.provides.build: CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj
 
 
+CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj: CMakeFiles/PCP.dir/flags.make
+CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj: CMakeFiles/PCP.dir/includes_CXX.rsp
+CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/USBcamera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PCP.dir\src\app\acquisition\USBcamera.cpp.obj -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\app\acquisition\USBcamera.cpp
+
+CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.i"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\app\acquisition\USBcamera.cpp > CMakeFiles\PCP.dir\src\app\acquisition\USBcamera.cpp.i
+
+CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.s"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\app\acquisition\USBcamera.cpp -o CMakeFiles\PCP.dir\src\app\acquisition\USBcamera.cpp.s
+
+CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj.requires:
+
+.PHONY : CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj.requires
+
+CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj.provides: CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj.provides.build
+.PHONY : CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj.provides
+
+CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj.provides.build: CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj
+
+
 CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj: CMakeFiles/PCP.dir/flags.make
 CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj: CMakeFiles/PCP.dir/includes_CXX.rsp
 CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/visualisation/videoVisualizer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj"
 	C:\Qt\Tools\mingw530_32\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PCP.dir\src\app\visualisation\videoVisualizer.cpp.obj -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\app\visualisation\videoVisualizer.cpp
 
 CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.i: cmake_force
@@ -234,7 +284,7 @@ CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj.provides.build:
 CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj: CMakeFiles/PCP.dir/flags.make
 CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj: CMakeFiles/PCP.dir/includes_CXX.rsp
 CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/visualisation/rOg_image.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj"
 	C:\Qt\Tools\mingw530_32\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PCP.dir\src\app\visualisation\rOg_image.cpp.obj -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\app\visualisation\rOg_image.cpp
 
 CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.i: cmake_force
@@ -256,35 +306,10 @@ CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj.provides: CMakeFiles/
 CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj.provides.build: CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj
 
 
-CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj: CMakeFiles/PCP.dir/flags.make
-CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj: CMakeFiles/PCP.dir/includes_CXX.rsp
-CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/eye_detector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj"
-	C:\Qt\Tools\mingw530_32\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PCP.dir\src\app\common\eye_detector.cpp.obj -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\app\common\eye_detector.cpp
-
-CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.i"
-	C:\Qt\Tools\mingw530_32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\app\common\eye_detector.cpp > CMakeFiles\PCP.dir\src\app\common\eye_detector.cpp.i
-
-CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.s"
-	C:\Qt\Tools\mingw530_32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\app\common\eye_detector.cpp -o CMakeFiles\PCP.dir\src\app\common\eye_detector.cpp.s
-
-CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.requires:
-
-.PHONY : CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.requires
-
-CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.provides: CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.provides.build
-.PHONY : CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.provides
-
-CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.provides.build: CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj
-
-
 CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj: CMakeFiles/PCP.dir/flags.make
 CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj: CMakeFiles/PCP.dir/includes_CXX.rsp
 CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj"
 	C:\Qt\Tools\mingw530_32\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PCP.dir\src\ui\mainwindow.cpp.obj -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\ui\mainwindow.cpp
 
 CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.i: cmake_force
@@ -306,10 +331,60 @@ CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj.provides: CMakeFiles/PCP.dir/src/ui
 CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj.provides.build: CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj
 
 
+CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.obj: CMakeFiles/PCP.dir/flags.make
+CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.obj: CMakeFiles/PCP.dir/includes_CXX.rsp
+CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.obj: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/calibrationwidget.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.obj"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PCP.dir\src\ui\calibrationwidget.cpp.obj -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\ui\calibrationwidget.cpp
+
+CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.i"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\ui\calibrationwidget.cpp > CMakeFiles\PCP.dir\src\ui\calibrationwidget.cpp.i
+
+CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.s"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\ui\calibrationwidget.cpp -o CMakeFiles\PCP.dir\src\ui\calibrationwidget.cpp.s
+
+CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.obj.requires:
+
+.PHONY : CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.obj.requires
+
+CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.obj.provides: CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.obj.provides.build
+.PHONY : CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.obj.provides
+
+CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.obj.provides.build: CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.obj
+
+
+CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj: CMakeFiles/PCP.dir/flags.make
+CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj: CMakeFiles/PCP.dir/includes_CXX.rsp
+CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/actionwidget.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PCP.dir\src\ui\actionwidget.cpp.obj -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\ui\actionwidget.cpp
+
+CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.i"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\ui\actionwidget.cpp > CMakeFiles\PCP.dir\src\ui\actionwidget.cpp.i
+
+CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.s"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\producerConsumerPattern\src\ui\actionwidget.cpp -o CMakeFiles\PCP.dir\src\ui\actionwidget.cpp.s
+
+CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj.requires:
+
+.PHONY : CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj.requires
+
+CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj.provides: CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj.provides.build
+.PHONY : CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj.provides
+
+CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj.provides.build: CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj
+
+
 CMakeFiles/PCP.dir/PCP_automoc.cpp.obj: CMakeFiles/PCP.dir/flags.make
 CMakeFiles/PCP.dir/PCP_automoc.cpp.obj: CMakeFiles/PCP.dir/includes_CXX.rsp
 CMakeFiles/PCP.dir/PCP_automoc.cpp.obj: PCP_automoc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/PCP.dir/PCP_automoc.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/PCP.dir/PCP_automoc.cpp.obj"
 	C:\Qt\Tools\mingw530_32\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PCP.dir\PCP_automoc.cpp.obj -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug\PCP_automoc.cpp
 
 CMakeFiles/PCP.dir/PCP_automoc.cpp.i: cmake_force
@@ -338,11 +413,14 @@ PCP_OBJECTS = \
 "CMakeFiles/PCP.dir/src/app/common/control.cpp.obj" \
 "CMakeFiles/PCP.dir/src/app/common/dataBuffer.cpp.obj" \
 "CMakeFiles/PCP.dir/src/app/common/dataBufferPool.cpp.obj" \
+"CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj" \
 "CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj" \
+"CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj" \
 "CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj" \
 "CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj" \
-"CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj" \
 "CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj" \
+"CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.obj" \
+"CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj" \
 "CMakeFiles/PCP.dir/PCP_automoc.cpp.obj"
 
 # External object files for target PCP
@@ -353,11 +431,14 @@ PCP.exe: CMakeFiles/PCP.dir/src/ui/widget.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/common/control.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/common/dataBuffer.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/common/dataBufferPool.cpp.obj
+PCP.exe: CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj
+PCP.exe: CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj
-PCP.exe: CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj
+PCP.exe: CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.obj
+PCP.exe: CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/PCP_automoc.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/build.make
 PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_dnn343.dll.a
@@ -383,7 +464,7 @@ PCP.exe: C:/Users/THP/Documents/opencv/release/lib/libopencv_core343.dll.a
 PCP.exe: CMakeFiles/PCP.dir/linklibs.rsp
 PCP.exe: CMakeFiles/PCP.dir/objects1.rsp
 PCP.exe: CMakeFiles/PCP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable PCP.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\designpattern-master\designpattern-master\build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable PCP.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\PCP.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -396,11 +477,14 @@ CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/ui/widget.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/common/control.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/common/dataBuffer.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/common/dataBufferPool.cpp.obj.requires
+CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj.requires
+CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/visualisation/rOg_image.cpp.obj.requires
-CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj.requires
+CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/ui/calibrationwidget.cpp.obj.requires
+CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/PCP_automoc.cpp.obj.requires
 
 .PHONY : CMakeFiles/PCP.dir/requires

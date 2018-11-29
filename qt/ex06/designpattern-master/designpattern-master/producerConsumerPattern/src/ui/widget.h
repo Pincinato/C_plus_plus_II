@@ -11,7 +11,7 @@
 #include <QTimer>
 #include <memory>
 #include "dataBuffer.h"
-#include "iwidget.h"
+#include "icontrol.h"
 
 // Forward declarations
 class DataBuffer;
@@ -24,7 +24,7 @@ namespace Ui {
 class Widget;
 }
 
-class Widget : public QWidget, IWidget
+class Widget : public QWidget, IControl
 {
     Q_OBJECT
 
@@ -36,7 +36,7 @@ public:
     //void displayMsg(std::string tag, std::string msg);
     //void setData(DataBufferPtr data);
     // ------------------------------------------------------------
-    void displayMsg(std::string tag, std::string msg) override;
+    void displayMsg(const std::string &tag, const std::string &msg) override;
     void setData(DataBufferPtr data) override;
 private:
     void initGUI();
@@ -47,6 +47,7 @@ private slots:
     void updateFrameRate();
     void playDataFromFile();
     void setPlayRate();
+    void setCamera(const QString & text);
 
 private:
     Ui::Widget* ui;

@@ -44,6 +44,20 @@
         </widget>
        </item>
        <item>
+        <widget class="QComboBox" name="CameraOption">
+         <item>
+          <property name="text">
+           <string>WebCam</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>USBCamera</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
         <widget class="QPushButton" name="back_pushButton">
          <property name="text">
           <string>back</string>

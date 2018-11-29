@@ -165,10 +165,22 @@
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/build-producerConsumerPattern-Desktop_Qt_5_10_0_MinGW_32bit-Debug/PCP_automoc.cpp">
 			<Option target="PCP"/>
 		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/USBcamera.cpp">
+			<Option target="PCP"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/USBcamera.h">
+			<Option target="PCP"/>
+		</Unit>
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/VCamera.cpp">
 			<Option target="PCP"/>
 		</Unit>
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/VCamera.h">
+			<Option target="PCP"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamera.h">
+			<Option target="PCP"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamerafactory.h">
 			<Option target="PCP"/>
 		</Unit>
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/icamera.h">
@@ -198,6 +210,9 @@
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/eye_detector.h">
 			<Option target="PCP"/>
 		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/icontrol.h">
+			<Option target="PCP"/>
+		</Unit>
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/visualisation/rOg_image.cpp">
 			<Option target="PCP"/>
 		</Unit>
@@ -213,7 +228,25 @@
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/main.cpp">
 			<Option target="PCP"/>
 		</Unit>
-		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/iwidget.h">
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/actionwidget.cpp">
+			<Option target="PCP"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/actionwidget.h">
+			<Option target="PCP"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/actionwidget.ui">
+			<Option target="PCP"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/calibrationwidget.cpp">
+			<Option target="PCP"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/calibrationwidget.h">
+			<Option target="PCP"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/calibrationwidget.ui">
+			<Option target="PCP"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/icalibrationwidget.h">
 			<Option target="PCP"/>
 		</Unit>
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/mainwindow.cpp">

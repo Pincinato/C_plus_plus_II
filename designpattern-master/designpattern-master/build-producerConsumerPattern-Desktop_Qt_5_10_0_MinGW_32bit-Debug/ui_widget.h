@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
@@ -31,6 +32,7 @@ public:
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *verticalLayout;
     QPushButton *play_pushButton;
+    QComboBox *CameraOption;
     QPushButton *back_pushButton;
     QSlider *frameRateSlider;
     QSpacerItem *verticalSpacer;
@@ -59,6 +61,13 @@ public:
         play_pushButton->setBaseSize(QSize(0, 0));
 
         verticalLayout->addWidget(play_pushButton);
+
+        CameraOption = new QComboBox(Widget);
+        CameraOption->addItem(QString());
+        CameraOption->addItem(QString());
+        CameraOption->setObjectName(QStringLiteral("CameraOption"));
+
+        verticalLayout->addWidget(CameraOption);
 
         back_pushButton = new QPushButton(Widget);
         back_pushButton->setObjectName(QStringLiteral("back_pushButton"));
@@ -103,6 +112,9 @@ public:
     {
         Widget->setWindowTitle(QApplication::translate("Widget", "Widget", nullptr));
         play_pushButton->setText(QApplication::translate("Widget", "Play", nullptr));
+        CameraOption->setItemText(0, QApplication::translate("Widget", "WebCam", nullptr));
+        CameraOption->setItemText(1, QApplication::translate("Widget", "USBCamera", nullptr));
+
         back_pushButton->setText(QApplication::translate("Widget", "back", nullptr));
         frameRate_label->setText(QString());
     } // retranslateUi

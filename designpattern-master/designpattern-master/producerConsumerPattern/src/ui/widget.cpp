@@ -19,6 +19,7 @@ Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget),
     m_tag("Widget"),
+    CamOption("WebCam"),
     m_frameCount(0),
     m_GuiUpdateRateMS(50),
     m_fpsUpdateRateMS(500)
@@ -52,6 +53,9 @@ Widget::Widget(QWidget *parent) :
     connect(ui->back_pushButton,SIGNAL(clicked()),this,SLOT(sendBack()));
     //newFrame signal
     //connect(this,SIGNAL(newFrame()),this,SLOT(updateFrameEyes()));
+    //connect qcombobox
+    connect(ui->CameraOption,SIGNAL(currentIndexChanged(const QString &)),this,SLOT(setCamera(const QString &)));
+
 
 }
 
@@ -63,7 +67,7 @@ Widget::~Widget()
 // -----------------------------------------------------------------
 // Functions called by Control (tight coupling)
 // -----------------------------------------------------------------
-void Widget::displayMsg(std::string tag, std::string msg)
+void Widget::displayMsg(const std::string &tag, const std::string &msg)
 {
     std::cout << " Info: " << tag << " : " <<  msg << std::endl;
 }
@@ -97,6 +101,7 @@ void Widget::updateGui()
         m_appCtrl->getEyes(m_lastData);
         m_appCtrl->setEyesInFrame(m_lastData);
         //m_appCtrl->setFaceInFrame(m_lastData);
+        m_appCtrl->setEyesCenter(m_lastData);
         m_videoVisualizer->setScan(m_lastData);
     }
 }
@@ -148,3 +153,24 @@ void Widget::updateFrameEyes(){
     }
 }
 */
+
+void Widget::setCamera(const QString &text){
+
+    if( m_appCtrl->isPlaying() )
+    {
+        m_appCtrl->stopPlaying();
+        ui->play_pushButton->setText("Play");
+    }
+    CamOption.clear();
+    CamOption.append(text.toUtf8().constData());
+    m_appCtrl->setCamera(text.toUtf8().constData());
+}
+
+string Widget::getCamOption(){
+    return CamOption;
+}
+
+void Widget::setPoint(const cv::Point eye_center){
+    cv::Point a;
+    a=eye_center;
+}

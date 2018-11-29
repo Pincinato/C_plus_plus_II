@@ -8,10 +8,11 @@
 #include "VCamera.h"
 #include "dataBufferPool.h"
 
-Control::Control(IWidget *parent) :
+Control::Control(IControl *parent) :
     m_widget(parent),
     m_height(256),
-    m_widht(256)
+    m_widht(256),
+    cameraOption("VCamera")
 {
     // init control handels
     init();
@@ -29,8 +30,10 @@ void Control::init()
     m_dataPool.reset(new DataBufferPool(m_height, m_widht));
 
     // create file reader
-    m_player.reset( new VCamera( this, m_dataPool) );
-
+    //m_player.reset( new VCamera( this, m_dataPool) );
+    camera_factory.reset(new BaseCameraFactory);
+    m_player.reset();
+    m_player = camera_factory->CreateCamera(this,m_dataPool,cameraOption);
     // Message
     m_widget->displayMsg("Control", "Constructed");
 }
@@ -68,4 +71,11 @@ bool Control::isPlaying() const
 void Control::setPlayRate(int playRate)
 {
     m_player->setPlayRate(playRate);
+}
+
+void Control::setCamera(const string &option)
+{
+
+ cameraOption.clear();
+ cameraOption.append(option);
 }

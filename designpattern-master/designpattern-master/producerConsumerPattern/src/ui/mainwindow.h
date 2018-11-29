@@ -3,22 +3,29 @@
 
 #include <QWidget>
 #include "widget.h"
+#include "calibrationwidget.h"
+#include "icalibrationwidget.h"
+#include "actionwidget.h"
 
 namespace Ui {
 class MainWindow;
 }
 
-class MainWindow : public QWidget
+class MainWindow : public QWidget, ICalibrationWidget
 {
     Q_OBJECT
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+    void setCalibrationPoint(cv::Point eye_center) override;
 private:
     Ui::MainWindow *ui;
-    Widget * eyeDetectionWidget;
+    unique_ptr<Widget> eyeDetectionWidget;
+    unique_ptr<CalibrationWidget> calibrator;
+    unique_ptr<ActionWidget> m_actionWigdet;
+    cv::Point calibrationEye;
+    string CamOption;
 
 
 private slots:
@@ -27,6 +34,8 @@ private slots:
     void calibration();
     void eyeDetectionView();
     void backEyeDetectionView();
+    void backCalibrationView();
+    void backActionView();
 
 };
 

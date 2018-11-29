@@ -9,6 +9,7 @@
 
 #include <thread>
 #include "dataBuffer.h"
+#include "basecamera.h"
 #include <opencv2/objdetect.hpp>
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgproc.hpp>
@@ -23,17 +24,17 @@ class DataBufferPool;
  *
  * Note: Inheritating is not allowed since starting a thread in the constructor can be problematic for derived classes
  */
-class VCamera final
+class VCamera final: public BaseCamera
 {
 
 public:
      VCamera(ICamera* control, std::shared_ptr<DataBufferPool> dataPool);
-     ~VCamera();
+     ~VCamera()override;
 
-     void startPlayData();
-     void stop();
-     bool isPlaying();
-     void setPlayRate(int playRate);
+     void startPlayData() override;
+     void stop() override;
+     bool isPlaying() override;
+     void setPlayRate(int playRate) override;
 
 private:
      void run() ;

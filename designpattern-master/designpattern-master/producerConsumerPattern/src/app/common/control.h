@@ -10,9 +10,11 @@
 #include <QWidget>
 #include <memory>
 #include "icamera.h"
+#include "icontrol.h"
 #include <QTimer>
-#include "iwidget.h"
 #include "eye_detector.h"
+#include "basecamera.h"
+#include "basecamerafactory.h"
 
 using namespace cv;
 // Forward declarations
@@ -23,7 +25,7 @@ class Control :  public QWidget , ICamera
 {
 
 public:
-    Control(IWidget *parent);
+    Control(IControl *parent);
     ~Control() override;
 
     void displayMsg(const std::string &tag, const std::string &msg) override;
@@ -37,16 +39,23 @@ public:
     bool getEyes(DataBufferPtr &data);
     bool setEyesInFrame(DataBufferPtr &data);
     bool setFaceInFrame(DataBufferPtr &data);
+    void setCamera(const string &option);
+    bool setEyesCenter(DataBufferPtr &data);
+    //Point getEyesCenter();
+
 
 private:
-    IWidget* m_widget;
+    IControl* m_widget;
     uint m_height;
     uint m_widht;
+    std::string cameraOption;
+    std::unique_ptr<BaseCamera> m_player;
+    std::unique_ptr<BaseCameraFactory> camera_factory;
     std::unique_ptr<Eye_detector> m_tracking;
-    std::unique_ptr<VCamera> m_player;
     std::shared_ptr<DataBufferPool> m_dataPool;
     std::unique_ptr<QTimer> m_ScanUpdateRateTimer;
     std::vector<Rect> eyes;
     std::vector<Rect> faces;
+    Point centerEyes;
 };
 #endif // CONTROL_H
