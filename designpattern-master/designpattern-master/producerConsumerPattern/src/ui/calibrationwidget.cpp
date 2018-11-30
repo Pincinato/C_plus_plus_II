@@ -107,5 +107,7 @@ void CalibrationWidget::setPoint(const cv::Point &eyeLeft,const cv::Point &eyeRi
     Point a,b;
     a= eyeLeft;
     b= eyeRight;
-    //m_owner->setCalibrationPoint(eye_center); // problem here when come from calibration
+    //TODO
+    // problem here when come from calibration
+    m_owner->setCalibrationPoint(eyeLeft,eyeRight);
 }

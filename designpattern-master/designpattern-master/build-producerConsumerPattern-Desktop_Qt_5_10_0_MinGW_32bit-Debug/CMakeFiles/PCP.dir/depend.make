@@ -2981,8 +2981,10 @@ CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/Qt
 CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qapplication.h
 CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qbuttongroup.h
 CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qdesktopwidget.h
+CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qdialog.h
 CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qframe.h
 CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qheaderview.h
+CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qmessagebox.h
 CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qpushbutton.h
 CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qrubberband.h
 CMakeFiles/PCP.dir/src/ui/mainwindow.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qsizepolicy.h

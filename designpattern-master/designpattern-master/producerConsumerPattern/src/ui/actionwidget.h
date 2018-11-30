@@ -17,7 +17,7 @@ class ActionWidget : public QWidget,public IControl
     Q_OBJECT
 
 public:
-    explicit ActionWidget(QWidget *parent = nullptr,const string &CamOp = "WebCam");
+    explicit ActionWidget(QWidget *parent = nullptr,const string &CamOp = "WebCam",const Point &calibrationLeft = Point(0,0),const Point &calibrationRight=Point(0,0));
     ~ActionWidget() override;
     void displayMsg(const std::string &tag, const std::string &msg) override;
     void setData(DataBufferPtr data) override;
@@ -26,6 +26,8 @@ public:
     void setCamOption(const string &Cam);
 private:
     Ui::ActionWidget *ui;
+    cv::Point calibrationEyeLeft;
+    cv::Point calibrationEyeRight;
     string CamOption;
     std::shared_ptr<DataBuffer> m_lastData;
     std::unique_ptr<Control> m_appCtrl;

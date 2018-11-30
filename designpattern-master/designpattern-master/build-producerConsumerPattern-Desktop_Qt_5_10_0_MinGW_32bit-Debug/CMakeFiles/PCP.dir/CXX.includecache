@@ -1528,6 +1528,12 @@ QtGui/qicon.h
 QtWidgets/qaction.h
 -
 
+C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qmessagebox.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qdialog.h
+-
+
 C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qpushbutton.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -2015,6 +2021,8 @@ mainwindow.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/mainwindow.h
 ui_mainwindow.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/ui_mainwindow.h
+qmessagebox.h
+-
 
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/mainwindow.h
 QWidget

@@ -1,23 +1,21 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <qmessagebox.h>
 
 class Widget;
 
 MainWindow::MainWindow(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+    CamOption("WebCam")
 {
     ui->setupUi(this);
-    eyeDetectionWidget.reset(new Widget);
-    calibrator.reset(new CalibrationWidget);
-    m_actionWigdet.reset(new ActionWidget);
-    //eyeDetectionWidget.reset(new Widget);
     connect(ui->Calibration,SIGNAL(clicked()),this,SLOT(calibration()));
     connect(ui->Start,SIGNAL(clicked()),this,SLOT(start()));
     connect(ui->EyeDetection,SIGNAL(clicked()),this,SLOT(eyeDetectionView()));
-    connect(eyeDetectionWidget.get(),SIGNAL(back()),this,SLOT(backEyeDetectionView()));
-    connect(calibrator.get(),SIGNAL(back()),this,SLOT(backCalibrationView()));
-    connect(m_actionWigdet.get(),SIGNAL(back()),this,SLOT(backActionView()));
+    Iscalibrated=false;
+    calibrationEyeRight = Point(0,0);
+    calibrationEyeLeft = Point(0,0);
 }
 
 MainWindow::~MainWindow()
@@ -25,22 +23,46 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::start(){
+void  MainWindow::initCalibration(){
+    Iscalibrated=false;
+    calibrator.reset(new CalibrationWidget(nullptr,this,CamOption));
+    connect(calibrator.get(),SIGNAL(back()),this,SLOT(backCalibrationView()));
+}
 
-    m_actionWigdet->setCamOption(CamOption);
-    m_actionWigdet->myShow();
-    this->hide();
+void  MainWindow::initEyeDetection(){
+    eyeDetectionWidget.reset(new Widget);
+    connect(eyeDetectionWidget.get(),SIGNAL(back()),this,SLOT(backEyeDetectionView()));
+}
+
+void  MainWindow::initActionWidget(){
+
+    m_actionWigdet.reset(new ActionWidget(nullptr,CamOption,calibrationEyeLeft,calibrationEyeRight));
+    connect(m_actionWigdet.get(),SIGNAL(back()),this,SLOT(backActionView()));
+
+}
+
+void MainWindow::start(){
+    if(Iscalibrated==false){
+        QMessageBox msgBox;
+        msgBox.setText("A calibration is needed.");
+        msgBox.exec();
+    }
+    else{
+        initActionWidget();
+        m_actionWigdet->myShow();
+        this->hide();
+    }
 }
 
 void MainWindow::calibration(){
 
-    calibrator->setCamoption(CamOption);
+    initCalibration();
     calibrator->myShow();
     this->hide();
 }
 
 void MainWindow::eyeDetectionView(){
-
+    initEyeDetection();
     eyeDetectionWidget->show();
     this->hide();
 }
@@ -48,9 +70,10 @@ void MainWindow::eyeDetectionView(){
 void MainWindow::backEyeDetectionView(){
 
     this->show();
-    eyeDetectionWidget->close();
+    if(eyeDetectionWidget->getCamOption()!=CamOption){Iscalibrated=false;}
     CamOption.clear();
     CamOption.append(eyeDetectionWidget->getCamOption());
+    eyeDetectionWidget->close();
 }
 
 void MainWindow::backCalibrationView(){
@@ -66,6 +89,7 @@ void MainWindow::backActionView(){
 void MainWindow::setCalibrationPoint(const cv::Point &eyeLeft,const cv::Point &eyeRight){
     calibrationEyeLeft=eyeLeft;
     calibrationEyeRight=eyeRight;
+    Iscalibrated=true;
 }
 
 

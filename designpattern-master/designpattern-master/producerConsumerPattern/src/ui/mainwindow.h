@@ -17,8 +17,11 @@ class MainWindow : public QWidget, ICalibrationWidget
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    ~MainWindow()override;
     void setCalibrationPoint(const cv::Point &eyeLeft,const cv::Point &eyeRight) override;
+    void  initEyeDetection();
+    void  initActionWidget();
+    void  initCalibration();
 private:
     Ui::MainWindow *ui;
     unique_ptr<Widget> eyeDetectionWidget;
@@ -27,6 +30,7 @@ private:
     cv::Point calibrationEyeRight;
     cv::Point calibrationEyeLeft;
     string CamOption;
+    bool Iscalibrated;
 
 
 private slots:

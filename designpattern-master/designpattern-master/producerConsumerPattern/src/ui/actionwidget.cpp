@@ -1,9 +1,11 @@
 #include "actionwidget.h"
 #include "ui_actionwidget.h"
 
-ActionWidget::ActionWidget(QWidget *parent,const string &CamOp) :
+ActionWidget::ActionWidget(QWidget *parent,const string &CamOp,const Point &calibrationLeft,const Point &calibrationRight) :
     QWidget(parent),
     ui(new Ui::ActionWidget),
+    calibrationEyeLeft(calibrationLeft),
+    calibrationEyeRight(calibrationRight),
     CamOption(CamOp)
 {
     ui->setupUi(this);
