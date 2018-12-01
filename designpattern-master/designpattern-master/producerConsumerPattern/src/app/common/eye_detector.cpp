@@ -4,7 +4,7 @@
 **
 ** Contact:    Patrik Arnold ( patrik.arnold@bfh.ch )
 *****************************************************************************/
-#include "Eye_detector.h"
+#include "eye_detector.h"
 #include "VCamera.h"
 #include "dataBufferPool.h"
 

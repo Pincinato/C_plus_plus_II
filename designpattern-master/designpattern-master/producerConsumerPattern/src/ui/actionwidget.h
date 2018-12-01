@@ -2,6 +2,7 @@
 #define ACTIONWIDGET_H
 
 #include <QWidget>
+#include <QTimer>
 #include <string>
 #include "icontrol.h"
 #include "control.h"
@@ -24,6 +25,7 @@ public:
     void setPoint(const cv::Point &eyeLeft,const cv::Point &eyeRight) override;
     void myShow();
     void setCamOption(const string &Cam);
+    void setBackground(QPixmap newImage);
 private:
     Ui::ActionWidget *ui;
     cv::Point calibrationEyeLeft;
@@ -31,10 +33,12 @@ private:
     string CamOption;
     std::shared_ptr<DataBuffer> m_lastData;
     std::unique_ptr<Control> m_appCtrl;
-
+    std::unique_ptr<QTimer> m_UpdateTimer;
+    const size_t m_UpdateRateMS;
 
 private slots:
     void buttonBack();
+    void Update();
 
 signals:
     void back();

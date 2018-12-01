@@ -15,6 +15,7 @@
 #include "eye_detector.h"
 #include "basecamera.h"
 #include "basecamerafactory.h"
+#include "eyeanalyser.h"
 
 using namespace cv;
 // Forward declarations
@@ -41,6 +42,8 @@ public:
     bool setFaceInFrame(DataBufferPtr &data);
     void setCamera(const string &option);
     bool setEyesCenter(DataBufferPtr &data);
+    int getDirection(const DataBufferPtr &data,const Point &calibrationLeft,const Point &calibrationRight);
+    void clearVectors();
     //Point getEyesCenter();
 
 
@@ -54,9 +57,12 @@ private:
     std::unique_ptr<Eye_detector> m_tracking;
     std::shared_ptr<DataBufferPool> m_dataPool;
     std::unique_ptr<QTimer> m_ScanUpdateRateTimer;
+    std::unique_ptr<EyeAnalyser> m_analyser;
     std::vector<Rect> eyes;
     std::vector<Rect> faces;
     Point centerEyeLeft;
     Point centerEyeRight;
+    deque<cv::Point > EyeRight;
+    deque<cv::Point > EyeLeft;
 };
 #endif // CONTROL_H

@@ -33,6 +33,8 @@ void CalibrationWidget::setData(DataBufferPtr data)
 
 void CalibrationWidget::myShow(){
 
+
+
     this->showFullScreen();
     QPixmap bkgnd("calibration.png");
     setBackground(bkgnd);
@@ -104,10 +106,5 @@ void CalibrationWidget::Refuse(){
 }
 
 void CalibrationWidget::setPoint(const cv::Point &eyeLeft,const cv::Point &eyeRight){
-    Point a,b;
-    a= eyeLeft;
-    b= eyeRight;
-    //TODO
-    // problem here when come from calibration
     m_owner->setCalibrationPoint(eyeLeft,eyeRight);
 }

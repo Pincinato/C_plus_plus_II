@@ -34,6 +34,16 @@ SET( APP_SOURCES ${APP_SOURCES}
     src/ui/widget.cpp
     src/ui/widget.h
     src/ui/widget.ui
+    src/ui/mainwindow.cpp
+    src/ui/mainwindow.h
+    src/ui/mainwindow.ui
+    src/ui/calibrationwidget.cpp
+    src/ui/calibrationwidget.h
+    src/ui/calibrationwidget.ui
+    src/ui/icalibrationwidget.h
+    src/ui/actionwidget.cpp
+    src/ui/actionwidget.h
+    src/ui/actionwidget.ui
     src/app/common/control.cpp
     src/app/common/control.h
     src/app/common/icontrol.h
@@ -43,6 +53,8 @@ SET( APP_SOURCES ${APP_SOURCES}
     src/app/common/dataBufferPool.h
     src/app/common/eye_detector.cpp
     src/app/common/eye_detector.h
+    src/app/common/eyeanalyser.cpp
+    src/app/common/eyeanalyser.h
     src/app/acquisition/VCamera.cpp
     src/app/acquisition/VCamera.h
     src/app/acquisition/USBcamera.cpp
@@ -54,16 +66,6 @@ SET( APP_SOURCES ${APP_SOURCES}
     src/app/visualisation/videoVisualizer.h
     src/app/visualisation/rOg_image.cpp
     src/app/visualisation/rOg_image.h
-    src/ui/mainwindow.cpp
-    src/ui/mainwindow.h
-    src/ui/mainwindow.ui
-    src/ui/calibrationwidget.cpp
-    src/ui/calibrationwidget.h
-    src/ui/calibrationwidget.ui
-    src/ui/icalibrationwidget.h
-    src/ui/actionwidget.cpp
-    src/ui/actionwidget.h
-    src/ui/actionwidget.ui
 )
 
 
@@ -98,5 +100,11 @@ target_link_libraries(PCP Qt5::Widgets Qt5::Core ${OpenCV_LIBS} ${APP_LIBS} )
 # copy stylesheets
 file(COPY BFH.stylesheet DESTINATION ${PROJECT_BINARY_DIR})
 FILE(COPY src/files/haarcascade_frontalface_alt.xml src/files/haarcascade_eye_tree_eyeglasses.xml DESTINATION ${PROJECT_BINARY_DIR})
-file(COPY src/images/calibration.png DESTINATION ${PROJECT_BINARY_DIR})
-file(COPY src/images/back_button.png DESTINATION ${PROJECT_BINARY_DIR})
+file(COPY src/images/calibration.png
+    src/images/back_button.png
+    src/images/center.png
+    src/images/left.png
+    src/images/up.png
+    src/images/right.png
+    src/images/down.png
+    DESTINATION ${PROJECT_BINARY_DIR})

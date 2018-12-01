@@ -51,7 +51,7 @@ void MainWindow::start(){
         initActionWidget();
         m_actionWigdet->myShow();
         this->hide();
-    }
+   }
 }
 
 void MainWindow::calibration(){
@@ -74,6 +74,7 @@ void MainWindow::backEyeDetectionView(){
     CamOption.clear();
     CamOption.append(eyeDetectionWidget->getCamOption());
     eyeDetectionWidget->close();
+     calibrator.reset();
 }
 
 void MainWindow::backCalibrationView(){

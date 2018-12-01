@@ -1814,24 +1814,6 @@ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-maste
 dataBuffer.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/dataBuffer.h
 
-C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/Eye_detector.h
-QWidget
--
-memory
--
-icamera.h
-C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/icamera.h
-QTimer
--
-QImage
--
-opencv2/objdetect.hpp
--
-opencv2/highgui.hpp
--
-opencv2/imgproc.hpp
--
-
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/control.cpp
 control.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/control.h
@@ -1861,6 +1843,8 @@ basecamera.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/basecamera.h
 basecamerafactory.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/basecamerafactory.h
+eyeanalyser.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/eyeanalyser.h
 
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/dataBuffer.cpp
 dataBuffer.h
@@ -1895,8 +1879,8 @@ dataBuffer.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/dataBuffer.h
 
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/eye_detector.cpp
-Eye_detector.h
-C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/Eye_detector.h
+eye_detector.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/eye_detector.h
 VCamera.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/VCamera.h
 dataBufferPool.h
@@ -1918,6 +1902,28 @@ opencv2/objdetect.hpp
 opencv2/highgui.hpp
 -
 opencv2/imgproc.hpp
+-
+
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/eyeanalyser.cpp
+eyeanalyser.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/eyeanalyser.h
+QWidget
+-
+icontrol.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/icontrol.h
+control.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/control.h
+string
+-
+
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/eyeanalyser.h
+opencv2/objdetect.hpp
+-
+opencv2/highgui.hpp
+-
+opencv2/imgproc.hpp
+-
+vector
 -
 
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/icontrol.h
@@ -1980,6 +1986,8 @@ C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-maste
 
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/ui/actionwidget.h
 QWidget
+-
+QTimer
 -
 string
 -

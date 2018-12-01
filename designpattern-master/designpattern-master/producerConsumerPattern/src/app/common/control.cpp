@@ -43,6 +43,13 @@ void Control::init()
 
     //eye_detector
     m_tracking.reset(new Eye_detector);
+
+    //eye_analyser
+    m_analyser.reset(new EyeAnalyser);
+
+    //vector init.
+    EyeRight.clear();
+    EyeLeft.clear();
 }
 
 // -----------------------------------------------------------------
@@ -88,7 +95,13 @@ bool Control::getEyes(DataBufferPtr &data){
       centerEyeRight = m_tracking->detectCenterRightEye(faces,eyes);
       Point zero(0,0);
       if((centerEyeLeft==zero)|| (centerEyeRight==zero)){ ACK=false;}
-      else{m_widget->setPoint(centerEyeLeft,centerEyeRight);}
+      else{
+          m_widget->setPoint(centerEyeLeft,centerEyeRight);//hmmmm
+          EyeLeft.push_back(centerEyeLeft);
+          EyeRight.push_back(centerEyeRight);
+          if(EyeLeft.size()>300){ EyeLeft.pop_front();}
+          if(EyeRight.size()>300){EyeRight.pop_front();}
+      }
    }
    return ACK;
 }
@@ -114,4 +127,15 @@ void Control::setCamera(const string &option)
 
  cameraOption.clear();
  cameraOption.append(option);
+}
+
+void Control::clearVectors(){
+    EyeLeft.clear();
+    EyeRight.clear();
+}
+
+int Control::getDirection(const DataBufferPtr &data,const Point &calibrationLeft,const Point &calibrationRight){
+
+    return m_analyser->getDirection(data->m_frame,calibrationLeft,calibrationRight,EyeLeft,EyeRight);
+
 }
