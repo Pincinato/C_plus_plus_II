@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/PCP.dir/src/app/common/dataBufferPool.cpp.obj"
   "CMakeFiles/PCP.dir/src/app/common/eyeDetector.cpp.obj"
   "CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.obj"
+  "CMakeFiles/PCP.dir/src/app/acquisition/camera.cpp.obj"
   "CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj"
   "CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj"
   "CMakeFiles/PCP.dir/src/app/visualisation/videoVisualizer.cpp.obj"

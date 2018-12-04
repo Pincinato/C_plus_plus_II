@@ -1731,8 +1731,8 @@ thread
 -
 dataBuffer.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/dataBuffer.h
-basecamera.h
-C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamera.h
+camera.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/camera.h
 opencv2/objdetect.hpp
 -
 opencv2/highgui.hpp
@@ -1755,8 +1755,8 @@ thread
 -
 dataBuffer.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/dataBuffer.h
-basecamera.h
-C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamera.h
+camera.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/camera.h
 opencv2/objdetect.hpp
 -
 opencv2/highgui.hpp
@@ -1779,8 +1779,8 @@ thread
 -
 dataBuffer.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/dataBuffer.h
-basecamera.h
-C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamera.h
+camera.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/camera.h
 opencv2/objdetect.hpp
 -
 opencv2/highgui.hpp
@@ -1809,6 +1809,22 @@ icamera.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/icamera.h
 dataBufferPool.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/dataBufferPool.h
+
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/camera.cpp
+camera.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/camera.h
+
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/camera.h
+dataBuffer.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/dataBuffer.h
+basecamera.h
+C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamera.h
+opencv2/objdetect.hpp
+-
+opencv2/highgui.hpp
+-
+opencv2/imgproc.hpp
+-
 
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/icamera.h
 dataBuffer.h

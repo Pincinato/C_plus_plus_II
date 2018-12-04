@@ -10,20 +10,15 @@
 #include "USBcamera.h"
 
 USBCamera::USBCamera(ICamera *control, std::shared_ptr<DataBufferPool> dataPool) :
-    BaseCamera(control,dataPool),
-    m_tag("Player"),
-    m_play(false),
-    m_control(control),
-    m_playRate(33),
-    m_dataPool(dataPool),
-    m_offset(0)
+    Camera(control,dataPool)
 {
+    m_tag="USBCamera";
     m_control->displayMsg(m_tag, "Player constructed");
 }
 
 USBCamera::~USBCamera()
 {
-    // Thread stopping
+    // Thread stopping22
     m_play = false;
 
     if(m_acquireThread.joinable())
@@ -50,16 +45,6 @@ void USBCamera::stop()
     }
 }
 
-bool USBCamera::isPlaying()
-{
-    return m_play;
-}
-
-void USBCamera::setPlayRate(int playRate)
-{
-    m_playRate = playRate;
-}
-
 //******* Below runs in own thread **********//
 void USBCamera::run()
 {
@@ -73,46 +58,5 @@ void USBCamera::run()
         // Control frame rate
         int sleeptime = static_cast<int>( 1000.0f/m_playRate ) ;
         std::this_thread::sleep_for( std::chrono::milliseconds( sleeptime ));
-    }
-}
-
-bool USBCamera::readImage(DataBufferPtr data)
-{
-    bool ACK=false;
-    //capture.read(data->m_frame);
-    m_capture >> data->m_frame;
-    //Mat frame_gray(256,256,CV_8UC1);
-
-    if(!data->m_frame.empty()){
-        bgrToGray(data->m_frame, data->m_frameGray);
-        data->m_image =QImage(data->m_frame.data,data->m_frame.cols,data->m_frame.rows,data->m_frame.step,QImage::Format_RGB888);
-        ACK=true;
-    }
-    return ACK;
-}
-
-void USBCamera::bgrToGray(const cv::Mat& src, cv::Mat& dst)
-{
-    CV_Assert(src.type() == CV_8UC3);
-    int rows = src.rows, cols = src.cols;
-
-    dst.create(src.size(), CV_8UC1);
-
-    if (src.isContinuous() && dst.isContinuous())
-    {
-        cols = rows * cols;
-        rows = 1;
-    }
-
-    for (int row = 0; row < rows; ++row)
-    {
-        const uchar* src_ptr = src.ptr<uchar>(row);
-        uchar* dst_ptr = dst.ptr<uchar>(row);
-
-        for (int col = 0; col < cols; ++col)
-        {
-            dst_ptr[col] = (uchar)(src_ptr[2] * 0.114f + src_ptr[1] * 0.587f + src_ptr[0] * 0.299f);
-            src_ptr += 3;
-        }
     }
 }

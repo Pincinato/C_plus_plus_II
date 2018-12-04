@@ -55,6 +55,8 @@ set( APP_SOURCES ${APP_SOURCES}
     src/app/common/eyeDetector.h
     src/app/common/eyeAnalyser.cpp
     src/app/common/eyeAnalyser.h
+    src/app/acquisition/camera.cpp
+    src/app/acquisition/camera.h
     src/app/acquisition/VCamera.cpp
     src/app/acquisition/VCamera.h
     src/app/acquisition/USBcamera.cpp

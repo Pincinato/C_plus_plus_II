@@ -183,6 +183,12 @@
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/basecamerafactory.h">
 			<Option target="PCP"/>
 		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/camera.cpp">
+			<Option target="PCP"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/camera.h">
+			<Option target="PCP"/>
+		</Unit>
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/acquisition/icamera.h">
 			<Option target="PCP"/>
 		</Unit>

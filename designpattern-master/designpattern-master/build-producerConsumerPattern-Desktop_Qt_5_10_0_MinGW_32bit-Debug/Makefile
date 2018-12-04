@@ -216,6 +216,33 @@ src/app/acquisition/VCamera.cpp.s:
 	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.s
 .PHONY : src/app/acquisition/VCamera.cpp.s
 
+src/app/acquisition/camera.obj: src/app/acquisition/camera.cpp.obj
+
+.PHONY : src/app/acquisition/camera.obj
+
+# target to build an object file
+src/app/acquisition/camera.cpp.obj:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/acquisition/camera.cpp.obj
+.PHONY : src/app/acquisition/camera.cpp.obj
+
+src/app/acquisition/camera.i: src/app/acquisition/camera.cpp.i
+
+.PHONY : src/app/acquisition/camera.i
+
+# target to preprocess a source file
+src/app/acquisition/camera.cpp.i:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/acquisition/camera.cpp.i
+.PHONY : src/app/acquisition/camera.cpp.i
+
+src/app/acquisition/camera.s: src/app/acquisition/camera.cpp.s
+
+.PHONY : src/app/acquisition/camera.s
+
+# target to generate assembly for a file
+src/app/acquisition/camera.cpp.s:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/acquisition/camera.cpp.s
+.PHONY : src/app/acquisition/camera.cpp.s
+
 src/app/common/control.obj: src/app/common/control.cpp.obj
 
 .PHONY : src/app/common/control.obj
@@ -559,6 +586,9 @@ help:
 	@echo ... src/app/acquisition/VCamera.obj
 	@echo ... src/app/acquisition/VCamera.i
 	@echo ... src/app/acquisition/VCamera.s
+	@echo ... src/app/acquisition/camera.obj
+	@echo ... src/app/acquisition/camera.i
+	@echo ... src/app/acquisition/camera.s
 	@echo ... src/app/common/control.obj
 	@echo ... src/app/common/control.i
 	@echo ... src/app/common/control.s
