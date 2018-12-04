@@ -4,17 +4,18 @@
 CalibrationWidget::CalibrationWidget(QWidget *parent,ICalibrationWidget *owner, const string &CamOp) :
     QWidget(parent),
     ui(new Ui::CalibrationWidget),
-    m_CamOption(CamOp),
+    //m_CamOption(CamOp),
     m_owner(owner)
 {
     ui->setupUi(this);
     m_lastData.reset();
     m_appCtrl.reset( new Control(this) );
-    m_appCtrl->setCamera(m_CamOption);
+    m_appCtrl->setCamera(CamOp);
     enableButtons(false);
     //connect bottuns
     connect(ui->RefuseButton,SIGNAL(clicked()),this,SLOT(Refuse()));
     connect(ui->AcceptButton,SIGNAL(clicked()),this,SLOT(Accept()));
+    this->showFullScreen();
 }
 
 CalibrationWidget::~CalibrationWidget()
@@ -34,8 +35,6 @@ void CalibrationWidget::setData(DataBufferPtr data)
 
 void CalibrationWidget::myShow(){
 
-
-
     this->showFullScreen();
     QPixmap bkgnd("calibration.png");
     setBackground(bkgnd);
@@ -43,6 +42,7 @@ void CalibrationWidget::myShow(){
 }
 
 void CalibrationWidget::keyPressEvent(QKeyEvent *ev){
+
 
     if(ev->key()==Qt::Key_Space){
         if(m_lastData){
@@ -84,16 +84,8 @@ void CalibrationWidget::enableButtons(bool op){
     }
 }
 
-/*
-void CalibrationWidget::setCamoption( const string &CamOp){
-
-    CamOption.clear();
-    CamOption.append(CamOp);
-}*/
-
 void CalibrationWidget::Accept(){
 
-    //();
     emit back();
 
 }
@@ -109,3 +101,4 @@ void CalibrationWidget::Refuse(){
 void CalibrationWidget::setPoint(const cv::Point &eyeLeft,const cv::Point &eyeRight){
     m_owner->setCalibrationPoint(m_lastData->m_frame, eyeLeft,eyeRight);
 }
+

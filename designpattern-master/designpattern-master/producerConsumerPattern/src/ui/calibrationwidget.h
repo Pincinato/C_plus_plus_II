@@ -26,13 +26,13 @@ public:
     void myShow();
     void setBackground(QPixmap newImage);
     void enableButtons(bool op);
-    void setCamoption( const string &CamOp);
+    //void setCamoption( const string &CamOp);
 
 private:
     Ui::CalibrationWidget *ui;
     std::shared_ptr<DataBuffer> m_lastData;
     std::unique_ptr<Control> m_appCtrl;
-    string m_CamOption;
+    //string m_CamOption;
     ICalibrationWidget *m_owner;
 
 private slots:

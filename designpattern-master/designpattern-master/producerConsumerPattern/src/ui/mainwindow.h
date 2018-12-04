@@ -22,6 +22,7 @@ public:
     void  initEyeDetection();
     void  initActionWidget();
     void  initCalibration();
+    void  myShow();
 private:
     Ui::MainWindow *ui;
     unique_ptr<Widget> eyeDetectionWidget;
@@ -29,7 +30,6 @@ private:
     unique_ptr<ActionWidget> m_actionWigdet;
     cv::Point m_calibrationEyeRight;
     cv::Point m_calibrationEyeLeft;
-    Mat m_EyeTemplate;
     string m_CamOption;
     bool m_Iscalibrated;
 

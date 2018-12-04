@@ -26,11 +26,10 @@ public:
     void myShow();
     void setCamOption(const string &Cam);
     void setBackground(QPixmap newImage);
-    void setTemplate(const Mat &newEyetemplate);
+
 private:
     Ui::ActionWidget *ui;
     cv::Point m_calibrationEyeLeft;
-    Mat m_EyeTemplate;
     cv::Point m_calibrationEyeRight;
     string m_CamOption;
     std::shared_ptr<DataBuffer> m_lastData;

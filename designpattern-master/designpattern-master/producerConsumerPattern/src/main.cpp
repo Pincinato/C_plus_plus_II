@@ -19,6 +19,6 @@ int main(int argc, char *argv[])
     qApp->setStyleSheet(StyleSheet);
 
     MainWindow w;
-    w.show();
+    w.myShow();
     return a.exec();
 }

@@ -14,16 +14,12 @@ class EyeAnalyser
 {
 public:
     EyeAnalyser();
-    short getEyePosition(const Mat &frame,const deque<Point> &leftEye,const deque<Point> &rightEye,const Mat &Eyetemplate);
-    short getDirection(const Mat &frame,const Point &calibrationLeft,const Point &calibrationRight,const deque<Point> &leftEye,const deque<Point> &rightEye,const Mat &Eyetemplate);
-    float getSumPixel(const Mat &image);
-    bool LeftRight(float leftValue,float rightValue);
-    bool UpDown(float upValue, float downValue);
+    short getDirection(const Point &calibrationLeft,const Point &calibrationRight,const deque<Point> &leftEye,const deque<Point> &rightEye);
     short getDistance(const Point &calibration,const deque<Point> &Eye);
     void setSensibility(int newValue);
 
 private:
-    Point averagePoint(const deque<Point> &vec);
+    Point medianPoint(const deque<Point> &input);
     int sensibility;
     deque<int> m_valueX;
     deque<int> m_valueY;

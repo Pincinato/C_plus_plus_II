@@ -6,13 +6,13 @@ ActionWidget::ActionWidget(QWidget *parent,const string &CamOp,const Point &cali
     ui(new Ui::ActionWidget),
     m_calibrationEyeLeft(calibrationLeft),
     m_calibrationEyeRight(calibrationRight),
-    m_CamOption(CamOp),
+    //m_CamOption(CamOp),
     m_UpdateRateMS(10)
 {
     ui->setupUi(this);
     m_lastData.reset();
     m_appCtrl.reset( new Control(this) );
-    m_appCtrl->setCamera(m_CamOption);
+    m_appCtrl->setCamera(CamOp);
     connect(ui->BackButton,SIGNAL(clicked()),this,SLOT(buttonBack()));
     //
     m_UpdateTimer.reset(new QTimer(this));
@@ -44,10 +44,11 @@ void ActionWidget::myShow(){
     ui->SensibilitySlider->setValue(10);
 }
 
+/*
 void ActionWidget::setCamOption(const string &Cam){
     m_CamOption.clear();
     m_CamOption.append(Cam);
-}
+}*/
 
 void ActionWidget::displayMsg(const std::string &tag, const std::string &msg) {
     std::cout << " Info: " << tag << " : " <<  msg << std::endl;
@@ -68,7 +69,7 @@ void ActionWidget::Update(){
     {
         if(m_appCtrl->getEyes(m_lastData)){
             //int ret1 = m_appCtrl->getPosition(m_lastData,EyeTemplate);
-            int ret = m_appCtrl->getDirection(m_lastData,m_calibrationEyeLeft,m_calibrationEyeRight,m_EyeTemplate);
+            int ret = m_appCtrl->getDirection(m_calibrationEyeLeft,m_calibrationEyeRight);
             if(ret==1){
                 QPixmap bkgnd1("center.png");
                 setBackground(bkgnd1);
@@ -102,10 +103,6 @@ void ActionWidget::setBackground(QPixmap newImage){
     palette.setBrush(QPalette::Background, newImage);
     this->setPalette(palette);
 
-}
-
-void ActionWidget::setTemplate(const Mat &newEyeTemplate){
-    m_EyeTemplate=newEyeTemplate;
 }
 
 void ActionWidget::buttonBack(){

@@ -30,13 +30,19 @@ public:
     {
         if (ActionWidget->objectName().isEmpty())
             ActionWidget->setObjectName(QStringLiteral("ActionWidget"));
-        ActionWidget->resize(400, 300);
+        ActionWidget->setWindowModality(Qt::NonModal);
+        ActionWidget->resize(200, 215);
         BackButton = new QPushButton(ActionWidget);
         BackButton->setObjectName(QStringLiteral("BackButton"));
-        BackButton->setGeometry(QRect(330, 240, 61, 51));
+        BackButton->setGeometry(QRect(80, 30, 70, 81));
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(BackButton->sizePolicy().hasHeightForWidth());
+        BackButton->setSizePolicy(sizePolicy);
         SensibilitySlider = new QSlider(ActionWidget);
         SensibilitySlider->setObjectName(QStringLiteral("SensibilitySlider"));
-        SensibilitySlider->setGeometry(QRect(330, 10, 20, 191));
+        SensibilitySlider->setGeometry(QRect(30, 10, 11, 185));
         SensibilitySlider->setMinimum(0);
         SensibilitySlider->setOrientation(Qt::Vertical);
 

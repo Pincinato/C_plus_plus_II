@@ -29,7 +29,7 @@ public:
     {
         if (CalibrationWidget->objectName().isEmpty())
             CalibrationWidget->setObjectName(QStringLiteral("CalibrationWidget"));
-        CalibrationWidget->resize(400, 300);
+        CalibrationWidget->resize(525, 347);
         CalibrationWidget->setStyleSheet(QStringLiteral("background-color: rgb(0, 0, 0);"));
         RefuseButton = new QPushButton(CalibrationWidget);
         RefuseButton->setObjectName(QStringLiteral("RefuseButton"));

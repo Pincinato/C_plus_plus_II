@@ -134,17 +134,13 @@ void Control::clearVectors(){
     m_EyeRight.clear();
 }
 
-int Control::getDirection(const DataBufferPtr &data,const Point &calibrationLeft,const Point &calibrationRight,const Mat &Eyetemplate){
+int Control::getDirection(const Point &calibrationLeft,const Point &calibrationRight){
 
     //return m_analyser->getDirection(data->m_frame,calibrationLeft,calibrationRight,EyeLeft,EyeRight,Eyetemplate);
-    return m_analyser->getDirection(data->m_frameGray,calibrationLeft,calibrationRight,m_EyeLeft,m_EyeRight,Eyetemplate);
+    return m_analyser->getDirection(calibrationLeft,calibrationRight,m_EyeLeft,m_EyeRight);
 
 }
 
-int Control::getPosition(const DataBufferPtr &data,const Mat &Templat){
-
-    return m_analyser->getEyePosition(data->m_frame,m_EyeLeft,m_EyeRight,Templat);
-}
 
 void Control::setSensibility(int newValue){
     m_analyser->setSensibility(newValue);
