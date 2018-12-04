@@ -33,7 +33,7 @@ public:
     Point detectCenterLeftEye(std::vector<Rect> &faces, vector<Rect> &eyes);
     Point detectCenterRightEye(std::vector<Rect> &faces, vector<Rect> &eyes);
     bool drawBothCenterEye(std::vector<Rect> &faces, vector<Rect> &eyes);
-    bool drawEyesCenter(Mat &frame, vector<Rect> &eyes,Point & eye_center);
+    bool drawEyesCenter(Mat &frame, Point & eye_center);
 private:
 
 

@@ -118,7 +118,7 @@ bool Control::setFaceInFrame(DataBufferPtr &data){
 }
 
 bool Control::setEyesCenter(DataBufferPtr &data){
-   return m_tracking->drawEyesCenter(data->m_frame,m_eyes,m_centerEyeLeft) & (m_tracking->drawEyesCenter(data->m_frame,m_eyes,m_centerEyeRight));
+   return m_tracking->drawEyesCenter(data->m_frame,m_centerEyeLeft) & (m_tracking->drawEyesCenter(data->m_frame,m_centerEyeRight));
 
 }
 

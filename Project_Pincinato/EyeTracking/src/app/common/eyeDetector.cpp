@@ -33,14 +33,13 @@ bool EyeDetector::detectEyes(const Mat &frame,vector<Rect> &faces,vector<Rect> &
     if(!frame.empty()){
         equalizeHist( frame, frame );
         m_face_cascade.detectMultiScale( frame, faces, 1.1, 2, 0|CASCADE_SCALE_IMAGE, Size(30, 30) );
-        for( size_t i = 0; i < faces.size(); ++i )
-        {
-            Mat faceROI = frame( faces[i] );
+        for_each(faces.begin(),faces.end(),[&](Rect face){
+            Mat faceROI = frame(face);
             m_eyes_cascade.detectMultiScale( faceROI, eyes, 1.1, 2, 0 |CASCADE_SCALE_IMAGE, Size(30, 30) );
             if(eyes.size()>0){
-               ACK=true;
+                ACK=true;
             }
-        }
+         });
     }
     return ACK;
 
@@ -109,20 +108,11 @@ bool EyeDetector::drawBothCenterEye(std::vector<Rect> &faces, vector<Rect> &eyes
     return ACK;
 }
 
-bool EyeDetector::drawEyesCenter(Mat &frame, vector<Rect> &eyes,Point & eye_center){
+bool EyeDetector::drawEyesCenter(Mat &frame,Point & eye_center){
 
     bool ACK=false;
-    for( size_t j = 0; j < eyes.size(); j++ )
-    {
-        circle(frame, eye_center, 1, Scalar( 255, 0, 0 ), 2, 8, 0 );
-        ACK=true;
-    }
-    /*
-    for_each(eyes.cbegin(),eyes.cend(),[&](){
-        circle(frame, eye_center, 1, Scalar( 255, 0, 0 ), 2, 8, 0 );
-        ACK=true;
-    });
-    */
+    circle(frame, eye_center, 1, Scalar( 255, 0, 0 ), 2, 8, 0 );
+    ACK=true;
     return ACK;
 }
 
