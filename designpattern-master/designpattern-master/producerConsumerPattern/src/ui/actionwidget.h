@@ -29,10 +29,10 @@ public:
     void setTemplate(const Mat &newEyetemplate);
 private:
     Ui::ActionWidget *ui;
-    cv::Point calibrationEyeLeft;
-    Mat EyeTemplate;
-    cv::Point calibrationEyeRight;
-    string CamOption;
+    cv::Point m_calibrationEyeLeft;
+    Mat m_EyeTemplate;
+    cv::Point m_calibrationEyeRight;
+    string m_CamOption;
     std::shared_ptr<DataBuffer> m_lastData;
     std::unique_ptr<Control> m_appCtrl;
     std::unique_ptr<QTimer> m_UpdateTimer;

@@ -16,7 +16,7 @@ USBCamera::USBCamera(ICamera *control, std::shared_ptr<DataBufferPool> dataPool)
     m_control(control),
     m_playRate(33),
     m_dataPool(dataPool),
-    offset(0)
+    m_offset(0)
 {
     m_control->displayMsg(m_tag, "Player constructed");
 }
@@ -36,7 +36,7 @@ USBCamera::~USBCamera()
 void USBCamera::startPlayData()
 {
     m_play = true;
-    capture.open(1);
+    m_capture.open(1);
     m_acquireThread = std::thread(&USBCamera::run, this);
     m_control->displayMsg(m_tag, "Start Playing");;
 }
@@ -45,8 +45,8 @@ void USBCamera::stop()
 {
     m_play = false;
     m_control->displayMsg(m_tag, "Stop playing");
-    if(capture.isOpened()){
-        capture.release();
+    if(m_capture.isOpened()){
+        m_capture.release();
     }
 }
 
@@ -63,7 +63,7 @@ void USBCamera::setPlayRate(int playRate)
 //******* Below runs in own thread **********//
 void USBCamera::run()
 {
-    while( (m_play) & (capture.isOpened()))
+    while( (m_play) & (m_capture.isOpened()))
     {
         DataBufferPtr nextPtr = m_dataPool->getBuffer();
         if( readImage(nextPtr) )
@@ -79,10 +79,40 @@ void USBCamera::run()
 bool USBCamera::readImage(DataBufferPtr data)
 {
     bool ACK=false;
-    capture >> data->m_frame;
+    //capture.read(data->m_frame);
+    m_capture >> data->m_frame;
+    //Mat frame_gray(256,256,CV_8UC1);
+
     if(!data->m_frame.empty()){
+        bgrToGray(data->m_frame, data->m_frameGray);
         data->m_image =QImage(data->m_frame.data,data->m_frame.cols,data->m_frame.rows,data->m_frame.step,QImage::Format_RGB888);
         ACK=true;
     }
     return ACK;
+}
+
+void USBCamera::bgrToGray(const cv::Mat& src, cv::Mat& dst)
+{
+    CV_Assert(src.type() == CV_8UC3);
+    int rows = src.rows, cols = src.cols;
+
+    dst.create(src.size(), CV_8UC1);
+
+    if (src.isContinuous() && dst.isContinuous())
+    {
+        cols = rows * cols;
+        rows = 1;
+    }
+
+    for (int row = 0; row < rows; ++row)
+    {
+        const uchar* src_ptr = src.ptr<uchar>(row);
+        uchar* dst_ptr = dst.ptr<uchar>(row);
+
+        for (int col = 0; col < cols; ++col)
+        {
+            dst_ptr[col] = (uchar)(src_ptr[2] * 0.114f + src_ptr[1] * 0.587f + src_ptr[0] * 0.299f);
+            src_ptr += 3;
+        }
+    }
 }

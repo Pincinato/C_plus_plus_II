@@ -12,10 +12,10 @@
 #include "icamera.h"
 #include "icontrol.h"
 #include <QTimer>
-#include "eye_detector.h"
+#include "eyeDetector.h"
 #include "basecamera.h"
 #include "basecamerafactory.h"
-#include "eyeanalyser.h"
+#include "eyeAnalyser.h"
 
 using namespace cv;
 // Forward declarations
@@ -56,15 +56,15 @@ private:
     std::string cameraOption;
     std::unique_ptr<BaseCamera> m_player;
     std::unique_ptr<BaseCameraFactory> camera_factory;
-    std::unique_ptr<Eye_detector> m_tracking;
+    std::unique_ptr<EyeDetector> m_tracking;
     std::shared_ptr<DataBufferPool> m_dataPool;
     std::unique_ptr<QTimer> m_ScanUpdateRateTimer;
     std::unique_ptr<EyeAnalyser> m_analyser;
-    std::vector<Rect> eyes;
-    std::vector<Rect> faces;
-    Point centerEyeLeft;
-    Point centerEyeRight;
-    deque<cv::Point > EyeRight;
-    deque<cv::Point > EyeLeft;
+    std::vector<Rect> m_eyes;
+    std::vector<Rect> m_faces;
+    Point m_centerEyeLeft;
+    Point m_centerEyeRight;
+    deque<cv::Point > m_EyeRight;
+    deque<cv::Point > m_EyeLeft;
 };
 #endif // CONTROL_H

@@ -27,11 +27,11 @@ private:
     unique_ptr<Widget> eyeDetectionWidget;
     unique_ptr<CalibrationWidget> calibrator;
     unique_ptr<ActionWidget> m_actionWigdet;
-    cv::Point calibrationEyeRight;
-    cv::Point calibrationEyeLeft;
-    Mat EyeTemplate;
-    string CamOption;
-    bool Iscalibrated;
+    cv::Point m_calibrationEyeRight;
+    cv::Point m_calibrationEyeLeft;
+    Mat m_EyeTemplate;
+    string m_CamOption;
+    bool m_Iscalibrated;
 
 
 private slots:

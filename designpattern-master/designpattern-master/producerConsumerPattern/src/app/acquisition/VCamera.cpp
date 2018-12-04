@@ -16,7 +16,7 @@ VCamera::VCamera(ICamera *control, std::shared_ptr<DataBufferPool> dataPool) :
     m_control(control),
     m_playRate(33),
     m_dataPool(dataPool),
-    offset(0)
+    m_offset(0)
 {
     m_control->displayMsg(m_tag, "Player constructed");
 }
@@ -30,15 +30,15 @@ VCamera::~VCamera()
     {
         m_acquireThread.join();
     }
-    if(capture.isOpened()){
-        capture.release();
+    if(m_capture.isOpened()){
+        m_capture.release();
     }
 }
 
 void VCamera::startPlayData()
 {
     m_play = true;
-    capture.open(0);
+    m_capture.open(0);
     m_acquireThread = std::thread(&VCamera::run, this);
     m_control->displayMsg(m_tag, "Start Playing");
 }
@@ -47,8 +47,8 @@ void VCamera::stop()
 {
     m_play = false;
     m_control->displayMsg(m_tag, "Stop playing");
-    if(capture.isOpened()){
-        capture.release();
+    if(m_capture.isOpened()){
+        m_capture.release();
     }
 }
 
@@ -65,7 +65,7 @@ void VCamera::setPlayRate(int playRate)
 //******* Below runs in own thread **********//
 void VCamera::run()
 {
-    while( (m_play) & (capture.isOpened()))
+    while( (m_play) & (m_capture.isOpened()))
     {
         DataBufferPtr nextPtr = m_dataPool->getBuffer();
         if( readImage(nextPtr) )
@@ -82,7 +82,7 @@ bool VCamera::readImage(DataBufferPtr data)
 {
     bool ACK=false;
     //capture.read(data->m_frame);
-    capture >> data->m_frame;
+    m_capture >> data->m_frame;
     //Mat frame_gray(256,256,CV_8UC1);
 
     if(!data->m_frame.empty()){
@@ -106,12 +106,12 @@ void VCamera::bgrToGray(const cv::Mat& src, cv::Mat& dst)
         rows = 1;
     }
 
-    for (int row = 0; row < rows; row++)
+    for (int row = 0; row < rows; ++row)
     {
         const uchar* src_ptr = src.ptr<uchar>(row);
         uchar* dst_ptr = dst.ptr<uchar>(row);
 
-        for (int col = 0; col < cols; col++)
+        for (int col = 0; col < cols; ++col)
         {
             dst_ptr[col] = (uchar)(src_ptr[2] * 0.114f + src_ptr[1] * 0.587f + src_ptr[0] * 0.299f);
             src_ptr += 3;

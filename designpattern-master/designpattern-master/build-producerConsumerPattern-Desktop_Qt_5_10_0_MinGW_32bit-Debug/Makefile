@@ -297,59 +297,59 @@ src/app/common/dataBufferPool.cpp.s:
 	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/common/dataBufferPool.cpp.s
 .PHONY : src/app/common/dataBufferPool.cpp.s
 
-src/app/common/eye_detector.obj: src/app/common/eye_detector.cpp.obj
+src/app/common/eyeAnalyser.obj: src/app/common/eyeAnalyser.cpp.obj
 
-.PHONY : src/app/common/eye_detector.obj
-
-# target to build an object file
-src/app/common/eye_detector.cpp.obj:
-	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.obj
-.PHONY : src/app/common/eye_detector.cpp.obj
-
-src/app/common/eye_detector.i: src/app/common/eye_detector.cpp.i
-
-.PHONY : src/app/common/eye_detector.i
-
-# target to preprocess a source file
-src/app/common/eye_detector.cpp.i:
-	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.i
-.PHONY : src/app/common/eye_detector.cpp.i
-
-src/app/common/eye_detector.s: src/app/common/eye_detector.cpp.s
-
-.PHONY : src/app/common/eye_detector.s
-
-# target to generate assembly for a file
-src/app/common/eye_detector.cpp.s:
-	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/common/eye_detector.cpp.s
-.PHONY : src/app/common/eye_detector.cpp.s
-
-src/app/common/eyeanalyser.obj: src/app/common/eyeanalyser.cpp.obj
-
-.PHONY : src/app/common/eyeanalyser.obj
+.PHONY : src/app/common/eyeAnalyser.obj
 
 # target to build an object file
-src/app/common/eyeanalyser.cpp.obj:
-	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.obj
-.PHONY : src/app/common/eyeanalyser.cpp.obj
+src/app/common/eyeAnalyser.cpp.obj:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.obj
+.PHONY : src/app/common/eyeAnalyser.cpp.obj
 
-src/app/common/eyeanalyser.i: src/app/common/eyeanalyser.cpp.i
+src/app/common/eyeAnalyser.i: src/app/common/eyeAnalyser.cpp.i
 
-.PHONY : src/app/common/eyeanalyser.i
+.PHONY : src/app/common/eyeAnalyser.i
 
 # target to preprocess a source file
-src/app/common/eyeanalyser.cpp.i:
-	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.i
-.PHONY : src/app/common/eyeanalyser.cpp.i
+src/app/common/eyeAnalyser.cpp.i:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.i
+.PHONY : src/app/common/eyeAnalyser.cpp.i
 
-src/app/common/eyeanalyser.s: src/app/common/eyeanalyser.cpp.s
+src/app/common/eyeAnalyser.s: src/app/common/eyeAnalyser.cpp.s
 
-.PHONY : src/app/common/eyeanalyser.s
+.PHONY : src/app/common/eyeAnalyser.s
 
 # target to generate assembly for a file
-src/app/common/eyeanalyser.cpp.s:
-	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.s
-.PHONY : src/app/common/eyeanalyser.cpp.s
+src/app/common/eyeAnalyser.cpp.s:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.s
+.PHONY : src/app/common/eyeAnalyser.cpp.s
+
+src/app/common/eyeDetector.obj: src/app/common/eyeDetector.cpp.obj
+
+.PHONY : src/app/common/eyeDetector.obj
+
+# target to build an object file
+src/app/common/eyeDetector.cpp.obj:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/common/eyeDetector.cpp.obj
+.PHONY : src/app/common/eyeDetector.cpp.obj
+
+src/app/common/eyeDetector.i: src/app/common/eyeDetector.cpp.i
+
+.PHONY : src/app/common/eyeDetector.i
+
+# target to preprocess a source file
+src/app/common/eyeDetector.cpp.i:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/common/eyeDetector.cpp.i
+.PHONY : src/app/common/eyeDetector.cpp.i
+
+src/app/common/eyeDetector.s: src/app/common/eyeDetector.cpp.s
+
+.PHONY : src/app/common/eyeDetector.s
+
+# target to generate assembly for a file
+src/app/common/eyeDetector.cpp.s:
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/common/eyeDetector.cpp.s
+.PHONY : src/app/common/eyeDetector.cpp.s
 
 src/app/visualisation/rOg_image.obj: src/app/visualisation/rOg_image.cpp.obj
 
@@ -568,12 +568,12 @@ help:
 	@echo ... src/app/common/dataBufferPool.obj
 	@echo ... src/app/common/dataBufferPool.i
 	@echo ... src/app/common/dataBufferPool.s
-	@echo ... src/app/common/eye_detector.obj
-	@echo ... src/app/common/eye_detector.i
-	@echo ... src/app/common/eye_detector.s
-	@echo ... src/app/common/eyeanalyser.obj
-	@echo ... src/app/common/eyeanalyser.i
-	@echo ... src/app/common/eyeanalyser.s
+	@echo ... src/app/common/eyeAnalyser.obj
+	@echo ... src/app/common/eyeAnalyser.i
+	@echo ... src/app/common/eyeAnalyser.s
+	@echo ... src/app/common/eyeDetector.obj
+	@echo ... src/app/common/eyeDetector.i
+	@echo ... src/app/common/eyeDetector.s
 	@echo ... src/app/visualisation/rOg_image.obj
 	@echo ... src/app/visualisation/rOg_image.i
 	@echo ... src/app/visualisation/rOg_image.s

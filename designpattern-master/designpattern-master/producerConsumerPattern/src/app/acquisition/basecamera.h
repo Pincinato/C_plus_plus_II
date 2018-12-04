@@ -10,7 +10,7 @@ class BaseCamera{
 public:
     BaseCamera(ICamera *control, std::shared_ptr<DataBufferPool> dataPool):
         m_control(control),m_dataPool(dataPool){}
-    virtual ~BaseCamera(){};
+    virtual ~BaseCamera(){}
     virtual void startPlayData()=0;
     virtual void stop()=0;
     virtual bool isPlaying()=0;

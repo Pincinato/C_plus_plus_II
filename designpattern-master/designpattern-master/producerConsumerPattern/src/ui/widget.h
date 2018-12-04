@@ -19,7 +19,6 @@ class DataBuffer;
 class Control;
 class VideoVisualizer;
 class QTimer;
-//class Eye_detector;
 
 namespace Ui {
 class Widget;
@@ -57,7 +56,7 @@ private:
     std::unique_ptr<VideoVisualizer> m_videoVisualizer;
     std::unique_ptr<QTimer> m_guiUpdateTimer;
     std::unique_ptr<QTimer> m_frameRateTimer;
-    std::string CamOption;
+    std::string m_CamOption;
     size_t m_frameCount;
     const size_t m_GuiUpdateRateMS;
     const size_t m_fpsUpdateRateMS;

@@ -6,7 +6,8 @@ project(PCP)
 if(MSVC)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++latest /W4")
 else()
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z -Wall " "-Wextra -Werror")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z -Wall ")
+        #"-Wextra -Werror")
 endif()
 
 
@@ -50,10 +51,10 @@ set( APP_SOURCES ${APP_SOURCES}
     src/app/common/dataBuffer.h
     src/app/common/dataBufferPool.cpp
     src/app/common/dataBufferPool.h
-    src/app/common/eye_detector.cpp
-    src/app/common/eye_detector.h
-    src/app/common/eyeanalyser.cpp
-    src/app/common/eyeanalyser.h
+    src/app/common/eyeDetector.cpp
+    src/app/common/eyeDetector.h
+    src/app/common/eyeAnalyser.cpp
+    src/app/common/eyeAnalyser.h
     src/app/acquisition/VCamera.cpp
     src/app/acquisition/VCamera.h
     src/app/acquisition/USBcamera.cpp
@@ -98,7 +99,10 @@ target_link_libraries(PCP Qt5::Widgets Qt5::Core ${OpenCV_LIBS} ${APP_LIBS} )
 
 # copy stylesheets
 file(COPY BFH.stylesheet DESTINATION ${PROJECT_BINARY_DIR})
-file(COPY src/files/haarcascade_frontalface_alt.xml src/files/haarcascade_eye_tree_eyeglasses.xml DESTINATION ${PROJECT_BINARY_DIR})
+# copy cascade files
+file(COPY src/files/haarcascade_frontalface_alt.xml
+    src/files/haarcascade_eye_tree_eyeglasses.xml DESTINATION ${PROJECT_BINARY_DIR})
+# copy image files
 file(COPY src/images/calibration.png
     src/images/back_button.png
     src/images/center.png

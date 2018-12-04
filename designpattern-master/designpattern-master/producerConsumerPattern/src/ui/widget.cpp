@@ -12,14 +12,14 @@
 #include "dataBuffer.h"
 #include "control.h"
 #include "videoVisualizer.h"
-//#include "eye_detector.h"
+//#include "eyeDetector.h"
 
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget),
     m_tag("Widget"),
-    CamOption("WebCam"),
+    m_CamOption("WebCam"),
     m_frameCount(0),
     m_GuiUpdateRateMS(50),
     m_fpsUpdateRateMS(500)
@@ -28,7 +28,7 @@ Widget::Widget(QWidget *parent) :
 
     // Setup main control - passing widget to control
     m_appCtrl.reset( new Control(this) );
-    //m_appCtrl.reset(new Eye_detector(this));
+    //m_appCtrl.reset(new eyeDetector(this));
     // reset data container
     m_lastData.reset();
 
@@ -161,13 +161,13 @@ void Widget::setCamera(const QString &text){
         m_appCtrl->stopPlaying();
         ui->play_pushButton->setText("Play");
     }
-    CamOption.clear();
-    CamOption.append(text.toUtf8().constData());
+    m_CamOption.clear();
+    m_CamOption.append(text.toUtf8().constData());
     m_appCtrl->setCamera(text.toUtf8().constData());
 }
 
 string Widget::getCamOption(){
-    return CamOption;
+    return m_CamOption;
 }
 
 void Widget::setPoint(const cv::Point &eyeLeft,const cv::Point &eyeRight){

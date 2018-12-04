@@ -4,13 +4,13 @@
 CalibrationWidget::CalibrationWidget(QWidget *parent,ICalibrationWidget *owner, const string &CamOp) :
     QWidget(parent),
     ui(new Ui::CalibrationWidget),
-    CamOption(CamOp),
+    m_CamOption(CamOp),
     m_owner(owner)
 {
     ui->setupUi(this);
     m_lastData.reset();
     m_appCtrl.reset( new Control(this) );
-    m_appCtrl->setCamera(CamOption);
+    m_appCtrl->setCamera(m_CamOption);
     enableButtons(false);
     //connect bottuns
     connect(ui->RefuseButton,SIGNAL(clicked()),this,SLOT(Refuse()));

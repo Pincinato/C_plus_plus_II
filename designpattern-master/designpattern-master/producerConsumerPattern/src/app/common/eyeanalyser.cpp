@@ -1,4 +1,4 @@
-#include "eyeanalyser.h"
+#include "eyeAnalyser.h"
 
 #include <QWidget>
 #include "icontrol.h"
@@ -10,65 +10,9 @@ using namespace std;
 EyeAnalyser::EyeAnalyser()
 {
     sensibility=10;
-    valueX.clear();
-    valueY.clear();
+    m_valueX.clear();
+    m_valueY.clear();
 }
-
-std::vector<cv::Point> centers;
-
-cv::Vec3f getEyeball(cv::Mat &eye, std::vector<cv::Vec3f> &circles)
-{
-  std::vector<int> sums(circles.size(), 0);
-  for (int y = 0; y < eye.rows; y++)
-  {
-      uchar *ptr = eye.ptr<uchar>(y);
-      for (int x = 0; x < eye.cols; x++)
-      {
-          int value = static_cast<int>(*ptr);
-          for (int i = 0; i < circles.size(); i++)
-          {
-              cv::Point center((int)std::round(circles[i][0]), (int)std::round(circles[i][1]));
-              int radius = (int)std::round(circles[i][2]);
-              if (std::pow(x - center.x, 2) + std::pow(y - center.y, 2) < std::pow(radius, 2))
-              {
-                  sums[i] += value;
-              }
-          }
-          ++ptr;
-      }
-  }
-  int smallestSum = 9999999;
-  int smallestSumIndex = -1;
-  for (int i = 0; i < circles.size(); i++)
-  {
-      if (sums[i] < smallestSum)
-      {
-          smallestSum = sums[i];
-          smallestSumIndex = i;
-      }
-  }
-  return circles[smallestSumIndex];
-}
-
-cv::Point stabilize(std::vector<cv::Point> &points, int windowSize)
-{
-  float sumX = 0;
-  float sumY = 0;
-  int count = 0;
-  for (int i = std::max(0, (int)(points.size() - windowSize)); i < points.size(); i++)
-  {
-      sumX += points[i].x;
-      sumY += points[i].y;
-      ++count;
-  }
-  if (count > 0)
-  {
-      sumX /= count;
-      sumY /= count;
-  }
-  return cv::Point(sumX, sumY);
-}
-
 
 short EyeAnalyser::getEyePosition(const Mat &frame,const deque<Point> &leftEye,const deque<Point> &rightEye,const Mat &Eyetemplate){
     const int MINIMALAREA=50;
@@ -99,12 +43,12 @@ short EyeAnalyser::getEyePosition(const Mat &frame,const deque<Point> &leftEye,c
             matchLoc = maxLoc;
             cout <<" center leftAverage x "<<leftAverage.x<<" center leftAverage y "<<leftAverage.y<<endl;
             cout <<" mathLoc x "<<matchLoc.x<<" matchLoc y "<<matchLoc.y<<" maxVal"<<maxVal<<endl;
-            valueX.push_front(matchLoc.x);
-            valueY.push_front(matchLoc.y);
-            if(valueX.size()>5){valueX.pop_back();}
-            if(valueY.size()>5){valueY.pop_front();}
-            int AverageX = (accumulate(valueX.begin(), valueX.end(), 0)) / static_cast<int>(valueX.size());
-            int AverageY = (accumulate(valueY.begin(), valueY.end(), 0)) / static_cast<int>(valueY.size());
+            m_valueX.push_front(matchLoc.x);
+            m_valueY.push_front(matchLoc.y);
+            if(m_valueX.size()>5){m_valueX.pop_back();}
+            if(m_valueY.size()>5){m_valueY.pop_front();}
+            int AverageX = (accumulate(m_valueX.begin(), m_valueX.end(), 0)) / static_cast<int>(m_valueX.size());
+            int AverageY = (accumulate(m_valueY.begin(), m_valueY.end(), 0)) / static_cast<int>(m_valueY.size());
             if ((AverageX< 7)){ACK=2;}//right
             else if(AverageY<5){ACK=3;}//up
             else if(AverageX>=33){ ACK=4;}//left
@@ -119,33 +63,6 @@ short EyeAnalyser::getEyePosition(const Mat &frame,const deque<Point> &leftEye,c
             }
         }
 
-
-    /*
-    if( (leftAverage.x>width/2) && (leftAverage.y>height/2)){
-        Rect Left(leftAverage.x-width/2,leftAverage.y-height/2,width,height);
-        if (Left.area()>MINIMALAREA) {
-              Mat frameCopy;
-              frame.copyTo(frameCopy);
-              Mat cropeed=frameCopy(Left);
-              Mat eye;
-              cv::cvtColor(cropeed, eye, CV_BGR2GRAY);
-              cv::equalizeHist(eye, eye);
-              std::vector<cv::Vec3f> circles;
-              cv::HoughCircles(eye, circles, CV_HOUGH_GRADIENT, 1, eye.cols / 8, 250, 15, eye.rows / 8, eye.rows / 3);
-              if (circles.size() > 0)
-                {
-                    cv::Vec3f eyeball = getEyeball(eye, circles);
-                    cv::Point center(eyeball[0], eyeball[1]);
-                    centers.push_back(center);
-                    center = stabilize(centers, 5);
-                    cv::circle(eye,center,2, cv::Scalar(0, 0, 255)[3], 2);
-                    //cv::circle(eye, center, radius, cv::Scalar(255, 255, 255), 2);
-                    imshow("Image",eye);
-                }
-
-        }
-    }
-    */
     return ACK;
     //return 0;
 
@@ -154,14 +71,6 @@ short EyeAnalyser::getEyePosition(const Mat &frame,const deque<Point> &leftEye,c
 
 short EyeAnalyser::getDirection(const Mat &frame,const Point &calibrationLeft,const Point &calibrationRight,const deque<Point> &leftEye,const deque<Point> &rightEye,const Mat &Eyetemplate){
 
-     //Mat gray_frame;
-     //cvtColor(frame, gray_frame, CV_BGR2GRAY);
-     //Mat gray_template;
-     //cvtColor(Eyetemplate, gray_template, CV_BGR2GRAY);
-     //return getEyePosition(frame,leftEye,rightEye,Eyetemplate);
-
-    //return 0;
-    //return getEyePosition(frame,leftEye,rightEye,Eyetemplate);
      return getDistance(calibrationLeft,leftEye);
 
 }

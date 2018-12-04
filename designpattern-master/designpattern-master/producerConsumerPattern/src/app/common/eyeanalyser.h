@@ -21,11 +21,13 @@ public:
     bool UpDown(float upValue, float downValue);
     short getDistance(const Point &calibration,const deque<Point> &Eye);
     void setSensibility(int newValue);
+
 private:
     Point averagePoint(const deque<Point> &vec);
     int sensibility;
-    deque<int> valueX;
-    deque<int> valueY;
+    deque<int> m_valueX;
+    deque<int> m_valueY;
+    std::vector<cv::Point> m_centers;
 
 };
 

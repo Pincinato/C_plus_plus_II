@@ -44,11 +44,11 @@ private:
      std::string m_tag;
      std::thread m_acquireThread;
      bool m_play;
-     VideoCapture capture;
+     VideoCapture m_capture;
      ICamera* m_control;
      int m_playRate;
      std::shared_ptr<DataBufferPool> m_dataPool;
-     size_t offset;
+     size_t m_offset;
 };
 
 #endif // VCAMERA_H
