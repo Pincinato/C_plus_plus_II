@@ -49,7 +49,7 @@ bool EyeDetector::detectEyes(const Mat &frame,vector<Rect> &faces,vector<Rect> &
 bool EyeDetector::drawEyes( Mat &frame,std::vector<Rect> &faces, vector<Rect> &eyes){
 
     bool ACK=false;
-    if((faces.size()>0) &(eyes.size()>0)){
+    if((faces.size()>0) &(eyes.size()>0)){/*
         for( size_t i = 0; i < faces.size(); ++i )
         {
             for( size_t j = 0; j < eyes.size(); j++ )
@@ -58,7 +58,14 @@ bool EyeDetector::drawEyes( Mat &frame,std::vector<Rect> &faces, vector<Rect> &e
               int radius = cvRound( (eyes[j].width + eyes[j].height)*0.25 );
              circle(frame, eye_center, radius, Scalar( 255, 0, 0 ), 4, 8, 0 );
             }
-        }
+        }*/
+        for_each(faces.begin(),faces.end(),[&](Rect face){
+            for_each(eyes.begin(),eyes.end(),[&](Rect eye){
+               Point eye_center( face.x + eye.x + eye.width/2, face.y + eye.y + eye.height/2 );
+               int radius = cvRound( (eye.width + eye.height)*0.25 );
+               circle(frame, eye_center, radius, Scalar( 255, 0, 0 ), 4, 8, 0 );
+            });
+        });
         ACK=true;
     }
     return ACK;
@@ -69,11 +76,16 @@ bool EyeDetector::drawFaces(Mat &frame,vector<Rect> &faces){
 
     bool ACK=false;
     if(faces.size()>0){
+        /*
         for( size_t i = 0; i < faces.size(); ++i )
         {
             Point center( faces[i].x + faces[i].width/2, faces[i].y + faces[i].height/2 );
             ellipse( frame, center, Size( faces[i].width/2, faces[i].height/2), 0, 0, 360, Scalar( 255, 0, 255 ), 4, 8, 0 );
-        }
+        }*/
+        for_each(faces.cbegin(),faces.cend(),[&](Rect face){
+            Point center( face.x +face.width/2,face.y + face.height/2 );
+            ellipse( frame, center, Size( face.width/2, face.height/2), 0, 0, 360, Scalar( 255, 0, 255 ), 4, 8, 0 );
+        });
         ACK=true;
     }
     return ACK;
@@ -103,6 +115,7 @@ Point EyeDetector::detectCenterLeftEye(std::vector<Rect> &faces, vector<Rect> &e
 
 bool EyeDetector::drawBothCenterEye(std::vector<Rect> &faces, vector<Rect> &eyes){
     bool ACK=false;
+    /*
     for( size_t i = 0; i < faces.size(); ++i )
     {
         for( size_t j = 0; j < eyes.size(); j++ )
@@ -110,7 +123,14 @@ bool EyeDetector::drawBothCenterEye(std::vector<Rect> &faces, vector<Rect> &eyes
             Point eye_center( faces[i].x + eyes[j].x + eyes[j].width/2, faces[i].y + eyes[j].y + eyes[j].height/2 );
             ACK=true;
         }
-    }
+    }*/
+
+    for_each(faces.cbegin(),faces.cend(),[&] (Rect face){
+        for_each(eyes.cbegin(),eyes.cend(),[&](Rect eye){
+            Point eye_center( face.x + eye.x + eye.width/2, face.y + eye.y + eye.height/2 );
+            ACK=true;
+        });});
+
     return ACK;
 }
 
@@ -122,6 +142,12 @@ bool EyeDetector::drawEyesCenter(Mat &frame, vector<Rect> &eyes,Point & eye_cent
         circle(frame, eye_center, 1, Scalar( 255, 0, 0 ), 2, 8, 0 );
         ACK=true;
     }
+    /*
+    for_each(eyes.cbegin(),eyes.cend(),[&](){
+        circle(frame, eye_center, 1, Scalar( 255, 0, 0 ), 2, 8, 0 );
+        ACK=true;
+    });
+    */
     return ACK;
 }
 

@@ -99,6 +99,6 @@ void CalibrationWidget::Refuse(){
 }
 
 void CalibrationWidget::setPoint(const cv::Point &eyeLeft,const cv::Point &eyeRight){
-    m_owner->setCalibrationPoint(m_lastData->m_frame, eyeLeft,eyeRight);
+    m_owner->setCalibrationPoint(eyeLeft,eyeRight);
 }
 

@@ -97,7 +97,7 @@ void MainWindow::backActionView(){
     m_actionWigdet.reset();
 }
 
-void MainWindow::setCalibrationPoint(const Mat &frame,const cv::Point &eyeLeft,const cv::Point &eyeRight){
+void MainWindow::setCalibrationPoint(const cv::Point &eyeLeft,const cv::Point &eyeRight){
     m_calibrationEyeLeft=eyeLeft;
     m_calibrationEyeRight=eyeRight;
     m_Iscalibrated=true;
