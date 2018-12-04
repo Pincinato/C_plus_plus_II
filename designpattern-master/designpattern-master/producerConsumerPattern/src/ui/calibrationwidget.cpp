@@ -10,6 +10,7 @@ CalibrationWidget::CalibrationWidget(QWidget *parent,ICalibrationWidget *owner, 
     ui->setupUi(this);
     m_lastData.reset();
     m_appCtrl.reset( new Control(this) );
+    m_appCtrl->setCamera(CamOption);
     enableButtons(false);
     //connect bottuns
     connect(ui->RefuseButton,SIGNAL(clicked()),this,SLOT(Refuse()));
@@ -83,12 +84,12 @@ void CalibrationWidget::enableButtons(bool op){
     }
 }
 
-
+/*
 void CalibrationWidget::setCamoption( const string &CamOp){
 
     CamOption.clear();
     CamOption.append(CamOp);
-}
+}*/
 
 void CalibrationWidget::Accept(){
 
@@ -106,5 +107,5 @@ void CalibrationWidget::Refuse(){
 }
 
 void CalibrationWidget::setPoint(const cv::Point &eyeLeft,const cv::Point &eyeRight){
-    m_owner->setCalibrationPoint(eyeLeft,eyeRight);
+    m_owner->setCalibrationPoint(m_lastData->m_frame, eyeLeft,eyeRight);
 }

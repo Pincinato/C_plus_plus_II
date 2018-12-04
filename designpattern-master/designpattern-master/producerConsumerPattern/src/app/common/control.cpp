@@ -89,7 +89,7 @@ void Control::setPlayRate(int playRate)
 
 bool Control::getEyes(DataBufferPtr &data){
 
-   bool ACK = m_tracking->detectEyes(data->m_frame,faces,eyes);
+   bool ACK = m_tracking->detectEyes(data->m_frameGray,faces,eyes);
    if(ACK){
       centerEyeLeft = m_tracking->detectCenterLeftEye(faces,eyes);
       centerEyeRight = m_tracking->detectCenterRightEye(faces,eyes);
@@ -134,8 +134,18 @@ void Control::clearVectors(){
     EyeRight.clear();
 }
 
-int Control::getDirection(const DataBufferPtr &data,const Point &calibrationLeft,const Point &calibrationRight){
+int Control::getDirection(const DataBufferPtr &data,const Point &calibrationLeft,const Point &calibrationRight,const Mat &Eyetemplate){
 
-    return m_analyser->getDirection(data->m_frame,calibrationLeft,calibrationRight,EyeLeft,EyeRight);
+    //return m_analyser->getDirection(data->m_frame,calibrationLeft,calibrationRight,EyeLeft,EyeRight,Eyetemplate);
+    return m_analyser->getDirection(data->m_frameGray,calibrationLeft,calibrationRight,EyeLeft,EyeRight,Eyetemplate);
 
+}
+
+int Control::getPosition(const DataBufferPtr &data,const Mat &Templat){
+
+    return m_analyser->getEyePosition(data->m_frame,EyeLeft,EyeRight,Templat);
+}
+
+void Control::setSensibility(int newValue){
+    m_analyser->setSensibility(newValue);
 }

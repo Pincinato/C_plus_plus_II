@@ -42,16 +42,18 @@ void  MainWindow::initActionWidget(){
 }
 
 void MainWindow::start(){
+    /*
     if(Iscalibrated==false){
         QMessageBox msgBox;
         msgBox.setText("A calibration is needed.");
         msgBox.exec();
     }
-    else{
+    else{*/
         initActionWidget();
+        m_actionWigdet->setTemplate(EyeTemplate);
         m_actionWigdet->myShow();
         this->hide();
-   }
+   //}
 }
 
 void MainWindow::calibration(){
@@ -73,24 +75,36 @@ void MainWindow::backEyeDetectionView(){
     if(eyeDetectionWidget->getCamOption()!=CamOption){Iscalibrated=false;}
     CamOption.clear();
     CamOption.append(eyeDetectionWidget->getCamOption());
-    eyeDetectionWidget->close();
-     calibrator.reset();
+    eyeDetectionWidget->close();    
+    eyeDetectionWidget.reset();
 }
 
 void MainWindow::backCalibrationView(){
     this->show();
     calibrator->close();
+    calibrator.reset();
+
 }
 
 void MainWindow::backActionView(){
     this->show();
     m_actionWigdet->close();
+    m_actionWigdet.reset();
 }
 
-void MainWindow::setCalibrationPoint(const cv::Point &eyeLeft,const cv::Point &eyeRight){
+void MainWindow::setCalibrationPoint(const Mat &frame,const cv::Point &eyeLeft,const cv::Point &eyeRight){
     calibrationEyeLeft=eyeLeft;
     calibrationEyeRight=eyeRight;
     Iscalibrated=true;
+
+    //Only for test
+
+    int radius = (eyeRight.x-eyeLeft.x)*0.2;
+    Rect temp(eyeLeft.x-radius/2,eyeLeft.y-radius/2,radius,radius);
+    frame(temp).copyTo(EyeTemplate);
+    cvtColor(EyeTemplate,EyeTemplate,CV_BGR2GRAY);
+    equalizeHist(EyeTemplate,EyeTemplate);
+    //Need to be placed in control!!
 }
 
 

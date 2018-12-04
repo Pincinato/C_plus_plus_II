@@ -2645,6 +2645,7 @@ CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/
 CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QButtonGroup
 CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QHeaderView
 CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QPushButton
+CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QSlider
 CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/QtWidgets/QWidget
 CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qabstractbutton.h
 CMakeFiles/PCP.dir/src/ui/actionwidget.cpp.obj: C:/Qt/5.10.0/mingw53_32/include/QtWidgets/qabstractitemdelegate.h

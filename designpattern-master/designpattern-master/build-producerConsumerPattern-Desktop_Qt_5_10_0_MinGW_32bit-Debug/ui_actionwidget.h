@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -23,6 +24,7 @@ class Ui_ActionWidget
 {
 public:
     QPushButton *BackButton;
+    QSlider *SensibilitySlider;
 
     void setupUi(QWidget *ActionWidget)
     {
@@ -32,6 +34,11 @@ public:
         BackButton = new QPushButton(ActionWidget);
         BackButton->setObjectName(QStringLiteral("BackButton"));
         BackButton->setGeometry(QRect(330, 240, 61, 51));
+        SensibilitySlider = new QSlider(ActionWidget);
+        SensibilitySlider->setObjectName(QStringLiteral("SensibilitySlider"));
+        SensibilitySlider->setGeometry(QRect(330, 10, 20, 191));
+        SensibilitySlider->setMinimum(0);
+        SensibilitySlider->setOrientation(Qt::Vertical);
 
         retranslateUi(ActionWidget);
 

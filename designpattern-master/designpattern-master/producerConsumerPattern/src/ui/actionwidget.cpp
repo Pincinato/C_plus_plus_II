@@ -12,11 +12,11 @@ ActionWidget::ActionWidget(QWidget *parent,const string &CamOp,const Point &cali
     ui->setupUi(this);
     m_lastData.reset();
     m_appCtrl.reset( new Control(this) );
+    m_appCtrl->setCamera(CamOption);
     connect(ui->BackButton,SIGNAL(clicked()),this,SLOT(buttonBack()));
     //
     m_UpdateTimer.reset(new QTimer(this));
     connect( m_UpdateTimer.get(), SIGNAL(timeout()), this, SLOT(Update()) );
-    m_UpdateTimer->start(m_UpdateRateMS);
 
 
 }
@@ -37,7 +37,11 @@ void ActionWidget::myShow(){
     this->showFullScreen();
     QPixmap bkgnd1("center.png");
     setBackground(bkgnd1);
-    m_appCtrl->startPlaying();
+    m_UpdateTimer->start(m_UpdateRateMS);
+    m_appCtrl->startPlaying();    
+    ui->SensibilitySlider->setMaximum(50);
+    ui->SensibilitySlider->setMinimum(1);
+    ui->SensibilitySlider->setValue(10);
 }
 
 void ActionWidget::setCamOption(const string &Cam){
@@ -63,7 +67,8 @@ void ActionWidget::Update(){
     if( m_lastData )
     {
         if(m_appCtrl->getEyes(m_lastData)){
-            int ret = (m_appCtrl->getDirection(m_lastData,calibrationEyeLeft,calibrationEyeRight));
+            //int ret1 = m_appCtrl->getPosition(m_lastData,EyeTemplate);
+            int ret = m_appCtrl->getDirection(m_lastData,calibrationEyeLeft,calibrationEyeRight,EyeTemplate);
             if(ret==1){
                 QPixmap bkgnd1("center.png");
                 setBackground(bkgnd1);
@@ -87,6 +92,7 @@ void ActionWidget::Update(){
         m_appCtrl->clearVectors();
         }
     }
+    m_appCtrl->setSensibility(ui->SensibilitySlider->value());
 }
 
 void ActionWidget::setBackground(QPixmap newImage){
@@ -96,6 +102,10 @@ void ActionWidget::setBackground(QPixmap newImage){
     palette.setBrush(QPalette::Background, newImage);
     this->setPalette(palette);
 
+}
+
+void ActionWidget::setTemplate(const Mat &newEyeTemplate){
+    EyeTemplate=newEyeTemplate;
 }
 
 void ActionWidget::buttonBack(){

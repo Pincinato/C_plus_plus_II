@@ -10,6 +10,7 @@ DataBuffer::DataBuffer(const uint& height, const uint& width )
 {
     m_image = QImage(height, width, QImage::Format_RGB888);
     m_frame = cv::Mat(height, width,CV_8UC3);
+    m_frameGray= cv::Mat(height,width,CV_8UC1);
 }
 
 

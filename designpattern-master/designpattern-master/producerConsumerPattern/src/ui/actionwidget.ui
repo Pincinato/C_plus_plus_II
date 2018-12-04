@@ -26,6 +26,22 @@
     <string/>
    </property>
   </widget>
+  <widget class="QSlider" name="SensibilitySlider">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>10</y>
+     <width>20</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>0</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

@@ -9,7 +9,7 @@ class ICalibrationWidget {
 public:
     ICalibrationWidget(){}
     virtual ~ICalibrationWidget(){}
-    virtual void setCalibrationPoint(const cv::Point &eyeLeft,const cv::Point &eyeRight) =0;
+    virtual void setCalibrationPoint(const cv::Mat &frame,const cv::Point &eyeLeft,const cv::Point &eyeRight) =0;
 
 };
 

@@ -42,8 +42,10 @@ public:
     bool setFaceInFrame(DataBufferPtr &data);
     void setCamera(const string &option);
     bool setEyesCenter(DataBufferPtr &data);
-    int getDirection(const DataBufferPtr &data,const Point &calibrationLeft,const Point &calibrationRight);
+    int getDirection(const DataBufferPtr &data,const Point &calibrationLeft,const Point &calibrationRight,const Mat &Eyetemplate);
     void clearVectors();
+    void setSensibility(int newValue);
+    int getPosition(const DataBufferPtr &data,const Mat &Templat);
     //Point getEyesCenter();
 
 

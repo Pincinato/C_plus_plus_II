@@ -28,16 +28,14 @@ Eye_detector::~Eye_detector()
 bool Eye_detector::detectEyes(const Mat &frame,vector<Rect> &faces,vector<Rect> &eyes){
 
     bool ACK=false;
-    Mat frame_gray;
     faces.clear();
     eyes.clear();
     if(!frame.empty()){
-        cvtColor(frame, frame_gray, COLOR_BGR2GRAY );
-        equalizeHist( frame_gray, frame_gray );
-        face_cascade.detectMultiScale( frame_gray, faces, 1.1, 2, 0|CASCADE_SCALE_IMAGE, Size(30, 30) );
+        equalizeHist( frame, frame );
+        face_cascade.detectMultiScale( frame, faces, 1.1, 2, 0|CASCADE_SCALE_IMAGE, Size(30, 30) );
         for( size_t i = 0; i < faces.size(); i++ )
         {
-            Mat faceROI = frame_gray( faces[i] );
+            Mat faceROI = frame( faces[i] );
             eyes_cascade.detectMultiScale( faceROI, eyes, 1.1, 2, 0 |CASCADE_SCALE_IMAGE, Size(30, 30) );
             if(eyes.size()>0){
                ACK=true;

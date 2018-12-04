@@ -6,8 +6,7 @@ project(PCP)
 if(MSVC)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++latest /W4")
 else()
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z -Wall ")
-    #"-Wextra -Werror")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z -Wall " "-Wextra -Werror")
 endif()
 
 
@@ -25,12 +24,12 @@ set(CMAKE_AUTOUIC ON)
 option( MODULE_CAMERA "Use UEYE Camera" ON )
 
 
-SET( APP_SOURCES )
-SET( APP_INCLUDE_DIRS )
-SET( APP_LIBS )
+set( APP_SOURCES )
+set( APP_INCLUDE_DIRS )
+set( APP_LIBS )
 
 # main sources
-SET( APP_SOURCES ${APP_SOURCES}
+set( APP_SOURCES ${APP_SOURCES}
     src/ui/widget.cpp
     src/ui/widget.h
     src/ui/widget.ui
@@ -69,7 +68,7 @@ SET( APP_SOURCES ${APP_SOURCES}
 )
 
 
-SET( APP_INCLUDE_DIRS ${APP_INCLUDE_DIRS}
+set( APP_INCLUDE_DIRS ${APP_INCLUDE_DIRS}
     src/ui/
     src/app/common/
     src/app/acquisition/
@@ -77,14 +76,14 @@ SET( APP_INCLUDE_DIRS ${APP_INCLUDE_DIRS}
 )
 
 # Include Qt
-FIND_PACKAGE(Qt5Core REQUIRED)
-FIND_PACKAGE(Qt5Widgets REQUIRED)
+find_package(Qt5Core REQUIRED)
+find_package(Qt5Widgets REQUIRED)
 
 # Include threads
-FIND_PACKAGE(Threads)
-IF(UNIX)
-SET(APP_LIBS ${APP_LIBS} ${CMAKE_THREAD_LIBS_INIT} )
-ENDIF(UNIX)
+find_package(Threads)
+if(UNIX)
+set(APP_LIBS ${APP_LIBS} ${CMAKE_THREAD_LIBS_INIT} )
+endif(UNIX)
 
 #Include Opencv
 find_package(OpenCV REQUIRED)
@@ -99,7 +98,7 @@ target_link_libraries(PCP Qt5::Widgets Qt5::Core ${OpenCV_LIBS} ${APP_LIBS} )
 
 # copy stylesheets
 file(COPY BFH.stylesheet DESTINATION ${PROJECT_BINARY_DIR})
-FILE(COPY src/files/haarcascade_frontalface_alt.xml src/files/haarcascade_eye_tree_eyeglasses.xml DESTINATION ${PROJECT_BINARY_DIR})
+file(COPY src/files/haarcascade_frontalface_alt.xml src/files/haarcascade_eye_tree_eyeglasses.xml DESTINATION ${PROJECT_BINARY_DIR})
 file(COPY src/images/calibration.png
     src/images/back_button.png
     src/images/center.png

@@ -4,75 +4,164 @@
 #include "icontrol.h"
 #include "control.h"
 #include <string>
+#include <algorithm>
 using namespace std;
 
 EyeAnalyser::EyeAnalyser()
 {
     sensibility=10;
+    valueX.clear();
+    valueY.clear();
+}
+
+std::vector<cv::Point> centers;
+
+cv::Vec3f getEyeball(cv::Mat &eye, std::vector<cv::Vec3f> &circles)
+{
+  std::vector<int> sums(circles.size(), 0);
+  for (int y = 0; y < eye.rows; y++)
+  {
+      uchar *ptr = eye.ptr<uchar>(y);
+      for (int x = 0; x < eye.cols; x++)
+      {
+          int value = static_cast<int>(*ptr);
+          for (int i = 0; i < circles.size(); i++)
+          {
+              cv::Point center((int)std::round(circles[i][0]), (int)std::round(circles[i][1]));
+              int radius = (int)std::round(circles[i][2]);
+              if (std::pow(x - center.x, 2) + std::pow(y - center.y, 2) < std::pow(radius, 2))
+              {
+                  sums[i] += value;
+              }
+          }
+          ++ptr;
+      }
+  }
+  int smallestSum = 9999999;
+  int smallestSumIndex = -1;
+  for (int i = 0; i < circles.size(); i++)
+  {
+      if (sums[i] < smallestSum)
+      {
+          smallestSum = sums[i];
+          smallestSumIndex = i;
+      }
+  }
+  return circles[smallestSumIndex];
+}
+
+cv::Point stabilize(std::vector<cv::Point> &points, int windowSize)
+{
+  float sumX = 0;
+  float sumY = 0;
+  int count = 0;
+  for (int i = std::max(0, (int)(points.size() - windowSize)); i < points.size(); i++)
+  {
+      sumX += points[i].x;
+      sumY += points[i].y;
+      ++count;
+  }
+  if (count > 0)
+  {
+      sumX /= count;
+      sumY /= count;
+  }
+  return cv::Point(sumX, sumY);
 }
 
 
-short EyeAnalyser::getEyePosition(const Mat &frame,const deque<Point> &leftEye,const deque<Point> &rightEye){
-
+short EyeAnalyser::getEyePosition(const Mat &frame,const deque<Point> &leftEye,const deque<Point> &rightEye,const Mat &Eyetemplate){
+    const int MINIMALAREA=50;
+    short ACK=0;
     Point leftAverage = averagePoint(leftEye);
     Point rightAverage= averagePoint(rightEye);
-    int width = (static_cast<int>(static_cast<float>((rightAverage.x-leftAverage.x)*0.4)));//0.8// need to check!!!
-    int height= static_cast<int>(width*0.6);//0.3//radio  ~0.4
-
-
-    /*
+    int width = (static_cast<int>(static_cast<float>((rightAverage.x-leftAverage.x)*0.6)));//0.8// need to check!!!
+    int height= static_cast<int>(width*0.5);//0.5//0.3//radio  ~0.4
+    /// Create the result matrix
     //Setting mask of whole left eye
-    Rect Left(leftAverage.x-width/2,leftAverage.y-height/2,width,height);
-    Mat imageGray=frame(Left);
-    cvtColor(imageGray,imageGray,COLOR_BGR2GRAY );
-    //getting left eye
-    Mat image=frame(Left);
-    equalizeHist(imageGray, imageGray);
-    //medianBlur(imageGray, imageGray,3);
-    vector<Vec3f> circles;
-    HoughCircles( imageGray, circles, CV_HOUGH_GRADIENT, 1, 30, 250, 25, 0, 0);
-    for( size_t i = 0; i < circles.size(); i++ )
-    {
-       Point center(cvRound(circles[i][0]), cvRound(circles[i][1]));
-       int radius = cvRound(circles[i][2]);
-       // circle center
-       circle( imageGray, center, 3, 255, 2, 8, 0 );
-       // circle outline
-       circle( imageGray, center, radius, 255, 3, 8, 0 );
-     }
-    imshow("circles in eyes",imageGray);
-    */
+
+
+
+    if( (leftAverage.x>width/2) && (leftAverage.y>height/2)){
+        Rect Left(leftAverage.x-width/2,leftAverage.y-height/2,width,height);
+        if (Left.area()>MINIMALAREA) {
+            Mat frameCopy;
+            frame.copyTo(frameCopy);
+            Mat image=frameCopy(Left);
+            //cv::equalizeHist(image, image);
+            int result_cols =  image.cols - Eyetemplate.cols + 1;
+            int result_rows = image.rows - Eyetemplate.rows + 1;
+            Mat result ( result_rows, result_cols, CV_32FC1 );
+            Point matchLoc(0,0);
+            matchTemplate( image, Eyetemplate, result, CV_TM_CCORR_NORMED);
+            double minVal; double maxVal; Point minLoc; Point maxLoc;
+            minMaxLoc( result, &minVal, &maxVal, &minLoc, &maxLoc, Mat() );
+            matchLoc = maxLoc;
+            cout <<" center leftAverage x "<<leftAverage.x<<" center leftAverage y "<<leftAverage.y<<endl;
+            cout <<" mathLoc x "<<matchLoc.x<<" matchLoc y "<<matchLoc.y<<" maxVal"<<maxVal<<endl;
+            valueX.push_front(matchLoc.x);
+            valueY.push_front(matchLoc.y);
+            if(valueX.size()>5){valueX.pop_back();}
+            if(valueY.size()>5){valueY.pop_front();}
+            int AverageX = (accumulate(valueX.begin(), valueX.end(), 0)) / static_cast<int>(valueX.size());
+            int AverageY = (accumulate(valueY.begin(), valueY.end(), 0)) / static_cast<int>(valueY.size());
+            if ((AverageX< 7)){ACK=2;}//right
+            else if(AverageY<5){ACK=3;}//up
+            else if(AverageX>=33){ ACK=4;}//left
+            else if ((AverageX< 24) &(AverageX>=15)){ACK=1;}//center
+
+            rectangle( image, matchLoc, Point( AverageX + Eyetemplate.cols ,AverageY + Eyetemplate.rows ), Scalar::all(0), 2, 8, 0 );
+            rectangle( result, matchLoc, Point( AverageX + Eyetemplate.cols , AverageY + Eyetemplate.rows ), Scalar::all(0), 2, 8, 0 );
+            //imshow( "image_window", frameCopy );
+            //imshow( "result_window", result );
+            imshow("template",Eyetemplate);
+            imshow("image",image);
+            }
+        }
+
 
     /*
-    //Setting mask of each part of the eye
-    Rect Left(leftAverage.x-width/2,leftAverage.y-height/2,width/2,height);
-    Rect Right(leftAverage.x,leftAverage.y-height/2,width/2,height);
-    Rect Up(leftAverage.x-width/2,leftAverage.y-height/2,width,height/2);
-    Rect Down(leftAverage.x-width/2,leftAverage.y,width,height/2);
-    Mat leftImage = frame(Left);
-    imshow("left",leftImage);
-    Mat rightImage = frame(Right);
-    imshow("Rigth",rightImage);
-    Mat upImage = frame(Up);
-    imshow("Up",upImage);
-    Mat downImage = frame(Down);
-    imshow("Down",downImage);
-    float leftSum =getSumPixel (leftImage);
-    float rightSum =getSumPixel (rightImage);
-    float upSum =getSumPixel(upImage);
-    float downSum =getSumPixel(downImage);
-    LeftRight( leftSum, rightSum);
-    UpDown( upSum,  downSum);
-    */
+    if( (leftAverage.x>width/2) && (leftAverage.y>height/2)){
+        Rect Left(leftAverage.x-width/2,leftAverage.y-height/2,width,height);
+        if (Left.area()>MINIMALAREA) {
+              Mat frameCopy;
+              frame.copyTo(frameCopy);
+              Mat cropeed=frameCopy(Left);
+              Mat eye;
+              cv::cvtColor(cropeed, eye, CV_BGR2GRAY);
+              cv::equalizeHist(eye, eye);
+              std::vector<cv::Vec3f> circles;
+              cv::HoughCircles(eye, circles, CV_HOUGH_GRADIENT, 1, eye.cols / 8, 250, 15, eye.rows / 8, eye.rows / 3);
+              if (circles.size() > 0)
+                {
+                    cv::Vec3f eyeball = getEyeball(eye, circles);
+                    cv::Point center(eyeball[0], eyeball[1]);
+                    centers.push_back(center);
+                    center = stabilize(centers, 5);
+                    cv::circle(eye,center,2, cv::Scalar(0, 0, 255)[3], 2);
+                    //cv::circle(eye, center, radius, cv::Scalar(255, 255, 255), 2);
+                    imshow("Image",eye);
+                }
 
-    return 0;
+        }
+    }
+    */
+    return ACK;
+    //return 0;
 
 }
 
 
-short EyeAnalyser::getDirection(const Mat &frame,const Point &calibrationLeft,const Point &calibrationRight,const deque<Point> &leftEye,const deque<Point> &rightEye){
+short EyeAnalyser::getDirection(const Mat &frame,const Point &calibrationLeft,const Point &calibrationRight,const deque<Point> &leftEye,const deque<Point> &rightEye,const Mat &Eyetemplate){
 
-     getEyePosition(frame,leftEye,rightEye);
+     //Mat gray_frame;
+     //cvtColor(frame, gray_frame, CV_BGR2GRAY);
+     //Mat gray_template;
+     //cvtColor(Eyetemplate, gray_template, CV_BGR2GRAY);
+     //return getEyePosition(frame,leftEye,rightEye,Eyetemplate);
+
+    //return 0;
+    //return getEyePosition(frame,leftEye,rightEye,Eyetemplate);
      return getDistance(calibrationLeft,leftEye);
 
 }
@@ -113,22 +202,26 @@ bool EyeAnalyser::UpDown(float upValue, float downValue){
 
 short EyeAnalyser::getDistance(const Point &calibration,const deque<Point> &Eye){
 
-    int ACK=0;
+    short ACK=0;
     Point Average = averagePoint(Eye);
     cout<<"Average x "<<Average.x<<" Average y"<<Average.y<<endl;
     cout<<"calibration x "<<calibration.x<<" calibration y "<<calibration.y<<endl;
     float distance = static_cast<float>(norm(Average-calibration));
     float angle= ((static_cast<float>(atan2(Average.y - calibration.y, Average.x - calibration.x)))*180)/(static_cast<float>(3.1416));
     cout<<"Distance : "<<distance<<" angle "<<angle<<endl;
-    if(distance>sensibility){// not in center
+    if((distance>sensibility) & (distance <100)){// not in center
         if((angle >= 135) || (angle <  -135)){ACK=2;} // rigth
         else if((angle >= -135) & (angle <  -45)){ACK=3;}// Up
         else if((angle >= -45) & (angle <  45)){ACK=4;} //left
         else if((angle >= 45) & (angle <  135)){ACK=5;} //down
     }
-    else{//center
+    else if (distance<sensibility){//center
         ACK=1;
     }
     return ACK;
 
+}
+
+void EyeAnalyser::setSensibility(int newValue){
+    sensibility=newValue;
 }

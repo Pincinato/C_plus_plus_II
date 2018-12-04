@@ -1915,6 +1915,8 @@ control.h
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/control.h
 string
 -
+algorithm
+-
 
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/eyeanalyser.h
 opencv2/objdetect.hpp
@@ -1924,6 +1926,8 @@ opencv2/highgui.hpp
 opencv2/imgproc.hpp
 -
 vector
+-
+deque
 -
 
 C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/designpattern-master/designpattern-master/producerConsumerPattern/src/app/common/icontrol.h
@@ -3382,6 +3386,8 @@ QtWidgets/QButtonGroup
 QtWidgets/QHeaderView
 -
 QtWidgets/QPushButton
+-
+QtWidgets/QSlider
 -
 QtWidgets/QWidget
 -

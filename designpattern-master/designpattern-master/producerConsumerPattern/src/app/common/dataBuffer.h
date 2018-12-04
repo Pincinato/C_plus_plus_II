@@ -33,6 +33,7 @@ public:
 public:
     QImage m_image;
     cv::Mat m_frame;
+    cv::Mat m_frameGray;
 };
 
 typedef std::shared_ptr<DataBuffer> DataBufferPtr;
