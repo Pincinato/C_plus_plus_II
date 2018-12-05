@@ -43,10 +43,9 @@ void Control::init()
 
     //eye_detector
     m_tracking.reset(new EyeDetector);
-
+    if(!m_tracking->cascadeIsLoaded()){ m_widget->displayMsg("EyeDetector", "Cascade's files not found");}
     //eye_analyser
     m_analyser.reset(new EyeAnalyser);
-
     //vector init.
     m_EyeRight.clear();
     m_EyeLeft.clear();

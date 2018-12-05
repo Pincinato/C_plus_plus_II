@@ -16,7 +16,7 @@ public:
     EyeAnalyser();
     short getDirection(const Point &calibrationLeft,const Point &calibrationRight,const deque<Point> &leftEye,const deque<Point> &rightEye);
     short getDistance(const Point &calibration,const deque<Point> &Eye);
-    void setSensibility(int newValue);
+    void setSensibility(const int &newValue);
 
 private:
     Point medianPoint(const deque<Point> &input);

@@ -1,5 +1,4 @@
 #include "eyeAnalyser.h"
-
 #include <QWidget>
 #include "icontrol.h"
 #include "control.h"
@@ -16,8 +15,11 @@ EyeAnalyser::EyeAnalyser()
 
 short EyeAnalyser::getDirection(const Point &calibrationLeft,const Point &calibrationRight,const deque<Point> &leftEye,const deque<Point> &rightEye){
 
-    getDistance(calibrationRight,rightEye);
-     return getDistance(calibrationLeft,leftEye);
+    short ACKright,ACKleft;
+    ACKright=getDistance(calibrationRight,rightEye);
+    ACKleft=getDistance(calibrationLeft,leftEye);
+    if( ACKleft == ACKright){ return ACKleft;}
+    return 0;
 
 }
 
@@ -39,13 +41,14 @@ Point EyeAnalyser::medianPoint(const deque<Point> &input){
 
 short EyeAnalyser::getDistance(const Point &calibration,const deque<Point> &Eye){
 
+    const float PI= static_cast<const float>(3.1416);
     short ACK=0;
     Point Average = medianPoint(Eye);
-    cout<<"Average x "<<Average.x<<" Average y"<<Average.y<<endl;
-    cout<<"calibration x "<<calibration.x<<" calibration y "<<calibration.y<<endl;
+    //cout<<"Average x "<<Average.x<<" Average y"<<Average.y<<endl;
+    //cout<<"calibration x "<<calibration.x<<" calibration y "<<calibration.y<<endl;
     float distance = static_cast<float>(norm(Average-calibration));
-    float angle= ((static_cast<float>(atan2(Average.y - calibration.y, Average.x - calibration.x)))*180)/(static_cast<float>(3.1416));
-    cout<<"Distance : "<<distance<<" angle "<<angle<<endl;
+    float angle= ((static_cast<float>(atan2(Average.y - calibration.y, Average.x - calibration.x)))*180)/(PI);
+    //cout<<"Distance : "<<distance<<" angle "<<angle<<endl;
     if((distance>sensibility) & (distance <100)){// not in center
         if((angle >= 135) || (angle <  -135)){ACK=2;} // rigth
         else if((angle >= -135) & (angle <  -45)){ACK=3;}// Up
@@ -59,6 +62,6 @@ short EyeAnalyser::getDistance(const Point &calibration,const deque<Point> &Eye)
 
 }
 
-void EyeAnalyser::setSensibility(int newValue){
+void EyeAnalyser::setSensibility(const int &newValue){
     sensibility=newValue;
 }

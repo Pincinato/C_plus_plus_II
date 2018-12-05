@@ -26,22 +26,22 @@ public:
     ~EyeDetector();
 
     bool detectEyes(const Mat &frame, vector<Rect> &faces,vector<Rect> &eyes);
-    Rect getRightEye(vector<Rect> &eyes);
-    Rect getLeftEye(vector<Rect> &eyes);
-    bool drawEyes( Mat &frame,vector<Rect> &faces, vector<Rect> &eyes);
-    bool drawFaces(Mat &frame,vector<Rect> &faces);
-    Point detectCenterLeftEye(std::vector<Rect> &faces, vector<Rect> &eyes);
-    Point detectCenterRightEye(std::vector<Rect> &faces, vector<Rect> &eyes);
-    bool drawBothCenterEye(std::vector<Rect> &faces, vector<Rect> &eyes);
-    bool drawEyesCenter(Mat &frame, Point & eye_center);
+    Rect getRightEye(const vector<Rect> &eyes);
+    Rect getLeftEye(const vector<Rect> &eyes);
+    bool drawEyes( Mat &frame,const vector<Rect> &faces,const vector<Rect> &eyes);
+    bool drawFaces(Mat &frame,const vector<Rect> &faces);
+    Point detectCenterLeftEye(const vector<Rect> &faces,const  vector<Rect> &eyes);
+    Point detectCenterRightEye(const vector<Rect> &faces,const  vector<Rect> &eyes);
+    bool drawBothCenterEye(const vector<Rect> &faces,const vector<Rect> &eyes);
+    bool drawEyesCenter(Mat &frame,const Point & eye_center);
+    bool cascadeIsLoaded();
+
 private:
-
-
     std::string m_face_cascade_name;
     std::string m_eyes_cascade_name;
     cv::CascadeClassifier m_face_cascade;
     cv::CascadeClassifier m_eyes_cascade;
-
+    bool cascade;
 };
 
 #endif // eyeDetector_H

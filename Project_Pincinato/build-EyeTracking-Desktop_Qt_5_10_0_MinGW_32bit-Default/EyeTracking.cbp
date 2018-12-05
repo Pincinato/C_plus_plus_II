@@ -209,16 +209,16 @@
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/Project_Pincinato/EyeTracking/src/app/common/dataBufferPool.h">
 			<Option target="PCP"/>
 		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/Project_Pincinato/EyeTracking/src/app/common/eyeAnalyser.cpp">
+			<Option target="PCP"/>
+		</Unit>
+		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/Project_Pincinato/EyeTracking/src/app/common/eyeAnalyser.h">
+			<Option target="PCP"/>
+		</Unit>
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/Project_Pincinato/EyeTracking/src/app/common/eyeDetector.cpp">
 			<Option target="PCP"/>
 		</Unit>
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/Project_Pincinato/EyeTracking/src/app/common/eyeDetector.h">
-			<Option target="PCP"/>
-		</Unit>
-		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/Project_Pincinato/EyeTracking/src/app/common/eyeanalyser.cpp">
-			<Option target="PCP"/>
-		</Unit>
-		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/Project_Pincinato/EyeTracking/src/app/common/eyeanalyser.h">
 			<Option target="PCP"/>
 		</Unit>
 		<Unit filename="C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/Project_Pincinato/EyeTracking/src/app/common/icontrol.h">

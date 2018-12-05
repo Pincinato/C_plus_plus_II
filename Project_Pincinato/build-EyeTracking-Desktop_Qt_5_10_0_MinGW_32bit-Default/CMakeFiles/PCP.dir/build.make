@@ -281,29 +281,29 @@ CMakeFiles/PCP.dir/src/app/common/eyeDetector.cpp.obj.provides: CMakeFiles/PCP.d
 CMakeFiles/PCP.dir/src/app/common/eyeDetector.cpp.obj.provides.build: CMakeFiles/PCP.dir/src/app/common/eyeDetector.cpp.obj
 
 
-CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.obj: CMakeFiles/PCP.dir/flags.make
-CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.obj: CMakeFiles/PCP.dir/includes_CXX.rsp
-CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.obj: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/Project_Pincinato/EyeTracking/src/app/common/eyeanalyser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\Project_Pincinato\build-EyeTracking-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.obj"
-	C:\Qt\Tools\mingw530_32\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PCP.dir\src\app\common\eyeanalyser.cpp.obj -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\Project_Pincinato\EyeTracking\src\app\common\eyeanalyser.cpp
+CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.obj: CMakeFiles/PCP.dir/flags.make
+CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.obj: CMakeFiles/PCP.dir/includes_CXX.rsp
+CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.obj: C:/Users/THP/Desktop/Unibern/2018_02/Subjects/C_plus_plus_II/Project_Pincinato/EyeTracking/src/app/common/eyeAnalyser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\Project_Pincinato\build-EyeTracking-Desktop_Qt_5_10_0_MinGW_32bit-Default\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.obj"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PCP.dir\src\app\common\eyeAnalyser.cpp.obj -c C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\Project_Pincinato\EyeTracking\src\app\common\eyeAnalyser.cpp
 
-CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.i"
-	C:\Qt\Tools\mingw530_32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\Project_Pincinato\EyeTracking\src\app\common\eyeanalyser.cpp > CMakeFiles\PCP.dir\src\app\common\eyeanalyser.cpp.i
+CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.i"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\Project_Pincinato\EyeTracking\src\app\common\eyeAnalyser.cpp > CMakeFiles\PCP.dir\src\app\common\eyeAnalyser.cpp.i
 
-CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.s"
-	C:\Qt\Tools\mingw530_32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\Project_Pincinato\EyeTracking\src\app\common\eyeanalyser.cpp -o CMakeFiles\PCP.dir\src\app\common\eyeanalyser.cpp.s
+CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.s"
+	C:\Qt\Tools\mingw530_32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\THP\Desktop\Unibern\2018_02\Subjects\C_plus_plus_II\Project_Pincinato\EyeTracking\src\app\common\eyeAnalyser.cpp -o CMakeFiles\PCP.dir\src\app\common\eyeAnalyser.cpp.s
 
-CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.obj.requires:
+CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.obj.requires:
 
-.PHONY : CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.obj.requires
+.PHONY : CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.obj.requires
 
-CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.obj.provides: CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.obj.provides.build
-.PHONY : CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.obj.provides
+CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.obj.provides: CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\PCP.dir\build.make CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.obj.provides.build
+.PHONY : CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.obj.provides
 
-CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.obj.provides.build: CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.obj
+CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.obj.provides.build: CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.obj
 
 
 CMakeFiles/PCP.dir/src/app/acquisition/camera.cpp.obj: CMakeFiles/PCP.dir/flags.make
@@ -467,7 +467,7 @@ PCP_OBJECTS = \
 "CMakeFiles/PCP.dir/src/app/common/dataBuffer.cpp.obj" \
 "CMakeFiles/PCP.dir/src/app/common/dataBufferPool.cpp.obj" \
 "CMakeFiles/PCP.dir/src/app/common/eyeDetector.cpp.obj" \
-"CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.obj" \
+"CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.obj" \
 "CMakeFiles/PCP.dir/src/app/acquisition/camera.cpp.obj" \
 "CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj" \
 "CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj" \
@@ -487,7 +487,7 @@ PCP.exe: CMakeFiles/PCP.dir/src/app/common/control.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/common/dataBuffer.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/common/dataBufferPool.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/common/eyeDetector.cpp.obj
-PCP.exe: CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.obj
+PCP.exe: CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/acquisition/camera.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj
 PCP.exe: CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj
@@ -535,7 +535,7 @@ CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/common/control.cpp.obj.r
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/common/dataBuffer.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/common/dataBufferPool.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/common/eyeDetector.cpp.obj.requires
-CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/common/eyeanalyser.cpp.obj.requires
+CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/common/eyeAnalyser.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/acquisition/camera.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/acquisition/VCamera.cpp.obj.requires
 CMakeFiles/PCP.dir/requires: CMakeFiles/PCP.dir/src/app/acquisition/USBcamera.cpp.obj.requires
