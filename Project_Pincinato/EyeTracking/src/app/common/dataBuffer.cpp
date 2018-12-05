@@ -8,9 +8,9 @@
 
 DataBuffer::DataBuffer(const uint& height, const uint& width )
 {
-    m_image = QImage(height, width, QImage::Format_RGB888);
-    m_frame = cv::Mat(height, width,CV_8UC3);
-    m_frameGray= cv::Mat(height,width,CV_8UC1);
+    m_image = QImage(static_cast<const int>(height), static_cast<const int>(width), QImage::Format_RGB888);
+    m_frame = cv::Mat(static_cast<const int>(height),static_cast<const int>(width),CV_8UC3);
+    m_frameGray= cv::Mat(static_cast<const int>(height),static_cast<const int>(width),CV_8UC1);
 }
 
 

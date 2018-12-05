@@ -22,7 +22,7 @@ bool Camera::isPlaying()
     return m_play;
 }
 
-void Camera::setPlayRate(int playRate)
+void Camera::setPlayRate(const int &playRate)
 {
     m_playRate = playRate;
 }
@@ -34,6 +34,7 @@ bool Camera::readImage(DataBufferPtr data)
     m_capture >> data->m_frame;
     if(!data->m_frame.empty()){
         bgrToGray(data->m_frame, data->m_frameGray);
+        bgrToRgb(data->m_frame);
         data->m_image =QImage(data->m_frame.data,data->m_frame.cols,data->m_frame.rows,static_cast<int>(data->m_frame.step),QImage::Format_RGB888);
         ACK=true;
     }
@@ -44,28 +45,42 @@ void Camera::bgrToGray(const cv::Mat& src, cv::Mat& dst)
 {
 
     CV_Assert(src.type() == CV_8UC3);
-    int rows = src.rows, cols = src.cols;
-    /*
-    vector<uchar> vec(static_cast<uint>(rows*cols));
-    if(src.isContinuous()){
-        vec.assign(src.datastart,src.dataend);
-    }
-    else{}
-*/
     dst.create(src.size(), CV_8UC1);
-    if (src.isContinuous() && dst.isContinuous())
+//    int row=0;
+//    int col=0;
+//    transform(dst.begin<uchar>(),dst.end<uchar>(),(dst.begin<uchar>()),[&src,&row,&col](uchar it){
+//        it =static_cast<uchar>(src.at<uchar>(row,(3*col)+2) * 0.114f + src.at<uchar>(row,(3*col)+1) * 0.587f + src.at<uchar>(row,(3*col)) * 0.299f);
+//        if(col<src.cols){++col;}
+//        else{
+//            ++row;
+//            col=0;
+//        }
+//        return  it;
+//    });
+
+    for (int row = 0; row <  src.rows; ++row)
     {
-        cols = rows * cols;
-        rows = 1;
-    }
-    for (int row = 0; row < rows; ++row)
-    {
-        const uchar* src_ptr = src.ptr<uchar>(row);
-        uchar* dst_ptr = dst.ptr<uchar>(row);
-        for (int col = 0; col < cols; ++col)
+        for (int col = 0; col < src.cols; ++col)
         {
-            dst_ptr[col] = static_cast<uchar>((src_ptr[2] * 0.114f + src_ptr[1] * 0.587f + src_ptr[0] * 0.299f));
-            src_ptr += 3;
+            dst.at<uchar>(row,col) =static_cast<uchar>(src.at<uchar>(row,(3*col)+2) * 0.114f + src.at<uchar>(row,(3*col)+1) * 0.587f + src.at<uchar>(row,(3*col)) * 0.299f);
+        }
+    }
+
+}
+
+
+void Camera::bgrToRgb(cv::Mat& image)
+{
+
+    CV_Assert(image.type() == CV_8UC3);
+    uchar aux1;
+    for (int row = 0; row <  image.rows; ++row)
+    {
+        for (int col = 0; col < 3*image.cols; col+=3)
+        {
+            aux1= image.at<uchar>(row,col+2);
+            image.at<uchar>(row,col+2) = image.at<uchar>(row,col+0);
+            image.at<uchar>(row,col+0)= aux1;
         }
     }
 }

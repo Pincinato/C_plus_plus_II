@@ -14,7 +14,7 @@ public:
     virtual void startPlayData()=0;
     virtual void stop()=0;
     virtual bool isPlaying()=0;
-    virtual void setPlayRate(int playRate)=0;
+    virtual void setPlayRate(const int &playRate)=0;
 protected:
     ICamera* m_control;
     std::shared_ptr<DataBufferPool> m_dataPool;

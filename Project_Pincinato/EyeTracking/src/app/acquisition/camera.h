@@ -21,12 +21,13 @@ public:
     virtual void startPlayData()=0;
     virtual void stop()=0;
     bool isPlaying();
-    void setPlayRate(int playRate);
+    void setPlayRate(const int &playRate);
 
 protected:
 
     bool readImage(DataBufferPtr data);
     void bgrToGray(const Mat &src, Mat & dst);
+    void bgrToRgb( Mat & dst);
     std::string m_tag;
     bool m_play;
     VideoCapture m_capture;
