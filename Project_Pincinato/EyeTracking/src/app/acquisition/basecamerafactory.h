@@ -1,10 +1,14 @@
 /****************************************************************************
+ *
 ** Copyright (c) 2018 University of Bern & Bern University of Applied Science
 ** Project: Eye tracking
 **
 ** Contact:  Thiago Henrique Pincianto ( thiago.pincinato@bfh.ch )
 *****************************************************************************/
-#ifndef BASECAMERA_H#ifndef BASECAMERAFACTORY_H
+
+
+
+#ifndef BASECAMERAFACTORY_H
 #define BASECAMERAFACTORY_H
 
 #include <memory>

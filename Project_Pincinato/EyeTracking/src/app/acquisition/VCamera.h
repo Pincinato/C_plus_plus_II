@@ -4,7 +4,7 @@
 **
 ** Contact:  Thiago Henrique Pincianto ( thiago.pincinato@bfh.ch )
 *****************************************************************************/
-#ifndef BASECAMERA_H
+
 #ifndef VCAMERA_H
 #define VCAMERA_H
 
