@@ -1,9 +1,10 @@
 /****************************************************************************
-** Copyright (c) 2018 HuCE-optoLab - Bern University of Applied Science
-** Project: Example of a producer-comsumer-pattern
+** Copyright (c) 2018 University of Bern & Bern University of Applied Science
+** Project: Eye tracking
 **
-** Contact:    Patrik Arnold ( patrik.arnold@bfh.ch )
+** Contact:  Thiago Henrique Pincianto ( thiago.pincinato@bfh.ch )
 *****************************************************************************/
+#ifndef BASECAMERA_H
 #ifndef VCAMERA_H
 #define VCAMERA_H
 
@@ -28,14 +29,36 @@ class VCamera final: public Camera
 {
 
 public:
+    /*!
+      * \brief VCamera
+      * \param control
+      * \param dataPool
+      */
      VCamera(ICamera* control, std::shared_ptr<DataBufferPool> dataPool);
      ~VCamera()override;
 
+     /*!
+      * \brief startPlayData
+      */
      void startPlayData() override;
+
+
+     /*!
+      * \brief stop
+      */
      void stop() override;
 
+
+
 private:
+     /*!
+      * \brief run
+      */
      void run();
+
+     /*!
+      * \brief m_acquireThread
+      */
      std::thread m_acquireThread;
 
 };

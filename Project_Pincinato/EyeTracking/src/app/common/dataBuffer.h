@@ -16,7 +16,7 @@
 /**
  * This class is the container for one data buffer. Modify content as required
  *
- * @author Patrik Arnold
+ * @author Patrik Arnold, Modified by : Thiago Pincinato
  */
 class DataBuffer
 {

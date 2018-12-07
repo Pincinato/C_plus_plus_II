@@ -19,12 +19,23 @@ class rOg_image;
 class VideoVisualizer : public QWidget
 {
 public:
+    /*!
+     * \brief VideoVisualizer
+     * \param parent
+     */
     VideoVisualizer( QWidget *parent = 0 );
     ~VideoVisualizer();
 
+    /*!
+     * \brief setScan
+     * \param dataData
+     */
     void setScan(DataBufferPtr dataData);
 
 private:
+    /*!
+     * \brief redrawFrame
+     */
     void redrawFrame();
     std::unique_ptr<rOg_image> m_imgWidget;
     std::unique_ptr<QVBoxLayout> m_layout;
