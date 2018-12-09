@@ -6,7 +6,6 @@ qt/Ex*/CMakeLists.txt.user
 
 #zip files
 qt/Ex*.zip
-qt/*
 
 Study
 book
