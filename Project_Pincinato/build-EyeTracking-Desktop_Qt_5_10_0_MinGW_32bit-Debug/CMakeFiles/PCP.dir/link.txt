@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\PCP.dir/objects.a
-C:\Qt\Tools\mingw530_32\bin\ar.exe cr CMakeFiles\PCP.dir/objects.a @CMakeFiles\PCP.dir\objects1.rsp
-C:\Qt\Tools\mingw530_32\bin\g++.exe   -std=c++1z -Wall -Wextra -Werror -g   -Wl,--whole-archive CMakeFiles\PCP.dir/objects.a -Wl,--no-whole-archive  -o PCP.exe -Wl,--out-implib,libPCP.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\PCP.dir\linklibs.rsp
