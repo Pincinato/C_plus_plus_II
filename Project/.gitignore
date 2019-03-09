@@ -1,0 +1,7 @@
+
+#build files
+build*
+
+#CMakeList.txt.user
+EyeTracking/CMakeLists.txt.user
+

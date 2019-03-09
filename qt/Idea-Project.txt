@@ -1,1 +1,0 @@
-My Project will consist of a Eye-tracking aplication in which I will detect the object that the user looks at. I would like to use OpenCV in such project.
